@@ -35,3 +35,6 @@ stmt.run({
   age: 45
 });
 ```
+
+* KVDatabase
+* KVCollection

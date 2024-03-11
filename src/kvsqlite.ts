@@ -1,5 +1,6 @@
 import Database from 'better-sqlite3'
 import type { Statement } from 'better-sqlite3'
+import { deepMergeObjects } from './deep-merge';
 
 export interface IKVObjItem {
   _id: string;
@@ -13,21 +14,6 @@ export interface IKVSetOptions extends Database.Options{
 }
 
 export const DefaultKVCollection = 'kv'
-
-function deepMergeObjects(src: any, dest: any) {
-  for (const key in src) {
-      if (src.hasOwnProperty(key)) {
-          if (typeof src[key] === "object") {
-              if (typeof dest[key] !== "object" || Array.isArray(dest[key])) {
-                  dest[key] = Array.isArray(src[key]) ? [] : {};
-              }
-              deepMergeObjects(src[key], dest[key]);
-          } else if (src[key] !== undefined) {
-              dest[key] = src[key];
-          }
-      }
-  }
-}
 
 function createTableSql(name: string) {
   return `CREATE TABLE IF NOT EXISTS ${name} (key TEXT PRIMARY KEY, val JSONB)`

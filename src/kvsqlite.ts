@@ -19,12 +19,12 @@ function createTableSql(name: string) {
   return `CREATE TABLE IF NOT EXISTS ${name} (key TEXT PRIMARY KEY, val JSONB)`
 }
 
-interface ICollections {
+export interface IKVCollections {
   [name: string]: KVSqliteCollection
 }
 
 export class KVSqlite extends Database {
-  public collections: ICollections = {}
+  public collections: IKVCollections = {}
 
   constructor(filename?: string|Buffer, options?: IKVSetOptions) {
     super(filename, options)
@@ -71,7 +71,7 @@ export class KVSqlite extends Database {
   }
 }
 
-class KVSqliteCollection {
+export class KVSqliteCollection {
   declare preAdd   : Statement
   declare preUpdate: Statement
   declare preExists: Statement

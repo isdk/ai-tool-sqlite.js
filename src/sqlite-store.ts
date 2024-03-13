@@ -1,23 +1,60 @@
 import path from 'path'
-import { ToolFunc } from '@isdk/ai-tool'
-import { IKVObjItem, IKVSetOptions, KVSqlite } from './kvsqlite';
+import { createLRUCache, ToolFunc } from '@isdk/ai-tool'
 
-export function _sqliteStore(this: ToolFunc, key?: string|IKVObjItem, value?: IKVObjItem, options?: IKVSetOptions) {
-  const store = this.store as KVSqlite;
+import { IKVObjItem, IKVSetOptions, KVSqlite as _KVSqlite } from './kvsqlite';
+
+export const StoreCacheName = 'cache.store'
+
+export const StoreCache = createLRUCache(StoreCacheName, { capacity: 16, expires: 1 * 60 * 1000, cleanInterval: 60 })
+ToolFunc.register(StoreCache)
+const cache = StoreCache.runSync()
+cache.on('del', function (k: string, store: _KVSqlite) {
+  store.close()
+})
+
+declare const KVSqlite: typeof _KVSqlite
+
+export function _sqliteStore(this: ToolFunc, key?: string, value?: IKVObjItem, options?: IKVSetOptions): _KVSqlite
+export function _sqliteStore(this: ToolFunc, doc?: IKVObjItem, options?: IKVSetOptions): _KVSqlite
+export function _sqliteStore(this: ToolFunc, options: IKVSetOptions): _KVSqlite
+export function _sqliteStore(this: ToolFunc, key?: string | IKVObjItem | IKVSetOptions, value?: IKVObjItem | IKVSetOptions, options?: IKVSetOptions) {
+  if (typeof key === 'object' && !key.hasOwnProperty('_id')) {
+    options = key as IKVSetOptions
+    key = value as IKVObjItem
+    // value = options
+  }
+  const loc = options?.location || this.location || ':memory:'
+  const storeId = loc !== ':memory:' ? loc : this.name + loc
+  let store = cache.get(storeId) as _KVSqlite;
+  if (!store) {
+    const dataPath = (this.constructor as any).dataPath
+    let _loc = loc
+    if (loc[0] !== ':' && dataPath) {
+      _loc = path.join(dataPath, loc)
+    }
+    store = new KVSqlite(_loc, {...options, id: storeId})
+    cache.set(storeId, store, options)
+  }
+
+  // const store = this.store as KVSqlite;
   if (key == null) {
     return store
   }
+
   if (typeof key === 'string') {
     if (value === null) {
       return store.del(key, options)
-    } if (value === undefined) {
+    } else if (value === undefined) {
       return store.get(key, options)
+    } else if (typeof value !== 'object') {
+      value = { value } as any
     }
-    value = {...value, _id: key}
+    value = { ...value, _id: key }
   } else {
-    value = key
+    options = value as IKVSetOptions
+    value = key as IKVObjItem
   }
-  return store.set(value, options)
+  return store.set(value as IKVObjItem, options)
 }
 
 export function createSqliteStore(name: string, dbPath?: string, options?: IKVSetOptions) {
@@ -25,13 +62,15 @@ export function createSqliteStore(name: string, dbPath?: string, options?: IKVSe
     func: _sqliteStore,
     description: 'get/set LRU cache or return the store object',
     params: [
-      {name: 'key', type: 'string', description: 'the key is undefined means return the database directly'},
-      {name: 'value', type: 'any', description: 'the value to store, if value is null means remove the key, undefined means get the value'},
-      {name: 'options', type: 'any', description: 'the database options'},
+      { name: 'key', type: 'string', description: 'the key is undefined means return the database directly' },
+      { name: 'value', type: 'any', description: 'the value to store, if value is null means remove the key, undefined means get the value' },
+      { name: 'options', type: 'any', description: 'the database options' },
     ],
     result: 'object',
+    scope: { cache, KVSqlite: _KVSqlite }
   })
-  if (!dbPath) {dbPath = ToolFunc.dataPath ? path.join(ToolFunc.dataPath, name) : ':memory:'}
-  result.store = new KVSqlite(dbPath, options)
+  // if (!dbPath) { dbPath = ToolFunc.dataPath ? path.join(ToolFunc.dataPath, name) : ':memory:' }
+  // result.store = new KVSqlite(dbPath, options)
+  result.location = dbPath
   return result
 }

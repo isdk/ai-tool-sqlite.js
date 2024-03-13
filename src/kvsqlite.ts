@@ -7,7 +7,7 @@ export interface IKVObjItem {
   [name: string]: any;
 }
 
-export interface IKVSetOptions extends Database.Options{
+export interface IKVSetOptions extends Database.Options {
   collection?: string
   collections?: string[]
   overwrite?: boolean
@@ -26,13 +26,13 @@ export interface IKVCollections {
 export class KVSqlite extends Database {
   public collections: IKVCollections = {}
 
-  constructor(filename?: string|Buffer, options?: IKVSetOptions) {
+  constructor(filename?: string | Buffer, options?: IKVSetOptions) {
     super(filename, options)
 
     if (!this.readonly) {
       const collections = options?.collections || []
       collections.push(DefaultKVCollection)
-      if (options?.collection) {collections.push(options.collection)}
+      if (options?.collection) { collections.push(options.collection) }
       if (collections.length) {
         collections.forEach(name => this.create(name))
       }
@@ -72,39 +72,39 @@ export class KVSqlite extends Database {
 }
 
 export class KVSqliteCollection {
-  declare preAdd   : Statement
+  declare preAdd: Statement
   declare preUpdate: Statement
   declare preExists: Statement
-  declare preGet   : Statement
-  declare preDel   : Statement
+  declare preGet: Statement
+  declare preDel: Statement
   declare preDelAll: Statement
-  declare preCount : Statement
+  declare preCount: Statement
   declare preCountW: Statement
 
   constructor(public name: string, protected db: KVSqlite) {
-    if (!db.readonly) { db.prepare(createTableSql(DefaultKVCollection)).run() }
+    if (!db.readonly) { db.prepare(createTableSql(name)).run() }
 
-    this.preAdd    = db.prepare('INSERT INTO '+name+' (key, val) VALUES (@_id, jsonb(@val))')
-    this.preUpdate = db.prepare('UPDATE '+name+' SET key = @_id, val = jsonb(@val) WHERE key=@_id');
-    this.preExists = db.prepare('SELECT 1 FROM '+name+' WHERE key = ?').pluck();
-    this.preGet    = db.prepare('SELECT json(val) as val FROM '+name+' WHERE key = ?').pluck()
-    this.preDel    = db.prepare('DELETE FROM '+name+' WHERE key = ?')
-    this.preDelAll = db.prepare('DELETE FROM '+name+'')
-    this.preCount  = db.prepare('SELECT Count(*) as count FROM '+name).pluck()
-    this.preCountW = db.prepare('SELECT Count(*) as count FROM '+name + ' WHERE key LIKE ?').pluck()
+    this.preAdd = db.prepare('INSERT INTO ' + name + ' (key, val) VALUES (@_id, jsonb(@val))')
+    this.preUpdate = db.prepare('UPDATE ' + name + ' SET key = @_id, val = jsonb(@val) WHERE key=@_id');
+    this.preExists = db.prepare('SELECT 1 FROM ' + name + ' WHERE key = ?').pluck();
+    this.preGet = db.prepare('SELECT json(val) as val FROM ' + name + ' WHERE key = ?').pluck()
+    this.preDel = db.prepare('DELETE FROM ' + name + ' WHERE key = ?')
+    this.preDelAll = db.prepare('DELETE FROM ' + name + '')
+    this.preCount = db.prepare('SELECT Count(*) as count FROM ' + name).pluck()
+    this.preCountW = db.prepare('SELECT Count(*) as count FROM ' + name + ' WHERE key LIKE ?').pluck()
   }
 
   set(obj: IKVObjItem, options?: IKVSetOptions) {
     const _id = obj._id
-    obj = {...obj}
+    obj = { ...obj }
     delete (obj as any)._id
-    return this.db.transaction(()=>{
+    return this.db.transaction(() => {
       let _obj: any = this.preGet.get(_id)
       if (_obj !== undefined) _obj = JSON.parse(_obj)
       let stm: Statement
       if (_obj) {
         const shouldOverwrite = !options || options.overwrite !== false
-        stm  = this.preUpdate
+        stm = this.preUpdate
         if (shouldOverwrite) {
           _obj = obj
           // return this.preUpdate.run({_id, val: JSON.stringify(obj)})
@@ -118,7 +118,7 @@ export class KVSqliteCollection {
         _obj = obj
         // return this.preAdd.run(_id, JSON.stringify(obj))
       }
-      return stm.run({_id, val: JSON.stringify(_obj)})
+      return stm.run({ _id, val: JSON.stringify(_obj) })
     })()
   }
 

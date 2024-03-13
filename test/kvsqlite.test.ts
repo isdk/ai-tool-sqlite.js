@@ -1,14 +1,6 @@
-import { IKVObjItem, KVSqlite } from '../src/kvsqlite'
+import { IKVObjItem, KVSqlite, KVSqliteCollection } from '../src/kvsqlite'
 
-describe('KVSqlite class', () => {
-    // Initialize the database
-    const db = new KVSqlite(':memory:');
-
-
-  beforeEach(() => {
-    db.prepare('DELETE FROM kv').run()
-  });
-
+function testCollection(db: KVSqliteCollection | KVSqlite) {
   it('should insert an object', () => {
     const objId = 'testObj';
     const testObject: IKVObjItem = { _id: objId, key1: 'value1' };
@@ -26,7 +18,7 @@ describe('KVSqlite class', () => {
 
     const newData: IKVObjItem = { ...initialData, key2: 'newValue2', key3: 50 };
     // the default is overwrite
-    db.set({...newData}, { overwrite: true });
+    db.set({ ...newData }, { overwrite: true });
 
     expect(db.get(objId)).toEqual({ _id: objId, key1: 'initialValue1', key2: 'newValue2', key3: 50 });
   });
@@ -39,7 +31,7 @@ describe('KVSqlite class', () => {
 
     const newData: IKVObjItem = { _id: objId, key2: 'newValue2', key3: 50 };
     // the default is overwrite
-    db.set({...newData});
+    db.set({ ...newData });
 
     expect(db.get(objId)).toEqual({ _id: objId, key2: 'newValue2', key3: 50 });
   });
@@ -51,7 +43,7 @@ describe('KVSqlite class', () => {
     db.set(initialData);
 
     const newData: IKVObjItem = { _id: objId, key2: 'newValue2', key3: 50 };
-    db.set({...newData}, { overwrite: false }); // Should not overwrite initialValue1 with newValue2 or initialize other keys
+    db.set({ ...newData }, { overwrite: false }); // Should not overwrite initialValue1 with newValue2 or initialize other keys
 
     expect(db.get(objId)).toEqual({ _id: objId, key1: 'initialValue1', key2: 'newValue2', key3: 50 });
   });
@@ -96,4 +88,26 @@ describe('KVSqlite class', () => {
     const objId = 'nonexistentObj';
     expect(db.isExists(objId)).toBeFalsy();
   });
+}
+
+describe('KVSqlite class', () => {
+  // Initialize the database
+  const db = new KVSqlite(':memory:');
+
+  beforeEach(() => {
+    // db.prepare('DELETE FROM kv').run()
+    // delete all
+    db.del()
+  });
+
+  testCollection(db)
+
+  describe('KVSqliteCollection class', () => {
+    const table = db.create('test')
+    beforeEach(() => {
+      // delete all
+      table?.del()
+    });
+    testCollection(table!)
+  })
 });

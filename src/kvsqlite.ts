@@ -8,9 +8,12 @@ export interface IKVObjItem {
 }
 
 export interface IKVSetOptions extends Database.Options {
+  id?: string
+  location?: string
   collection?: string
   collections?: string[]
   overwrite?: boolean
+  [name: string]: any;
 }
 
 export const DefaultKVCollection = 'kv'
@@ -24,10 +27,12 @@ export interface IKVCollections {
 }
 
 export class KVSqlite extends Database {
+  declare id: string|undefined
   public collections: IKVCollections = {}
 
   constructor(filename?: string | Buffer, options?: IKVSetOptions) {
     super(filename, options)
+    if (options?.id) {this.id = options.id}
 
     if (!this.readonly) {
       const collections = options?.collections || []

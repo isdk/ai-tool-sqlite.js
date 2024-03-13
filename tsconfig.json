@@ -4,12 +4,14 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "types": [
+      "vitest/globals"
+    ],
     "typeRoots": [
       "./types",
       "./node_modules/@types",
       "./node_modules/@microsoft"
     ],
-
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
@@ -20,5 +22,7 @@
     "node_modules",
     "**/*.spec.ts"
   ],
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

@@ -8,16 +8,13 @@ export const StoreCacheName = 'cache.store'
 export const StoreCache = createLRUCache(StoreCacheName, { capacity: 16, expires: 1 * 60 * 1000, cleanInterval: 60 })
 ToolFunc.register(StoreCache)
 const cache = StoreCache.runSync()
-cache.on('del', function (k: string, store: _KVSqlite) {
+cache.on('del', function (key: string, store: _KVSqlite) {
   store.close()
 })
 
 declare const KVSqlite: typeof _KVSqlite
 
-export function _sqliteStore(this: ToolFunc, key?: string, value?: IKVObjItem, options?: IKVSetOptions): _KVSqlite
-export function _sqliteStore(this: ToolFunc, doc?: IKVObjItem, options?: IKVSetOptions): _KVSqlite
-export function _sqliteStore(this: ToolFunc, options: IKVSetOptions): _KVSqlite
-export function _sqliteStore(this: ToolFunc, key?: string | IKVObjItem | IKVSetOptions, value?: IKVObjItem | IKVSetOptions, options?: IKVSetOptions) {
+export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: string | IKVObjItem | IKVSetOptions, value?: IKVObjItem | IKVSetOptions, options?: IKVSetOptions} = {}) {
   if (typeof key === 'object' && !key.hasOwnProperty('_id')) {
     options = key as IKVSetOptions
     key = value as IKVObjItem
@@ -61,11 +58,11 @@ export function createSqliteStore(name: string, dbPath?: string, options?: IKVSe
   const result = ToolFunc.get(name) ?? new ToolFunc(name, {
     func: _sqliteStore,
     description: 'get/set LRU cache or return the store object',
-    params: [
-      { name: 'key', type: 'string', description: 'the key is undefined means return the database directly' },
-      { name: 'value', type: 'any', description: 'the value to store, if value is null means remove the key, undefined means get the value' },
-      { name: 'options', type: 'any', description: 'the database options' },
-    ],
+    params: {
+      key: { name: 'key', type: 'string', description: 'the key is undefined means return the database directly' },
+      value: { name: 'value', type: 'any', description: 'the value to store, if value is null means remove the key, undefined means get the value' },
+      options: { name: 'options', type: 'any', description: 'the database options' },
+    },
     result: 'object',
     scope: { cache, KVSqlite: _KVSqlite }
   })
@@ -74,3 +71,5 @@ export function createSqliteStore(name: string, dbPath?: string, options?: IKVSe
   result.location = dbPath
   return result
 }
+
+// export const sqlite = createSqliteStore('sqlite', 'config.db')

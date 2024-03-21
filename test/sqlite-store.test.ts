@@ -20,18 +20,18 @@ describe('sqliteStore function', async () => {
 
   it('should delete a key-value pair when value is null', async () => {
     store.set(doc);
-    await conf.run(key, null);
+    await conf.run({key, value: null});
     expect(store.get(key)).toBeUndefined();
   });
 
   it('should get a value when value is undefined', async () => {
     store.set(doc);
-    const result = await conf.run(key);
+    const result = await conf.run({key});
     expect(result).toEqual(doc);
   });
 
   it('should set a value when key is a string and value is defined', async () => {
-    await conf.run(key, value);
+    await conf.run({key, value});
     expect(store.get(key)).toEqual(doc);
   });
 });
@@ -44,7 +44,7 @@ describe('createSqliteStore function', () => {
     const mStore = createSqliteStore(name, dbPath, options);
     expect(mStore).toBeInstanceOf(ToolFunc);
     expect(mStore.location).toEqual(dbPath);
-    let result = await mStore.run({ expires: 100 }) as KVSqlite
+    let result = await mStore.run({options: { expires: 100 }}) as KVSqlite
     expect(result.open).toBeTruthy()
     await sleep(200)
     const cache = ToolFunc.runSync(StoreCacheName)

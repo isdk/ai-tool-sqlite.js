@@ -27,6 +27,9 @@ export interface IKVCollections {
 }
 
 export class KVSqlite extends Database {
+  /**
+   * The unique id of the database.
+   */
   declare id: string|undefined
   public collections: IKVCollections = {}
 
@@ -99,31 +102,35 @@ export class KVSqliteCollection {
     this.preCountW = db.prepare('SELECT Count(*) as count FROM ' + name + ' WHERE key LIKE ?').pluck()
   }
 
-  set(obj: IKVObjItem, options?: IKVSetOptions) {
+  _set(obj: IKVObjItem, options?: IKVSetOptions) {
     const _id = obj._id
     obj = { ...obj }
     delete (obj as any)._id
-    return this.db.transaction(() => {
-      let _obj: any = this.preGet.get(_id)
-      if (_obj !== undefined) _obj = JSON.parse(_obj)
-      let stm: Statement
-      if (_obj) {
-        const shouldOverwrite = !options || options.overwrite !== false
-        stm = this.preUpdate
-        if (shouldOverwrite) {
-          _obj = obj
-          // return this.preUpdate.run({_id, val: JSON.stringify(obj)})
-        } else {
-          // just overwrite difference properties values
-          deepMergeObjects(obj, _obj)
-          // return this.preUpdate.run({_id, val: JSON.stringify(_obj)})
-        }
-      } else {
-        stm = this.preAdd
+    let _obj: any = this.preGet.get(_id)
+    if (_obj !== undefined) _obj = JSON.parse(_obj)
+    let stm: Statement
+    if (_obj) {
+      const shouldOverwrite = !options || options.overwrite !== false
+      stm = this.preUpdate
+      if (shouldOverwrite) {
         _obj = obj
-        // return this.preAdd.run(_id, JSON.stringify(obj))
+        // return this.preUpdate.run({_id, val: JSON.stringify(obj)})
+      } else {
+        // just overwrite difference properties values
+        deepMergeObjects(obj, _obj)
+        // return this.preUpdate.run({_id, val: JSON.stringify(_obj)})
       }
-      return stm.run({ _id, val: JSON.stringify(_obj) })
+    } else {
+      stm = this.preAdd
+      _obj = obj
+      // return this.preAdd.run(_id, JSON.stringify(obj))
+    }
+    return stm.run({ _id, val: JSON.stringify(_obj) })
+  }
+
+  set(obj: IKVObjItem, options?: IKVSetOptions) {
+    return this.db.transaction(() => {
+      return this._set(obj, options)
     })()
   }
 

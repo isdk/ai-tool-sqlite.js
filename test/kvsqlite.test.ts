@@ -88,6 +88,58 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     const objId = 'nonexistentObj';
     expect(db.isExists(objId)).toBeFalsy();
   });
+
+  it('should list all objects', () => {
+    const objId1 = 'listObj1';
+    const objId2 = 'listObj2';
+    const testObject1: IKVObjItem = { _id: objId1, value: 'test1'};
+    const testObject2: IKVObjItem = { _id: objId2, value: 'test2'};
+
+    db.set(testObject1);
+    db.set(testObject2);
+    let result = db.list()
+    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
+  });
+
+  it('should list some objects', () => {
+    const objId1 = 'searchObj1';
+    const objId2 = 'searchObj2';
+    const objId3 = 'Obj3';
+    const objId4 = 'Ob3';
+    const testObject1: IKVObjItem = { _id: objId1, value: 'test1'};
+    const testObject2: IKVObjItem = { _id: objId2, value: 'test2'};
+    const testObject3: IKVObjItem = { _id: objId3, value: 'test3'};
+    const testObject4: IKVObjItem = { _id: objId4, value: 'test4'};
+
+    db.set(testObject1);
+    db.set(testObject2);
+    db.set(testObject3);
+    db.set(testObject4);
+    let result = db.list('search%')
+    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
+    result = db.list('%Obj%')
+    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}, { _id: objId3, value: 'test3'}])
+  })
+
+  it('should list objects by page', () => {
+    const objId1 = 'searchObj1';
+    const objId2 = 'searchObj2';
+    const objId3 = 'Obj3';
+    const objId4 = 'Ob3';
+    const testObject1: IKVObjItem = { _id: objId1, value: 'test1'};
+    const testObject2: IKVObjItem = { _id: objId2, value: 'test2'};
+    const testObject3: IKVObjItem = { _id: objId3, value: 'test3'};
+    const testObject4: IKVObjItem = { _id: objId4, value: 'test4'};
+
+    db.set(testObject1);
+    db.set(testObject2);
+    db.set(testObject3);
+    db.set(testObject4);
+    let result = db.list(undefined, 2)
+    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
+    result = db.list(undefined, 2, 1)
+    expect(result).toStrictEqual([{ _id: objId3, value: 'test3'},{ _id: objId4, value: 'test4'}])
+  })
 }
 
 describe('KVSqlite class', () => {

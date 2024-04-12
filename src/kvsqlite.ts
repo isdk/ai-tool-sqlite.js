@@ -77,6 +77,11 @@ export class KVSqlite extends Database {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.count(query)
   }
+
+  list(query?: string, pageSize?: number, page?: number, options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.list(query, pageSize, page)
+  }
 }
 
 export class KVSqliteCollection {
@@ -88,6 +93,10 @@ export class KVSqliteCollection {
   declare preDelAll: Statement
   declare preCount: Statement
   declare preCountW: Statement
+  declare preSearch: Statement
+  declare preSearchAll: Statement
+  declare preAll: Statement
+  declare preAllLimit: Statement
 
   constructor(public name: string, protected db: KVSqlite) {
     if (!db.readonly) { db.prepare(createTableSql(name)).run() }
@@ -100,6 +109,10 @@ export class KVSqliteCollection {
     this.preDelAll = db.prepare('DELETE FROM ' + name + '')
     this.preCount = db.prepare('SELECT Count(*) as count FROM ' + name).pluck()
     this.preCountW = db.prepare('SELECT Count(*) as count FROM ' + name + ' WHERE key LIKE ?').pluck()
+    this.preSearch = db.prepare('SELECT key, json(val) as val FROM ' + name + ' WHERE key LIKE @query LIMIT @size OFFSET @offset')
+    this.preSearchAll = db.prepare('SELECT key, json(val) as val FROM ' + name + ' WHERE key LIKE @query')
+    this.preAll = db.prepare('SELECT key, json(val) as val FROM ' + name)
+    this.preAllLimit = db.prepare('SELECT key, json(val) as val FROM ' + name + ' LIMIT @size OFFSET @offset')
   }
 
   _set(obj: IKVObjItem, options?: IKVSetOptions) {
@@ -153,5 +166,12 @@ export class KVSqliteCollection {
 
   count(query?: string) {
     return query ? this.preCountW.get(query) : this.preCount.get()
+  }
+
+  list(query?: string, size?: number, page:number = 0) {
+    const result = (query ?
+        size ? this.preSearch.all({query, size, offset: page*size}) : this.preSearchAll.all({query})
+      : size ? this.preAllLimit.all({size, offset: page*size}) : this.preAll.all()) as {key: string, val: string}[]
+    return result.map(row => ({...JSON.parse(row.val), _id: row.key})) as IKVObjItem[]
   }
 }

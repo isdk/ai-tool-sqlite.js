@@ -1,3 +1,5 @@
+import path from 'path/posix'
+
 import Database from 'better-sqlite3'
 import type { Statement } from 'better-sqlite3'
 import { deepMergeObjects } from './deep-merge';
@@ -13,10 +15,14 @@ export interface IKVSetOptions extends Database.Options {
   collection?: string
   collections?: string[]
   overwrite?: boolean
+  singleValue?: boolean
   [name: string]: any;
 }
 
 export const DefaultKVCollection = 'kv'
+export const KV_VALUE_SYMBOL = '值'
+export const KV_TYPE_SYMBOL = '型'
+
 
 function createTableSql(name: string) {
   return `CREATE TABLE IF NOT EXISTS ${name} (key TEXT PRIMARY KEY, val JSONB)`
@@ -58,9 +64,34 @@ export class KVSqlite extends Database {
     return this.collections[name]?.set(obj, options)
   }
 
+  setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.setExtend(docId, key, value, options)
+  }
+
+  setExtends(docId: string, aDoc: any, options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.setExtends(docId, aDoc, options)
+  }
+
+  bulkDocs(objs: IKVObjItem[], options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.bulkDocs(objs, options)
+  }
+
   get(_id: string, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.get(_id)
+  }
+
+  getExtend(docId: string, aPropName: string, options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.getExtend(docId, aPropName)
+  }
+
+  getExtends(docId: string, aPropName?: string | string[], options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.getExtends(docId, aPropName, options)
   }
 
   del(_id?: string, options?: IKVSetOptions) {
@@ -147,6 +178,32 @@ export class KVSqliteCollection {
     })()
   }
 
+  _setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
+    if (!key.startsWith('.')) key = '.' + key;
+    docId = path.join(docId, key);
+    const vDoc = {_id: docId, [KV_VALUE_SYMBOL]: value} as IKVObjItem
+    if (options?.[KV_TYPE_SYMBOL]) {vDoc[KV_TYPE_SYMBOL] = options[KV_TYPE_SYMBOL]}
+    return this._set(vDoc, options);
+  }
+
+  setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
+    return this.db.transaction(() => {
+      return this._setExtend(docId, key, value, options)
+    })()
+  }
+
+  setExtends(docId: string, aDoc: any, options?: IKVSetOptions) {
+    return this.db.transaction(() => {
+      return Object.keys(aDoc).map(key => this._setExtend(docId, key, aDoc[key], options));
+    })()
+  }
+
+  bulkDocs(objs: IKVObjItem[], options?: IKVSetOptions) {
+    return this.db.transaction(() => {
+      return objs.map(obj => this._set(obj, options))
+    })()
+  }
+
   get(_id: string) {
     let result: any = this.preGet.get(_id)
     if (result) {
@@ -154,6 +211,54 @@ export class KVSqliteCollection {
       result._id = _id
     }
     return result as IKVObjItem
+  }
+
+  /**
+   * get the value of the document's property
+   * @param docId the document id
+   * @param aPropName the property name of the document id
+   * @returns the property value object
+   */
+  getExtend(docId: string, aPropName: string) {
+    if (!aPropName.startsWith('.')) aPropName = '.' + aPropName;
+    const result = this.get(path.join(docId, aPropName));
+    return result?.[KV_VALUE_SYMBOL];
+  }
+
+  /**
+   * get extends of the document
+   * @param docId the document id
+   * @param aPropName the property name(s) of the document id
+   * @param options optional options
+   * @param options.singleValue whether return value if only one property.
+   * @returns all extends property key-value object
+   */
+  getExtends(docId: string, aPropName?: string | string[], options?: IKVSetOptions) {
+    const singleValue = options?.singleValue
+    if (aPropName) {
+      if (typeof aPropName === 'string') aPropName = [aPropName];
+    } else {
+      aPropName = ['%'];
+    }
+    aPropName = aPropName.map((name) =>
+      path.join(docId, (name.startsWith('.') ? name : '.' + name))
+    );
+    const vProps = aPropName.map(key => key.lastIndexOf('%') >= 0 ? this.list(key) : this.get(key)).flat()
+    let result = vProps.reduce(
+      (obj, prop) => {
+        if (prop) {
+          const value = prop[KV_VALUE_SYMBOL]
+          const key = path.basename(prop._id).slice(1)
+          obj[key] = value
+        }
+        return obj
+      },
+      {_id: docId}
+    )
+    if (singleValue) {
+      result = vProps.length === 1 ? vProps[0][KV_VALUE_SYMBOL] : result
+    }
+    return result
   }
 
   del(_id?: string) {

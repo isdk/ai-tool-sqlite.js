@@ -1,4 +1,4 @@
-import { IKVObjItem, KVSqlite, KVSqliteCollection } from '../src/kvsqlite'
+import { IKVObjItem, KVSqlite, KVSqliteCollection, KV_VALUE_SYMBOL } from '../src/kvsqlite'
 
 function testCollection(db: KVSqliteCollection | KVSqlite) {
   it('should insert an object', () => {
@@ -139,6 +139,55 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
     result = db.list(undefined, 2, 1)
     expect(result).toStrictEqual([{ _id: objId3, value: 'test3'},{ _id: objId4, value: 'test4'}])
+  })
+
+  it('should getExtends document', () => {
+    let result:any = db.bulkDocs([
+      {_id: 'getExtends/test/.a', [KV_VALUE_SYMBOL]: 123},
+      {_id: 'getExtends/test/.b', [KV_VALUE_SYMBOL]: 'ba'},
+      {_id: 'getExtends/test/.c', [KV_VALUE_SYMBOL]: 321},
+    ]);
+    result = db.getExtends('getExtends/test');
+    expect(result).toMatchObject({_id: 'getExtends/test', a: 123, b: 'ba', c: 321});
+
+    result = db.getExtends('getExtends/test', ['b', 'c']);
+    expect(result).toMatchObject({_id: 'getExtends/test', b: 'ba', c: 321});
+
+  })
+
+  it('should get an extend properties value if singleValue', () => {
+    let result: any = db.bulkDocs([
+      {_id: 'getExtends/tests/.a', [KV_VALUE_SYMBOL]: 1123},
+      {_id: 'getExtends/tests/.b', [KV_VALUE_SYMBOL]: 'ba1'},
+      {_id: 'getExtends/tests/.c', [KV_VALUE_SYMBOL]: 3121},
+    ]);
+    result = db.getExtends('getExtends/tests', 'b', {singleValue: true});
+    expect(result).toEqual('ba1');
+  });
+
+  it('should get an extend property value', () => {
+    let result: any = db.bulkDocs([
+      {_id: 'getExtends/tests/.a', [KV_VALUE_SYMBOL]: 1123},
+      {_id: 'getExtends/tests/.b', [KV_VALUE_SYMBOL]: 'ba1'},
+      {_id: 'getExtends/tests/.c', [KV_VALUE_SYMBOL]: 3121},
+    ]);
+    result = db.getExtend('getExtends/tests', 'b');
+    expect(result).toEqual('ba1');
+  })
+
+  it('should set extend property', () => {
+    db.setExtend('setExtend/test', 'a', 12)
+    db.setExtend('setExtend/test', '.b', 1)
+    let result = db.getExtend('setExtend/test', 'b');
+    expect(result).toEqual(1);
+    result = db.getExtend('setExtend/test', 'a');
+    expect(result).toEqual(12);
+  })
+
+  it('should set extend properties', () => {
+    db.setExtends('setExtends/test', {a: 12, b: 1})
+    const result = db.getExtends('setExtends/test')
+    expect(result).toMatchObject({_id: 'setExtends/test', a: 12, b: 1});
   })
 }
 

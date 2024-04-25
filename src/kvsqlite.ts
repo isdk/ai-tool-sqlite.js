@@ -270,7 +270,7 @@ export class KVSqliteCollection {
   }
 
   count(query?: string) {
-    return query ? this.preCountW.get(query) : this.preCount.get()
+    return (query ? this.preCountW.get(query) : this.preCount.get()) as number
   }
 
   list(query?: string, size?: number, page:number = 0) {

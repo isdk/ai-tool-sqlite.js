@@ -13,7 +13,7 @@ import { RunResult } from "better-sqlite3";
 
 // const eventBus = event.runSync()
 
-interface KVSqliteResFuncParams extends ResServerFuncParams {
+export interface KVSqliteResFuncParams extends ResServerFuncParams {
   _id?: string
   val: IKVObjItem
   query?: string

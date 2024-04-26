@@ -68,6 +68,18 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     expect(db.isExists(objId)).toBeFalsy();
   });
 
+  it('should delete multi objects', () => {
+    let result: any = db.bulkDocs([
+      {_id: '1', [KV_VALUE_SYMBOL]: 1123},
+      {_id: '2', [KV_VALUE_SYMBOL]: 'ba1'},
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121},
+    ]);
+    expect(result).toHaveLength(3)
+
+    db.del(['1','2','3']);
+    expect(db.list()).toHaveLength(0)
+  });
+
   it('should delete all', () => {
     const objId = 'deleteObj';
     const testObject: IKVObjItem = { _id: objId };

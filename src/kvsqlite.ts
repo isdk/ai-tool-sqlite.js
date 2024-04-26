@@ -94,7 +94,7 @@ export class KVSqlite extends Database {
     return this.collections[name]?.getExtends(docId, aPropName, options)
   }
 
-  del(_id?: string, options?: IKVSetOptions) {
+  del(_id?: string|string[], options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.del(_id)
   }
@@ -268,7 +268,12 @@ export class KVSqliteCollection {
     return result
   }
 
-  del(_id?: string) {
+  del(_id?: string|string[]) {
+    if (Array.isArray(_id)) {
+      return this.db.transaction(() => {
+        return _id.map(id => this.preDel.run(id))
+      })()
+    }
     return _id ? this.preDel.run(_id) : this.preDelAll.run()
   }
 

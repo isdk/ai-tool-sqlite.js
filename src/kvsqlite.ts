@@ -59,9 +59,9 @@ export class KVSqlite extends Database {
     }
   }
 
-  set(obj: IKVObjItem, options?: IKVSetOptions) {
+  set(docId: string|IKVObjItem, obj?: IKVObjItem|IKVSetOptions, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
-    return this.collections[name]?.set(obj, options)
+    return this.collections[name]?.set(docId, obj, options)
   }
 
   setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
@@ -172,9 +172,16 @@ export class KVSqliteCollection {
     return stm.run({ _id, val: JSON.stringify(_obj) })
   }
 
-  set(obj: IKVObjItem, options?: IKVSetOptions) {
+  set(docId: string|IKVObjItem, obj?: IKVObjItem|IKVSetOptions, options?: IKVSetOptions) {
+    const vType = typeof docId
+    if (vType === 'object') {
+      options = obj
+      obj = docId as IKVObjItem
+    } else if (vType === 'string') {
+      obj!._id = docId as string
+    }
     return this.db.transaction(() => {
-      return this._set(obj, options)
+      return this._set(obj as IKVObjItem, options)
     })()
   }
 

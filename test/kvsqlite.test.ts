@@ -10,6 +10,15 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     expect(db.get(objId)).toEqual({ _id: objId, key1: 'value1' });
   });
 
+  it('should insert an id with object', () => {
+    const objId = 'testObj';
+    const testObject: IKVObjItem = { _id: 'ignoreIt', key1: 'value1' };
+
+    db.set(objId, testObject);
+
+    expect(db.get(objId)).toEqual({ _id: objId, key1: 'value1' });
+  });
+
   it('should update an existing object by overwrite', () => {
     const objId = 'updateObj';
     const initialData: IKVObjItem = { _id: objId, key1: 'initialValue1' };

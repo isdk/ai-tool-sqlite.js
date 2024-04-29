@@ -36,7 +36,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
         this.initDB()
       }
     } else {
-      throw new CommonError('dbPath is required', 'KVSqliteRes', ErrorCode.InvalidArgument)
+      throw new CommonError('dbPath is required', this.name, ErrorCode.InvalidArgument)
     }
   }
 
@@ -61,11 +61,11 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     if (id !== undefined) {
       const result = this.db.get(id) as T
       if (!result) {
-        throw new NotFoundError(id, 'KVSqliteRes.get')
+        throw new NotFoundError(id, this.name + '.get')
       }
       return result
     } else {
-      throw new CommonError('id is required', 'KVSqliteRes.get', ErrorCode.InvalidArgument)
+      throw new CommonError('id is required', this.name + '.get', ErrorCode.InvalidArgument)
     }
   }
 
@@ -74,16 +74,16 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     const val = model.val
     const overwrite = model.overwrite || false
     if (!id) {
-      throw new CommonError('id is required', 'KVSqliteRes.put', ErrorCode.InvalidArgument)
+      throw new CommonError('id is required', this.name + '.put', ErrorCode.InvalidArgument)
     }
     if (typeof val !== 'object' ) {
-      throw new CommonError('object val is required', 'KVSqliteRes.put', ErrorCode.InvalidArgument)
+      throw new CommonError('object val is required', this.name + '.put', ErrorCode.InvalidArgument)
     }
 
     if (this.db.isExists(id)) {
       return this.db.set(id, model.val, { overwrite })
     } else {
-      throw new NotFoundError(id, 'KVSqliteRes.put')
+      throw new NotFoundError(id, this.name + '.put')
     }
   }
 
@@ -96,14 +96,14 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
       result = this.db.bulkDocs(val)
     } else {
       if (!id) {
-        throw new CommonError('id is required', 'KVSqliteRes.post', ErrorCode.InvalidArgument)
+        throw new CommonError('id is required', this.name + '.post', ErrorCode.InvalidArgument)
       }
       if (typeof val !== 'object' ) {
-        throw new CommonError('object val is required', 'KVSqliteRes.post', ErrorCode.InvalidArgument)
+        throw new CommonError('object val is required', this.name + '.post', ErrorCode.InvalidArgument)
       }
 
       if (this.db.isExists(id)) {
-        throw new AlreadyExistsError(id, 'KVSqliteRes.post')
+        throw new AlreadyExistsError(id, this.name + '.post')
       }
 
       result = this.db.set(id, model.val)
@@ -120,10 +120,10 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
       if (this.db.isExists(id)) {
         return this.db.del(id)
       } else {
-        throw new NotFoundError(id, 'KVSqliteRes.delete')
+        throw new NotFoundError(id, this.name + '.delete')
       }
     } else {
-      throw new CommonError('_id is required', 'KVSqliteRes.delete', ErrorCode.InvalidArgument)
+      throw new CommonError('_id is required', this.name + '.delete', ErrorCode.InvalidArgument)
     }
   }
 }

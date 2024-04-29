@@ -2,18 +2,19 @@
 import fastify from 'fastify'
 import fs from 'fs'
 import { ErrorCode, NotFoundError, ResClientTools, ResServerTools, wait } from "@isdk/ai-tool"
-import { findPort } from './find-port'
+import { findPort } from '@isdk/ai-tool/test/util'
 
 import { KVSqliteResFunc } from '../src/sqlite-res'
 
 // const dbPath = __dirname + '/test.db'
 // const dbPath = '/tmp/aikvsqlite-test.db'
 const dbPath = ':memory:'
+const FUNC_NAME = 'sqlite'
 
 describe('KVSqliteRes server api', () => {
   let apiRoot: string // = 'http://localhost:3000/api'
   const server = fastify()
-  const res = new KVSqliteResFunc('sqlite', {dbPath})
+  const res = new KVSqliteResFunc(FUNC_NAME, {dbPath})
 
   beforeAll(async () => {
     fs.rmSync(dbPath, {force: true})
@@ -75,7 +76,7 @@ describe('KVSqliteRes server api', () => {
 
     ResServerTools.setApiRoot(apiRoot)
 
-    // const res = new KVSqliteResFunc('sqlite', {dbPath})
+    // const res = new KVSqliteResFunc(FUNC_NAME, {dbPath})
     res.register()
 
     ResClientTools.setApiRoot(apiRoot)
@@ -91,7 +92,7 @@ describe('KVSqliteRes server api', () => {
   });
 
   it('should raise error to get non-exists item', async () => {
-    const result = ResClientTools.get('sqlite')
+    const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
     let err: any
     try {
@@ -103,12 +104,12 @@ describe('KVSqliteRes server api', () => {
     expect(err.message).toBe('Could not find 123.')
     expect(err.code).toBe(ErrorCode.NotFound)
     expect(err.data).toStrictEqual({what: "123"})
-    expect(err.name).toBe('KVSqliteRes.get')
+    expect(err.name).toBe(FUNC_NAME+'.get')
 
   })
 
   it('should post an object', async () => {
-    const result = ResClientTools.get('sqlite')
+    const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
     let res = await result.post({id: "1", val: {name: 'hello'}})
     expect(res).toHaveProperty('changes', 1)
@@ -119,7 +120,7 @@ describe('KVSqliteRes server api', () => {
     expect(res).toHaveProperty('changes', 1)
   })
   it('should post multi objects', async () => {
-    const result = ResClientTools.get('sqlite')
+    const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
     let res = await result.post({val: [{_id: "1", name: 'hello'}, {_id: "2", name: 'world'}]})
     expect(res).toHaveLength(2)
@@ -132,7 +133,7 @@ describe('KVSqliteRes server api', () => {
   })
 
   it('should delete', async () => {
-    const result = ResClientTools.get('sqlite')
+    const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
     let res = await result.post({val: [{_id: "1", name: 'hello'}, {_id: "2", name: 'world'}]})
     expect(res).toHaveLength(2)
@@ -147,7 +148,7 @@ describe('KVSqliteRes server api', () => {
   })
 
   it('should list', async () => {
-    const result = ResClientTools.get('sqlite')
+    const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
     let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'world'}, {_id: "3", name: 'd'}]})
     expect(res).toHaveLength(3)

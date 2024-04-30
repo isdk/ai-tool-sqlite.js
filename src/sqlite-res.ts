@@ -19,7 +19,7 @@ export interface SqliteRunResult {
 
 export interface KVSqliteResFuncParams extends ResServerFuncParams {
   _id?: string
-  val: IKVObjItem
+  val?: IKVObjItem
   query?: string
   size?: number
   page?: number

@@ -9,7 +9,11 @@ import {
 } from "@isdk/ai-tool";
 
 import { IKVObjItem, KVSqlite } from "./kvsqlite";
-import { RunResult } from "better-sqlite3";
+
+export interface SqliteRunResult {
+  changes: number;
+  lastInsertRowid: number | bigint;
+}
 
 // const eventBus = event.runSync()
 
@@ -81,7 +85,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     }
 
     if (this.db.isExists(id)) {
-      return this.db.set(id, model.val, { overwrite })
+      return this.db.set(id, model.val, { overwrite }) as SqliteRunResult
     } else {
       throw new NotFoundError(id, this.name + '.put')
     }
@@ -90,7 +94,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   post(model: KVSqliteResFuncParams) {
     const id = model.id
     const val = model.val
-    let result: RunResult[]|RunResult
+    let result: SqliteRunResult[]|SqliteRunResult
 
     if (Array.isArray(val)) {
       result = this.db.bulkDocs(val)
@@ -111,7 +115,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     return result
   }
 
-  delete({id}: KVSqliteResFuncParams) {
+  delete({id}: KVSqliteResFuncParams): SqliteRunResult | SqliteRunResult[] {
     if (Array.isArray(id)) {
       return this.db.del(id)
     }

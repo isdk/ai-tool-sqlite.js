@@ -113,6 +113,16 @@ export class KVSqlite extends Database {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.list(query, pageSize, page)
   }
+
+  createIndex(indexName: string, fields: string|string[], options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.createIndex(indexName, fields)
+  }
+
+  search(query: string, size?: number, page:number = 0, options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.search(query, size, page)
+  }
 }
 
 export class KVSqliteCollection {
@@ -124,13 +134,16 @@ export class KVSqliteCollection {
   declare preDelAll: Statement
   declare preCount: Statement
   declare preCountW: Statement
-  declare preSearch: Statement
-  declare preSearchAll: Statement
+  declare preSearchKey: Statement
+  declare preSearchKeyAll: Statement
   declare preAll: Statement
   declare preAllLimit: Statement
 
   constructor(public name: string, protected db: KVSqlite) {
-    if (!db.readonly) { db.prepare(createTableSql(name)).run() }
+    if (!db.readonly) {
+      db.prepare(createTableSql(name)).run()
+      db.createIndex('type', KV_TYPE_SYMBOL)
+    }
 
     this.preAdd = db.prepare('INSERT INTO ' + name + ' (key, val) VALUES (@_id, jsonb(@val))')
     this.preUpdate = db.prepare('UPDATE ' + name + ' SET key = @_id, val = jsonb(@val) WHERE key=@_id');
@@ -140,8 +153,8 @@ export class KVSqliteCollection {
     this.preDelAll = db.prepare('DELETE FROM ' + name + '')
     this.preCount = db.prepare('SELECT Count(*) as count FROM ' + name).pluck()
     this.preCountW = db.prepare('SELECT Count(*) as count FROM ' + name + ' WHERE key LIKE ?').pluck()
-    this.preSearch = db.prepare('SELECT key, json(val) as val FROM ' + name + ' WHERE key LIKE @query LIMIT @size OFFSET @offset')
-    this.preSearchAll = db.prepare('SELECT key, json(val) as val FROM ' + name + ' WHERE key LIKE @query')
+    this.preSearchKey = db.prepare('SELECT key, json(val) as val FROM ' + name + ' WHERE key LIKE @query LIMIT @size OFFSET @offset')
+    this.preSearchKeyAll = db.prepare('SELECT key, json(val) as val FROM ' + name + ' WHERE key LIKE @query')
     this.preAll = db.prepare('SELECT key, json(val) as val FROM ' + name)
     this.preAllLimit = db.prepare('SELECT key, json(val) as val FROM ' + name + ' LIMIT @size OFFSET @offset')
   }
@@ -287,8 +300,29 @@ export class KVSqliteCollection {
 
   list(query?: string, size?: number, page:number = 0) {
     const result = (query ?
-        size ? this.preSearch.all({query, size, offset: page*size}) : this.preSearchAll.all({query})
+        size ? this.preSearchKey.all({query, size, offset: page*size}) : this.preSearchKeyAll.all({query})
       : size ? this.preAllLimit.all({size, offset: page*size}) : this.preAll.all()) as {key: string, val: string}[]
+    return result.map(row => ({...JSON.parse(row.val), _id: row.key})) as IKVObjItem[]
+  }
+
+  createIndex(indexName: string, fields: string|string[]) {
+    if (!indexName.startsWith('idx_' + this.name + '_')) {indexName = 'idx_' + this.name + '_' + indexName}
+    if (!Array.isArray(fields)) {fields = [fields]}
+    fields = fields.map(field => `val->>'$.${field}'`);
+    return this.db.prepare('CREATE INDEX IF NOT EXISTS ' + indexName + ' ON ' + this.name + ' (' + fields.join(',') + ')').run()
+  }
+
+  // createIndex(indexName: string, fields: string|string[]) {
+  //   return this.db.transaction(() => {
+  //     return this._createIndex(indexName, fields)
+  //   })()
+  // }
+
+  search(query: string, size?: number, page:number = 0) {
+    const preSearchField = this.db.prepare('SELECT key, json(val) as val FROM ' + this.name + ' WHERE '+ query +' LIMIT @size OFFSET @offset')
+    const preSearchFieldAll = this.db.prepare('SELECT key, json(val) as val FROM ' + this.name + ' WHERE '+ query)
+
+    const result = (size ? preSearchField.all({size, offset: page*size}) : preSearchFieldAll.all()) as {key: string, val: string}[]
     return result.map(row => ({...JSON.parse(row.val), _id: row.key})) as IKVObjItem[]
   }
 }

@@ -1,6 +1,6 @@
 # ai-tool-sqlite
 
-SQlite key/value store
+SQlite(>=3.45.0) key/value store
 
 ## KVSqliteResFunc
 
@@ -92,3 +92,10 @@ KVSqliteCollection 类主要维护以下内部状态：
 
 总之，KVSqliteCollection 类充当 KVSqlite 数据库系统中特定键值对集合的专用管理器。它通过预编译语句处理低级别的数据库交互，为键值对上的 CRUD 操作提供干净的 API，并通过事务支持确保数据一致性。通过在 KVSqlite 类中维护 KVSqliteCollection 实例的映射，可以在同一 SQLite 数据库中高效管理和访问多个集合。
 
+### 索引支持
+
+* **createIndex(indexName: string, fields: string|string[])**: `createIndex` 方法允许为val对象创建索引。它使用 SQLite 的 `CREATE INDEX` 语句创建索引，并记录索引名称以备后续查询使用。
+  * 例如: `collection.createIndex('name', 'name')`
+  * 使用 `EXPLAIN QUERY PLAN SELECT * FROM ...`检查是否使用索引。
+* **search(query: string, size?: number, page:number = 0)**: `search` 方法允许搜索val对象中的内容.
+  * `query`: 待搜索的内容, eg: `val->>'$.name' = 'something'`

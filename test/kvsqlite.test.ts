@@ -1,4 +1,4 @@
-import { IKVObjItem, KVSqlite, KVSqliteCollection, KV_VALUE_SYMBOL } from '../src/kvsqlite'
+import { DefaultKVCollection, IKVObjItem, KVSqlite, KVSqliteCollection, KV_TYPE_SYMBOL, KV_VALUE_SYMBOL } from '../src/kvsqlite'
 
 function testCollection(db: KVSqliteCollection | KVSqlite) {
   it('should insert an object', () => {
@@ -210,6 +210,18 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     const result = db.getExtends('setExtends/test')
     expect(result).toMatchObject({_id: 'setExtends/test', a: 12, b: 1});
   })
+
+  it('should search field in objects', () => {
+    let result: any = db.bulkDocs([
+      {_id: '1', [KV_VALUE_SYMBOL]: 1123, [KV_TYPE_SYMBOL]: 'number'},
+      {_id: '2', [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string'},
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121, [KV_TYPE_SYMBOL]: 'number'},
+    ]);
+    expect(result).toHaveLength(3)
+    result = db.search(`val->>'$.${KV_TYPE_SYMBOL}' = 'string'`)
+    expect(result).toHaveLength(1)
+    expect(result).toStrictEqual([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
+  });
 }
 
 describe('KVSqlite class', () => {
@@ -231,5 +243,20 @@ describe('KVSqlite class', () => {
       table?.del()
     });
     testCollection(table!)
+  })
+
+  it('should create and use index', () => {
+    db.createIndex('value', KV_VALUE_SYMBOL)
+
+    let result: any = db.bulkDocs([
+      {_id: '1', [KV_VALUE_SYMBOL]: 1123, [KV_TYPE_SYMBOL]: 'number'},
+      {_id: '2', [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string'},
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121, [KV_TYPE_SYMBOL]: 'number'},
+    ]);
+    expect(result).toHaveLength(3)
+    // result = db.search(`val->>'$.${KV_VALUE_SYMBOL}' > 1000`)
+    result = db.prepare(`EXPLAIN QUERY PLAN SELECT * FROM ${DefaultKVCollection} WHERE val->>'$.${KV_VALUE_SYMBOL}' > 1000`).get()
+    expect(result).toHaveProperty('detail')
+    expect(result.detail).toMatch(`SEARCH ${DefaultKVCollection} USING INDEX idx_kv_value`)
   })
 });

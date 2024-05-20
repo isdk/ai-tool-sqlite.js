@@ -1,6 +1,6 @@
 # ai-tool-sqlite
 
-SQlite key/value store
+SQlite(>=3.45.0) key/value store
 
 ## KVSqliteResFunc
 

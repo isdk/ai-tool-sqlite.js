@@ -162,4 +162,15 @@ describe('KVSqliteRes server api', () => {
     expect(res.length).toBe(2)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }])
   })
+
+  it('should search', async () => {
+    const result = ResClientTools.get(FUNC_NAME)
+    expect(result).toBeInstanceOf(ResClientTools)
+    let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'hi world'}, {_id: "3", name: 'd'}]})
+    expect(res).toHaveLength(3)
+
+    res = await result.search({query: "val->>'$.name' = 'hello' OR val->>'$.name' = 'd'"})
+    expect(res.length).toStrictEqual(2)
+    expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, {_id: "3", name: 'd'}])
+  })
 });

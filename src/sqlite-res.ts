@@ -130,6 +130,16 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
       throw new CommonError('_id is required', this.name + '.delete', ErrorCode.InvalidArgument)
     }
   }
+
+  $search(options?: KVSqliteResFuncParams){
+    const { query, size, page } = options || {}
+    if (!query) {
+      throw new CommonError('query is required', this.name + '.search', ErrorCode.InvalidArgument)
+    }
+    const result = this.db.search(query, size, page) as unknown as T[]
+
+    return result;
+  }
 }
 
 KVSqliteResFunc.defineProperties(KVSqliteResFunc, {

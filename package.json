@@ -27,7 +27,9 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@isdk/ai-tool": "workspace:*"
+    "@isdk/ai-tool": "workspace:*",
+    "mime-db": "^1.52.0",
+    "mime-type": "5.0.0-alpha.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.15.0",

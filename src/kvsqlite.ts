@@ -121,7 +121,7 @@ export class KVSqlite extends Database {
     return this.collections[name]?.createIndex(indexName, fields)
   }
 
-  search(query: string, size?: number, page:number = 0, options?: IKVSetOptions) {
+  search(query: string|Record<string, string>, size?: number, page:number = 0, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.search(query, size, page)
   }
@@ -324,7 +324,10 @@ export class KVSqliteCollection {
   //   })()
   // }
 
-  search(query: string, size?: number, page:number = 0) {
+  search(query: string|Record<string, string>, size?: number, page:number = 0) {
+    if (typeof query !== 'string') {
+      query = Object.entries(query).map(([key, value]) => `val->>'$.${key}' = '${value}'`).join(' AND ')
+    }
     const preSearchField = this.db.prepare('SELECT key, json(val) as val FROM ' + this.name + ' WHERE '+ query +' LIMIT @size OFFSET @offset')
     const preSearchFieldAll = this.db.prepare('SELECT key, json(val) as val FROM ' + this.name + ' WHERE '+ query)
 

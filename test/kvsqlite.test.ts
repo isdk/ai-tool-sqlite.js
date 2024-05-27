@@ -221,6 +221,10 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     result = db.search(`val->>'$.${KV_TYPE_SYMBOL}' = 'string'`)
     expect(result).toHaveLength(1)
     expect(result).toMatchObject([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
+
+    result = db.search({[KV_TYPE_SYMBOL]: 'string'})
+    expect(result).toHaveLength(1)
+    expect(result).toMatchObject([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
   });
 }
 

@@ -172,5 +172,9 @@ describe('KVSqliteRes server api', () => {
     res = await result.search({query: "val->>'$.name' = 'hello' OR val->>'$.name' = 'd'"})
     expect(res.length).toStrictEqual(2)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, {_id: "3", name: 'd'}])
+
+    res = await result.search({query: {'name': 'hello'}})
+    expect(res.length).toStrictEqual(1)
+    expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }])
   })
 });

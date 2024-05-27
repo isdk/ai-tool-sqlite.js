@@ -99,3 +99,4 @@ KVSqliteCollection 类主要维护以下内部状态：
   * 使用 `EXPLAIN QUERY PLAN SELECT * FROM ...`检查是否使用索引。
 * **search(query: string, size?: number, page:number = 0)**: `search` 方法允许搜索val对象中的内容.
   * `query`: 待搜索的内容, eg: `val->>'$.name' = 'something'`
+* Added `createdAt`/`updatedAt` fields to the `val` object(with indexed).

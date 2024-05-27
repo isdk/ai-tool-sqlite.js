@@ -2,6 +2,8 @@ import path from 'path/posix'
 
 import Database from 'better-sqlite3'
 import type { Statement } from 'better-sqlite3'
+import { mimeType } from 'mime-type/with-db'
+
 import { deepMergeObjects } from './deep-merge';
 
 export interface IKVObjItem {
@@ -142,7 +144,11 @@ export class KVSqliteCollection {
   constructor(public name: string, protected db: KVSqlite) {
     if (!db.readonly) {
       db.prepare(createTableSql(name)).run()
-      db.createIndex('type', KV_TYPE_SYMBOL)
+      this.createIndex('createdAt', 'createdAt')
+      this.createIndex('updatedAt', 'updatedAt')
+      this.createIndex('type', KV_TYPE_SYMBOL)
+      db.prepare(`CREATE TRIGGER IF NOT EXISTS tr_${name}_updatedAt AFTER UPDATE ON ${name} BEGIN UPDATE ${name} SET val = jsonb_set(New.val, '$.updatedAt', strftime('%FT%TZ', CURRENT_TIMESTAMP)) WHERE key = NEW.key; END`).run()
+      db.prepare(`CREATE TRIGGER IF NOT EXISTS tr_${name}_createdAt AFTER INSERT ON ${name} BEGIN UPDATE ${name} SET val = jsonb_insert(New.val, '$.createdAt', strftime('%FT%TZ', CURRENT_TIMESTAMP)) WHERE key = NEW.key; END`).run()
     }
 
     this.preAdd = db.prepare('INSERT INTO ' + name + ' (key, val) VALUES (@_id, jsonb(@val))')
@@ -306,7 +312,7 @@ export class KVSqliteCollection {
   }
 
   createIndex(indexName: string, fields: string|string[]) {
-    if (!indexName.startsWith('idx_' + this.name + '_')) {indexName = 'idx_' + this.name + '_' + indexName}
+    if (!indexName.startsWith('ix_' + this.name + '_')) {indexName = 'ix_' + this.name + '_' + indexName}
     if (!Array.isArray(fields)) {fields = [fields]}
     fields = fields.map(field => `val->>'$.${field}'`);
     return this.db.prepare('CREATE INDEX IF NOT EXISTS ' + indexName + ' ON ' + this.name + ' (' + fields.join(',') + ')').run()
@@ -324,5 +330,125 @@ export class KVSqliteCollection {
 
     const result = (size ? preSearchField.all({size, offset: page*size}) : preSearchFieldAll.all()) as {key: string, val: string}[]
     return result.map(row => ({...JSON.parse(row.val), _id: row.key})) as IKVObjItem[]
+  }
+}
+
+export class KVSqliteAttachments {
+  declare preAdd: Statement
+  declare preUpdate: Statement
+  declare preExists: Statement
+  declare preGet: Statement
+  declare preDel: Statement
+  declare preDelAll: Statement
+  declare preCount: Statement
+  declare preCountW: Statement
+  declare preSearchKey: Statement
+  declare preSearchKeyAll: Statement
+  declare preAll: Statement
+  declare preAllLimit: Statement
+  declare preCalcSize: Statement
+
+  constructor(public name: string, protected db: KVSqlite) {
+    name = name + '_attach'
+
+    if (!db.readonly) {
+      db.prepare('CREATE TABLE IF NOT EXISTS ' + name + ' (' +
+        'key TEXT PRIMARY KEY,' +
+        'filename TEXT, isText BOOLEAN, size INTEGER, mime TEXT, content BLOB, ' +
+        'createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP)'
+      ).run()
+      db.prepare(`CREATE INDEX IF NOT EXISTS ix_${name}_createdAt ON ${name} (createdAt)`).run()
+      db.prepare(`CREATE INDEX IF NOT EXISTS ix_${name}_updatedAt ON ${name} (updatedAt)`).run()
+      db.prepare(`CREATE INDEX IF NOT EXISTS ix_${name}_filename ON ${name} (filename)`).run()
+      db.prepare(`CREATE INDEX IF NOT EXISTS ix_${name}_isText ON ${name} (isText)`).run()
+      db.prepare(`CREATE INDEX IF NOT EXISTS ix_${name}_size ON ${name} (size)`).run()
+      db.prepare(`CREATE TRIGGER IF NOT EXISTS tr_${name}_updatedAt AFTER UPDATE ON ${name} BEGIN UPDATE ${name} SET updatedAt = CURRENT_TIMESTAMP WHERE key = NEW.key; END`).run()
+    }
+
+    this.preAdd = db.prepare('INSERT INTO ' + name + ' (key, filename, isText, mime, content) VALUES (@_id, @filename, @isText, @mime, @content))')
+    this.preUpdate = db.prepare('UPDATE ' + name + ' SET key = @_id, content = @content WHERE key=@_id');
+    this.preExists = db.prepare('SELECT 1 FROM ' + name + ' WHERE key = ?').pluck();
+    this.preGet = db.prepare('SELECT filename, content FROM ' + name + ' WHERE key = ?').pluck()
+    this.preDel = db.prepare('DELETE FROM ' + name + ' WHERE key = ?')
+    this.preDelAll = db.prepare('DELETE FROM ' + name + ' WHERE key like ?')
+    this.preCount = db.prepare('SELECT Count(*) as count FROM ' + name).pluck()
+    this.preCountW = db.prepare('SELECT Count(*) as count FROM ' + name + ' WHERE key LIKE ?').pluck()
+    this.preSearchKey = db.prepare('SELECT key, filename, isText, mime, size, createdAt, updatedAt FROM ' + name + ' WHERE key LIKE @query LIMIT @size OFFSET @offset')
+    this.preSearchKeyAll = db.prepare('SELECT key, filename, isText, mime, size, createdAt, updatedAt FROM ' + name + ' WHERE key LIKE @query')
+    this.preAll = db.prepare('SELECT key, filename, isText, mime, size, createdAt, updatedAt FROM ' + name)
+    this.preAllLimit = db.prepare('SELECT key, filename, isText, mime, size, createdAt, updatedAt FROM ' + name + ' LIMIT @size OFFSET @offset')
+    this.preCalcSize = db.prepare('SELECT length(content) FROM ' + name + ' WHERE key = ?').pluck()
+  }
+
+  /**
+   * Get file content
+   * @param docId
+   * @param filename
+   * @returns
+   */
+  get(docId: string, filename: string) {
+    const _id = docId + '/' + filename
+    return this.preGet.get(_id) as {filename: string, content: Buffer}
+  }
+
+  list(docId: string, filename = '') {
+    return this.preSearchKeyAll.all({query: docId + `/${filename}%`})
+  }
+
+  add(docId: string, filename: string, content: Buffer, options:{ isText?: boolean, mime?: string} = {}) {
+    const _id = docId + '/' + filename
+    if (!options.mime) {
+      const mime = mimeType.lookup(filename) as string
+      if (mime) {
+        options.mime = mime
+        if (options.isText === undefined) {
+          const isText = mime.includes('text') || mime.includes('xml') || mime.includes('json') || mime.includes('script')
+          if (isText) {
+            options.isText = isText
+          }
+        }
+      }
+    }
+    return this.preAdd.run({...options, _id, filename, content})
+  }
+
+  update(docId: string, filename: string, content: Buffer, options:{ isText?: boolean, mime?: string} = {}) {
+    const _id = docId + '/' + filename
+    if (!options.mime) {
+      const mime = mimeType.lookup(filename) as string
+      if (mime) {
+        options.mime = mime
+        if (options.isText === undefined) {
+          const isText = mime.includes('text') || mime.includes('xml') || mime.includes('json') || mime.includes('script')
+          if (isText) {
+            options.isText = isText
+          }
+        }
+      }
+    }
+    let params = ['key = @_id', 'content = @content', `filename = '${filename}'`] as string[]
+    if (options.isText !== undefined) {
+      params.push(`isText = ${options.isText ? 'true' : 'false'}`)
+    }
+    if (options.mime) {
+      params.push(`mime = '${options.mime}'`)
+    }
+
+    let sql = 'UPDATE ' + this.name + ' SET ' + params.join(', ') + 'WHERE key = @_id'
+    return this.db.prepare(sql).run({_id, content})
+  }
+
+  del(docId: string, filename?: string|string[]) {
+    if (!docId.endsWith('/')) {docId = docId + '/'}
+    if (filename) {
+      if (Array.isArray(filename)) {
+        return this.db.transaction(() => {
+          return filename.map(f => this.preDel.run(docId + f))
+        })()
+      } else {
+        return this.preDel.run(docId + filename)
+      }
+    }
+    return this.preDelAll.run(docId + '%')
   }
 }

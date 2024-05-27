@@ -154,12 +154,12 @@ describe('KVSqliteRes server api', () => {
     expect(res).toHaveLength(3)
     res = await result.list()
     expect(res.length).toStrictEqual(3)
-    expect(res).toStrictEqual([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }, {_id: "3", name: 'd'}])
+    expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }, {_id: "3", name: 'd'}])
 
     res = await result.list({size: 2})
     expect(res.length).toBe(2)
     res = await result.list({query: 'x%'})
     expect(res.length).toBe(2)
-    expect(res).toStrictEqual([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }])
+    expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }])
   })
 });

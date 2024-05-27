@@ -27,12 +27,12 @@ describe('sqliteStore function', async () => {
   it('should get a value when value is undefined', async () => {
     store.set(doc);
     const result = await conf.run({key});
-    expect(result).toEqual(doc);
+    expect(result).toMatchObject(doc);
   });
 
   it('should set a value when key is a string and value is defined', async () => {
     await conf.run({key, value});
-    expect(store.get(key)).toEqual(doc);
+    expect(store.get(key)).toMatchObject(doc);
   });
 });
 

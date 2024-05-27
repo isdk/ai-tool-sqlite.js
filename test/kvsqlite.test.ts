@@ -7,7 +7,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
 
     db.set(testObject);
 
-    expect(db.get(objId)).toEqual({ _id: objId, key1: 'value1' });
+    expect(db.get(objId)).toMatchObject({ _id: objId, key1: 'value1' });
   });
 
   it('should insert an id with object', () => {
@@ -16,7 +16,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
 
     db.set(objId, testObject);
 
-    expect(db.get(objId)).toEqual({ _id: objId, key1: 'value1' });
+    expect(db.get(objId)).toMatchObject({ _id: objId, key1: 'value1' });
   });
 
   it('should update an existing object by overwrite', () => {
@@ -29,7 +29,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     // the default is overwrite
     db.set({ ...newData }, { overwrite: true });
 
-    expect(db.get(objId)).toEqual({ _id: objId, key1: 'initialValue1', key2: 'newValue2', key3: 50 });
+    expect(db.get(objId)).toMatchObject({ _id: objId, key1: 'initialValue1', key2: 'newValue2', key3: 50 });
   });
 
   it('should update an existing object by default overwrite', () => {
@@ -42,7 +42,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     // the default is overwrite
     db.set({ ...newData });
 
-    expect(db.get(objId)).toEqual({ _id: objId, key2: 'newValue2', key3: 50 });
+    expect(db.get(objId)).toMatchObject({ _id: objId, key2: 'newValue2', key3: 50 });
   });
 
   it('should not update an existing object when option is false', () => {
@@ -54,7 +54,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     const newData: IKVObjItem = { _id: objId, key2: 'newValue2', key3: 50 };
     db.set({ ...newData }, { overwrite: false }); // Should not overwrite initialValue1 with newValue2 or initialize other keys
 
-    expect(db.get(objId)).toEqual({ _id: objId, key1: 'initialValue1', key2: 'newValue2', key3: 50 });
+    expect(db.get(objId)).toMatchObject({ _id: objId, key1: 'initialValue1', key2: 'newValue2', key3: 50 });
   });
 
   it('should delete an object', () => {
@@ -119,7 +119,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     db.set(testObject1);
     db.set(testObject2);
     let result = db.list()
-    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
+    expect(result).toMatchObject([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
   });
 
   it('should list some objects', () => {
@@ -137,9 +137,9 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     db.set(testObject3);
     db.set(testObject4);
     let result = db.list('search%')
-    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
+    expect(result).toMatchObject([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
     result = db.list('%Obj%')
-    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}, { _id: objId3, value: 'test3'}])
+    expect(result).toMatchObject([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}, { _id: objId3, value: 'test3'}])
   })
 
   it('should list objects by page', () => {
@@ -157,9 +157,9 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     db.set(testObject3);
     db.set(testObject4);
     let result = db.list(undefined, 2)
-    expect(result).toStrictEqual([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
+    expect(result).toMatchObject([{ _id: objId1, value: 'test1'}, { _id: objId2, value: 'test2'}])
     result = db.list(undefined, 2, 1)
-    expect(result).toStrictEqual([{ _id: objId3, value: 'test3'},{ _id: objId4, value: 'test4'}])
+    expect(result).toMatchObject([{ _id: objId3, value: 'test3'},{ _id: objId4, value: 'test4'}])
   })
 
   it('should getExtends document', () => {
@@ -220,7 +220,7 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     expect(result).toHaveLength(3)
     result = db.search(`val->>'$.${KV_TYPE_SYMBOL}' = 'string'`)
     expect(result).toHaveLength(1)
-    expect(result).toStrictEqual([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
+    expect(result).toMatchObject([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
   });
 }
 
@@ -257,6 +257,24 @@ describe('KVSqlite class', () => {
     // result = db.search(`val->>'$.${KV_VALUE_SYMBOL}' > 1000`)
     result = db.prepare(`EXPLAIN QUERY PLAN SELECT * FROM ${DefaultKVCollection} WHERE val->>'$.${KV_VALUE_SYMBOL}' > 1000`).get()
     expect(result).toHaveProperty('detail')
-    expect(result.detail).toMatch(`SEARCH ${DefaultKVCollection} USING INDEX idx_kv_value`)
+    expect(result.detail).toMatch(`SEARCH ${DefaultKVCollection} USING INDEX ix_kv_value`)
+
+    result = db.prepare(`EXPLAIN QUERY PLAN SELECT * FROM ${DefaultKVCollection} WHERE val->>'$.createdAt' > 100`).get()
+    expect(result).toHaveProperty('detail')
+    expect(result.detail).toMatch(`SEARCH ${DefaultKVCollection} USING INDEX ix_kv_createdAt`)
+  })
+
+  it('should set createdAt and updatedAt by trigger automatically', () => {
+    const testObject1: IKVObjItem = { _id: 'id1', value: 'test1'};
+    const dt = new Date()
+    dt.setUTCMilliseconds(0);
+    db.set(testObject1);
+    const result = db.get('id1')
+    expect(result).toHaveProperty('createdAt')
+    expect(result).toHaveProperty('updatedAt')
+    let mdt = new Date(result.createdAt)
+    expect(mdt.getTime()).toBeCloseTo(dt.getTime(), 1)
+    mdt = new Date(result.updatedAt)
+    expect(mdt.getTime()).toBeCloseTo(dt.getTime(), 1)
   })
 });

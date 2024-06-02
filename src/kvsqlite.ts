@@ -2,7 +2,7 @@ import path from 'path/posix'
 
 import Database from 'better-sqlite3'
 import type { Statement } from 'better-sqlite3'
-import mimeType from 'mime-type/with-db'
+import {mimeType} from 'mime-type/with-db'
 
 import { deepMergeObjects } from './deep-merge';
 

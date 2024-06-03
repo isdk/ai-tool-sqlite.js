@@ -6,6 +6,7 @@ import {
   ErrorCode,
   FuncItem,
   CommonError,
+  getConfigs,
 } from "@isdk/ai-tool";
 
 import { IKVObjItem, KVSqlite } from "./kvsqlite";
@@ -26,8 +27,14 @@ export interface KVSqliteResFuncParams extends ResServerFuncParams {
   overwrite?: boolean
 }
 
+export interface KVSqliteResFuncItem extends FuncItem {
+  dbPath: string|undefined
+  initDir: string|undefined
+}
+
 export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerTools {
   dbPath: string|undefined
+  initDir: string|undefined
   db: KVSqlite
 
   constructor(name: string|Function|FuncItem, options: FuncItem|any = {}) {
@@ -45,6 +52,14 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   }
 
   initDB() {
+    if (this.initDir) {
+      this.intDBFromDir(this.initDir)
+    }
+  }
+
+  intDBFromDir(dir: string) {
+    const docs = getConfigs(dir)
+    this.db.bulkDocs(docs)
   }
 
   cast(key: string, value: any) {
@@ -131,7 +146,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     }
   }
 
-  $search(options?: KVSqliteResFuncParams){
+  $searchEx(options?: KVSqliteResFuncParams){
     const { query, size, page } = options || {}
     if (!query) {
       throw new CommonError('query is required', this.name + '.search', ErrorCode.InvalidArgument)
@@ -144,4 +159,5 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
 
 KVSqliteResFunc.defineProperties(KVSqliteResFunc, {
   dbPath: { type: 'string' },
+  initDir: { type: 'string' },
 })

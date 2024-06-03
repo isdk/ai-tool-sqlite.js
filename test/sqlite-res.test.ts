@@ -1,7 +1,7 @@
 // @vitest-environment node
 import fastify from 'fastify'
 import fs from 'fs'
-import { ErrorCode, NotFoundError, ResClientTools, ResServerTools, wait } from "@isdk/ai-tool"
+import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServerTools, ServerTools, ToolFunc, wait } from "@isdk/ai-tool"
 import { findPort } from '@isdk/ai-tool/test/util'
 
 import { KVSqliteResFunc } from '../src/sqlite-res'
@@ -17,6 +17,14 @@ describe('KVSqliteRes server api', () => {
   const res = new KVSqliteResFunc(FUNC_NAME, {dbPath})
 
   beforeAll(async () => {
+    const ServerToolItems: {[name:string]: ServerTools|ToolFunc} = {}
+    Object.setPrototypeOf(ServerToolItems, ToolFunc.items)
+    ServerTools.items = ServerToolItems
+
+    const ClientToolItems: Funcs = {}
+    Object.setPrototypeOf(ClientToolItems, ToolFunc.items)
+    ClientTools.items = ClientToolItems
+
     fs.rmSync(dbPath, {force: true})
     server.get('/api', async function(request, reply){
       reply.send(ResServerTools.toJSON())
@@ -85,6 +93,8 @@ describe('KVSqliteRes server api', () => {
 
   afterAll(async () => {
     await server.close()
+    delete (ClientTools as any).items
+    delete (ServerTools as any).items
   })
 
   beforeEach(() => {
@@ -169,11 +179,11 @@ describe('KVSqliteRes server api', () => {
     let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'hi world'}, {_id: "3", name: 'd'}]})
     expect(res).toHaveLength(3)
 
-    res = await result.search({query: "val->>'$.name' = 'hello' OR val->>'$.name' = 'd'"})
+    res = await result.searchEx({query: "val->>'$.name' = 'hello' OR val->>'$.name' = 'd'"})
     expect(res.length).toStrictEqual(2)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, {_id: "3", name: 'd'}])
 
-    res = await result.search({query: {'name': 'hello'}})
+    res = await result.searchEx({query: {'name': 'hello'}})
     expect(res.length).toStrictEqual(1)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }])
   })

@@ -22,6 +22,7 @@ export interface KVSqliteResFuncParams extends ResServerFuncParams {
   _id?: string
   val?: IKVObjItem
   query?: string
+  filter?: Record<string, any>|Record<string, any>[]
   size?: number
   page?: number
   overwrite?: boolean
@@ -149,9 +150,19 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   $searchEx(options?: KVSqliteResFuncParams){
     const { query, size, page } = options || {}
     if (!query) {
-      throw new CommonError('query is required', this.name + '.search', ErrorCode.InvalidArgument)
+      throw new CommonError('query is required', this.name + '.searchEx', ErrorCode.InvalidArgument)
     }
-    const result = this.db.search(query, size, page) as unknown as T[]
+    const result = this.db.searchEx(query, size, page) as unknown as T[]
+
+    return result;
+  }
+
+  $search(options?: KVSqliteResFuncParams){
+    const { filter, size, page } = options || {}
+    if (!filter) {
+      throw new CommonError('filter is required', this.name + '.search', ErrorCode.InvalidArgument)
+    }
+    const result = this.db.search(filter, size, page) as unknown as T[]
 
     return result;
   }

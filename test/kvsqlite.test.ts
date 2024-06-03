@@ -211,20 +211,38 @@ function testCollection(db: KVSqliteCollection | KVSqlite) {
     expect(result).toMatchObject({_id: 'setExtends/test', a: 12, b: 1});
   })
 
-  it('should search field in objects', () => {
+  it('should searchEx field in objects', () => {
     let result: any = db.bulkDocs([
       {_id: '1', [KV_VALUE_SYMBOL]: 1123, [KV_TYPE_SYMBOL]: 'number'},
       {_id: '2', [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string'},
       {_id: '3', [KV_VALUE_SYMBOL]: 3121, [KV_TYPE_SYMBOL]: 'number'},
     ]);
     expect(result).toHaveLength(3)
-    result = db.search(`val->>'$.${KV_TYPE_SYMBOL}' = 'string'`)
+    result = db.searchEx(`val->>'$.${KV_TYPE_SYMBOL}' = 'string'`)
     expect(result).toHaveLength(1)
     expect(result).toMatchObject([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
 
-    result = db.search({[KV_TYPE_SYMBOL]: 'string'})
+    result = db.searchEx({[KV_TYPE_SYMBOL]: 'string'})
     expect(result).toHaveLength(1)
     expect(result).toMatchObject([ { [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string', _id: '2' } ])
+  });
+
+  it('should search field in objects', () => {
+    let result: any = db.bulkDocs([
+      {_id: '1', [KV_VALUE_SYMBOL]: 1123, [KV_TYPE_SYMBOL]: 'number'},
+      {_id: '2', [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string'},
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121, [KV_TYPE_SYMBOL]: 'number'},
+      {_id: '4', [KV_VALUE_SYMBOL]: 3421, [KV_TYPE_SYMBOL]: 'number'},
+    ]);
+    expect(result).toHaveLength(4)
+
+    result = db.search({$or: [{[KV_TYPE_SYMBOL]: 'number', _id: {'>=': 2}}, {[KV_TYPE_SYMBOL]: 'string'}]})
+    expect(result).toHaveLength(3)
+    expect(result.sort((a,b)=>a._id-b._id)).toMatchObject([
+      {_id: '2', [KV_VALUE_SYMBOL]: 'ba1', [KV_TYPE_SYMBOL]: 'string'},
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121, [KV_TYPE_SYMBOL]: 'number'},
+      {_id: '4', [KV_VALUE_SYMBOL]: 3421, [KV_TYPE_SYMBOL]: 'number'},
+    ])
   });
 }
 

@@ -5,6 +5,7 @@ import type { Statement } from 'better-sqlite3'
 import {mimeType} from 'mime-type/with-db'
 
 import { deepMergeObjects } from './deep-merge';
+import { jsonFilterToWhere } from '@isdk/ai-tool';
 
 export interface IKVObjItem {
   _id: string;
@@ -121,9 +122,14 @@ export class KVSqlite extends Database {
     return this.collections[name]?.createIndex(indexName, fields)
   }
 
-  search(query: string|Record<string, string>, size?: number, page:number = 0, options?: IKVSetOptions) {
+  searchEx(query: string|Record<string, string>, size?: number, page:number = 0, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
-    return this.collections[name]?.search(query, size, page)
+    return this.collections[name]?.searchEx(query, size, page)
+  }
+
+  search(filter: Record<string, any>, size?: number, page:number = 0, options?: IKVSetOptions) {
+    const name = options?.collection || DefaultKVCollection
+    return this.collections[name]?.search(filter, size, page)
   }
 }
 
@@ -324,7 +330,7 @@ export class KVSqliteCollection {
   //   })()
   // }
 
-  search(query: string|Record<string, string>, size?: number, page:number = 0) {
+  searchEx(query: string|Record<string, string>, size?: number, page:number = 0) {
     if (typeof query !== 'string') {
       query = Object.entries(query).map(([key, value]) => `val->>'$.${key}' = '${value}'`).join(' AND ')
     }
@@ -333,6 +339,11 @@ export class KVSqliteCollection {
 
     const result = (size ? preSearchField.all({size, offset: page*size}) : preSearchFieldAll.all()) as {key: string, val: string}[]
     return result.map(row => ({...JSON.parse(row.val), _id: row.key})) as IKVObjItem[]
+  }
+
+  search(filter: Record<string, any>, size?: number, page:number = 0) {
+    const filterStr = jsonFilterToWhere(filter, (key: string) => key !== '_id' ? `val->>'$.${key}'`: 'key')
+    return this.searchEx(filterStr, size, page)
   }
 }
 

@@ -94,8 +94,8 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   }
 
   put(model: KVSqliteResFuncParams) {
-    const id = model.id
     const val = model.val
+    const id = model.id ?? val?._id
     const overwrite = model.overwrite || false
     if (!id) {
       throw new CommonError('id is required', this.name + '.put', ErrorCode.InvalidArgument)

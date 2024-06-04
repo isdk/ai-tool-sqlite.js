@@ -1,4 +1,6 @@
-import path from 'path/posix'
+import pathPosix from 'path/posix'
+import path from 'path'
+import fs from 'fs'
 
 import Database from 'better-sqlite3'
 import type { Statement } from 'better-sqlite3'
@@ -43,6 +45,12 @@ export class KVSqlite extends Database {
   public collections: IKVCollections = {}
 
   constructor(filename?: string | Buffer, options?: IKVSetOptions) {
+    if (typeof filename === 'string' && filename[0] != ':') {
+      const dirname = path.dirname(filename)
+      if (dirname && !fs.existsSync(dirname)) {
+        fs.mkdirSync(dirname, { recursive: true })
+      }
+    }
     super(filename, options)
     if (options?.id) {this.id = options.id}
 
@@ -212,7 +220,7 @@ export class KVSqliteCollection {
 
   _setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
     if (!key.startsWith('.')) key = '.' + key;
-    docId = path.join(docId, key);
+    docId = pathPosix.join(docId, key);
     const vDoc = {_id: docId, [KV_VALUE_SYMBOL]: value} as IKVObjItem
     if (options?.[KV_TYPE_SYMBOL]) {vDoc[KV_TYPE_SYMBOL] = options[KV_TYPE_SYMBOL]}
     return this._set(vDoc, options);
@@ -253,7 +261,7 @@ export class KVSqliteCollection {
    */
   getExtend(docId: string, aPropName: string) {
     if (!aPropName.startsWith('.')) aPropName = '.' + aPropName;
-    const result = this.get(path.join(docId, aPropName));
+    const result = this.get(pathPosix.join(docId, aPropName));
     return result?.[KV_VALUE_SYMBOL];
   }
 
@@ -273,14 +281,14 @@ export class KVSqliteCollection {
       aPropName = ['%'];
     }
     aPropName = aPropName.map((name) =>
-      path.join(docId, (name.startsWith('.') ? name : '.' + name))
+      pathPosix.join(docId, (name.startsWith('.') ? name : '.' + name))
     );
     const vProps = aPropName.map(key => key.lastIndexOf('%') >= 0 ? this.list(key) : this.get(key)).flat()
     let result = vProps.reduce(
       (obj, prop) => {
         if (prop) {
           const value = prop[KV_VALUE_SYMBOL]
-          const key = path.basename(prop._id).slice(1)
+          const key = pathPosix.basename(prop._id).slice(1)
           obj[key] = value
         }
         return obj

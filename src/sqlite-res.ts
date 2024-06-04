@@ -52,15 +52,19 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     }
   }
 
-  initDB() {
-    if (this.initDir) {
-      this.intDBFromDir(this.initDir)
+  initDB(initDir = this.initDir) {
+    if (initDir) {
+      this.intDBFromDir(initDir)
     }
   }
 
   intDBFromDir(dir: string) {
-    const docs = getConfigs(dir)
+    const docs = this.getDocsFromDir(dir)
     this.db.bulkDocs(docs)
+  }
+
+  getDocsFromDir(dir: string) {
+    return getConfigs(dir)
   }
 
   cast(key: string, value: any) {

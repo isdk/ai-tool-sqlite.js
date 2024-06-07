@@ -1,6 +1,7 @@
 // @vitest-environment node
 import fastify from 'fastify'
 import fs from 'fs'
+import path from 'path'
 import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServerTools, ServerTools, ToolFunc, wait } from "@isdk/ai-tool"
 import { findPort } from '@isdk/ai-tool/test/util'
 
@@ -100,6 +101,28 @@ describe('KVSqliteRes server api', () => {
   beforeEach(() => {
     res.db.del()
   });
+
+  it('should initDB from dir', async () => {
+    const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
+    expect(res.$count()).toBe(4)
+    let result = res.get({id: 3})
+    expect(result).toMatchObject({_id: 3, name: 'test3'})
+  })
+
+  it('should updateDB from dir', async () => {
+    const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
+    expect(res.$count()).toBe(4)
+    let result = res.get({id: 3})
+    expect(result).toMatchObject({_id: 3, name: 'test3'})
+    result = res.put({id: 3, val: {name: 'test3-updated'}})
+    expect(result).toHaveProperty('changes', 1)
+    result = res.get({id: 3})
+    expect(result).toMatchObject({_id: 3, name: 'test3-updated'})
+
+    res.updateDBFromDir()
+    result = res.get({id: 3})
+    expect(result).toMatchObject({_id: 3, name: 'test3-updated'})
+  })
 
   it('should raise error to get non-exists item', async () => {
     const result = ResClientTools.get(FUNC_NAME)

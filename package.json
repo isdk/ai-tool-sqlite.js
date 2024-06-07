@@ -4,6 +4,11 @@
   "author": "Riceball LEE <snowyu.lee@gmail.com>",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
+  "homepage": "https://github.com/isdk/ai-tool-sqlite.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isdk/ai-tool-sqlite.js.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -23,8 +28,8 @@
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
     "test": "vitest run",
-    "release": "bumpp package.json --commit --push --tag && pnpm publish --access public",
-    "prepublishOnly": "pnpm run build"
+    "release": "pnpm run clean && pnpm run build && git add -f docs && git ci -m 'docs: update API docs' && pnpm dlx commit-and-tag-version -s",
+    "release.alpha": "npm run release -- --prerelease alpha"
   },
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",

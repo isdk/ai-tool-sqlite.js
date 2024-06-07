@@ -9,8 +9,10 @@ import {mimeType} from 'mime-type/with-db'
 import { deepMergeObjects } from './deep-merge';
 import { jsonFilterToWhere } from '@isdk/ai-tool';
 
+export type IKVDocumentId = string|number
+
 export interface IKVObjItem {
-  _id: string;
+  _id: IKVDocumentId;
   [name: string]: any;
 }
 
@@ -21,6 +23,7 @@ export interface IKVSetOptions extends Database.Options {
   collections?: string[]
   overwrite?: boolean
   singleValue?: boolean
+  ignoreExists?: boolean
   [name: string]: any;
 }
 
@@ -70,17 +73,17 @@ export class KVSqlite extends Database {
     }
   }
 
-  set(docId: string|IKVObjItem, obj?: IKVObjItem|IKVSetOptions, options?: IKVSetOptions) {
+  set(docId: IKVDocumentId|IKVObjItem, obj?: IKVObjItem|IKVSetOptions, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.set(docId, obj, options)
   }
 
-  setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
+  setExtend(docId: IKVDocumentId, key: string, value: any, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.setExtend(docId, key, value, options)
   }
 
-  setExtends(docId: string, aDoc: any, options?: IKVSetOptions) {
+  setExtends(docId: IKVDocumentId, aDoc: any, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.setExtends(docId, aDoc, options)
   }
@@ -90,27 +93,27 @@ export class KVSqlite extends Database {
     return this.collections[name]?.bulkDocs(objs, options)
   }
 
-  get(_id: string, options?: IKVSetOptions) {
+  get(_id: IKVDocumentId, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.get(_id)
   }
 
-  getExtend(docId: string, aPropName: string, options?: IKVSetOptions) {
+  getExtend(docId: IKVDocumentId, aPropName: string, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.getExtend(docId, aPropName)
   }
 
-  getExtends(docId: string, aPropName?: string | string[], options?: IKVSetOptions) {
+  getExtends(docId: IKVDocumentId, aPropName?: string | string[], options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.getExtends(docId, aPropName, options)
   }
 
-  del(_id?: string|string[], options?: IKVSetOptions) {
+  del(_id?: IKVDocumentId|IKVDocumentId[], options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.del(_id)
   }
 
-  isExists(_id: string, options?: IKVSetOptions) {
+  isExists(_id: IKVDocumentId, options?: IKVSetOptions) {
     const name = options?.collection || DefaultKVCollection
     return this.collections[name]?.isExists(_id)
   }
@@ -187,6 +190,7 @@ export class KVSqliteCollection {
     if (_obj !== undefined) _obj = JSON.parse(_obj)
     let stm: Statement
     if (_obj) {
+      if (options?.ignoreExists) {return {changes: 0, lastInsertRowid: -1}}
       const shouldOverwrite = !options || options.overwrite !== false
       stm = this.preUpdate
       if (shouldOverwrite) {
@@ -205,12 +209,12 @@ export class KVSqliteCollection {
     return stm.run({ _id, val: JSON.stringify(_obj) })
   }
 
-  set(docId: string|IKVObjItem, obj?: IKVObjItem|IKVSetOptions, options?: IKVSetOptions) {
+  set(docId: IKVDocumentId|IKVObjItem, obj?: IKVObjItem|IKVSetOptions, options?: IKVSetOptions) {
     const vType = typeof docId
     if (vType === 'object') {
       options = obj
       obj = docId as IKVObjItem
-    } else if (vType === 'string') {
+    } else if (vType === 'string' || vType === 'number') {
       obj!._id = docId as string
     }
     return this.db.transaction(() => {
@@ -218,21 +222,21 @@ export class KVSqliteCollection {
     })()
   }
 
-  _setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
+  _setExtend(docId: IKVDocumentId, key: string, value: any, options?: IKVSetOptions) {
     if (!key.startsWith('.')) key = '.' + key;
-    docId = pathPosix.join(docId, key);
+    docId = pathPosix.join(''+docId, key);
     const vDoc = {_id: docId, [KV_VALUE_SYMBOL]: value} as IKVObjItem
     if (options?.[KV_TYPE_SYMBOL]) {vDoc[KV_TYPE_SYMBOL] = options[KV_TYPE_SYMBOL]}
     return this._set(vDoc, options);
   }
 
-  setExtend(docId: string, key: string, value: any, options?: IKVSetOptions) {
+  setExtend(docId: IKVDocumentId, key: string, value: any, options?: IKVSetOptions) {
     return this.db.transaction(() => {
       return this._setExtend(docId, key, value, options)
     })()
   }
 
-  setExtends(docId: string, aDoc: any, options?: IKVSetOptions) {
+  setExtends(docId: IKVDocumentId, aDoc: any, options?: IKVSetOptions) {
     return this.db.transaction(() => {
       return Object.keys(aDoc).map(key => this._setExtend(docId, key, aDoc[key], options));
     })()
@@ -244,7 +248,7 @@ export class KVSqliteCollection {
     })()
   }
 
-  get(_id: string) {
+  get(_id: IKVDocumentId) {
     let result: any = this.preGet.get(_id)
     if (result) {
       result = JSON.parse(result)
@@ -259,9 +263,9 @@ export class KVSqliteCollection {
    * @param aPropName the property name of the document id
    * @returns the property value object
    */
-  getExtend(docId: string, aPropName: string) {
+  getExtend(docId: IKVDocumentId, aPropName: string) {
     if (!aPropName.startsWith('.')) aPropName = '.' + aPropName;
-    const result = this.get(pathPosix.join(docId, aPropName));
+    const result = this.get(pathPosix.join(''+docId, aPropName));
     return result?.[KV_VALUE_SYMBOL];
   }
 
@@ -273,7 +277,7 @@ export class KVSqliteCollection {
    * @param options.singleValue whether return value if only one property.
    * @returns all extends property key-value object
    */
-  getExtends(docId: string, aPropName?: string | string[], options?: IKVSetOptions) {
+  getExtends(docId: IKVDocumentId, aPropName?: string | string[], options?: IKVSetOptions) {
     const singleValue = options?.singleValue
     if (aPropName) {
       if (typeof aPropName === 'string') aPropName = [aPropName];
@@ -281,14 +285,14 @@ export class KVSqliteCollection {
       aPropName = ['%'];
     }
     aPropName = aPropName.map((name) =>
-      pathPosix.join(docId, (name.startsWith('.') ? name : '.' + name))
+      pathPosix.join(docId+'', (name.startsWith('.') ? name : '.' + name))
     );
     const vProps = aPropName.map(key => key.lastIndexOf('%') >= 0 ? this.list(key) : this.get(key)).flat()
     let result = vProps.reduce(
       (obj, prop) => {
         if (prop) {
           const value = prop[KV_VALUE_SYMBOL]
-          const key = pathPosix.basename(prop._id).slice(1)
+          const key = pathPosix.basename(prop._id+'').slice(1)
           obj[key] = value
         }
         return obj
@@ -301,7 +305,7 @@ export class KVSqliteCollection {
     return result
   }
 
-  del(_id?: string|string[]) {
+  del(_id?: IKVDocumentId|IKVDocumentId[]) {
     if (Array.isArray(_id)) {
       return this.db.transaction(() => {
         return _id.map(id => this.preDel.run(id))
@@ -310,7 +314,7 @@ export class KVSqliteCollection {
     return _id ? this.preDel.run(_id) : this.preDelAll.run()
   }
 
-  isExists(_id: string) {
+  isExists(_id: IKVDocumentId) {
     return this.preExists.get(_id) as boolean
   }
 
@@ -408,16 +412,16 @@ export class KVSqliteAttachments {
    * @param filename
    * @returns
    */
-  get(docId: string, filename: string) {
+  get(docId: IKVDocumentId, filename: string) {
     const _id = docId + '/' + filename
     return this.preGet.get(_id) as {filename: string, content: Buffer}
   }
 
-  list(docId: string, filename = '') {
+  list(docId: IKVDocumentId, filename = '') {
     return this.preSearchKeyAll.all({query: docId + `/${filename}%`})
   }
 
-  add(docId: string, filename: string, content: Buffer, options:{ isText?: boolean, mime?: string} = {}) {
+  add(docId: IKVDocumentId, filename: string, content: Buffer, options:{ isText?: boolean, mime?: string} = {}) {
     const _id = docId + '/' + filename
     if (!options.mime) {
       const mime = mimeType.lookup(filename) as string
@@ -434,7 +438,7 @@ export class KVSqliteAttachments {
     return this.preAdd.run({...options, _id, filename, content})
   }
 
-  update(docId: string, filename: string, content: Buffer, options:{ isText?: boolean, mime?: string} = {}) {
+  update(docId: IKVDocumentId, filename: string, content: Buffer, options:{ isText?: boolean, mime?: string} = {}) {
     const _id = docId + '/' + filename
     if (!options.mime) {
       const mime = mimeType.lookup(filename) as string
@@ -460,8 +464,8 @@ export class KVSqliteAttachments {
     return this.db.prepare(sql).run({_id, content})
   }
 
-  del(docId: string, filename?: string|string[]) {
-    if (!docId.endsWith('/')) {docId = docId + '/'}
+  del(docId: IKVDocumentId, filename?: string|string[]) {
+    if (!String(docId).endsWith('/')) {docId = docId + '/'}
     if (filename) {
       if (Array.isArray(filename)) {
         return this.db.transaction(() => {

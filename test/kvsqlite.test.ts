@@ -299,4 +299,23 @@ describe('KVSqlite class', () => {
     mdt = new Date(result.updatedAt)
     expect(mdt.getTime()).toBeCloseTo(dt.getTime(), 1)
   })
+
+  it('should bulkDocs with ignore exists', () => {
+    let result: any = db.bulkDocs([
+      {_id: '1', [KV_VALUE_SYMBOL]: 1123},
+      {_id: '2', [KV_VALUE_SYMBOL]: 'ba1'},
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121},
+    ]);
+    expect(result).toHaveLength(3)
+
+    result = db.bulkDocs([
+      {_id: '3', [KV_VALUE_SYMBOL]: 3121},
+      {_id: '4', [KV_VALUE_SYMBOL]: 121},
+      {_id: '1', [KV_VALUE_SYMBOL]: 1123},
+    ], {ignoreExists: true});
+    expect(result).toHaveLength(3)
+    expect(result[0]).toHaveProperty('changes', 0)
+    expect(result[1]).toHaveProperty('changes', 1)
+    expect(result[2]).toHaveProperty('changes', 0)
+  });
 });

@@ -19,6 +19,7 @@
   "scripts": {
     "build-fast": "tsup",
     "build": "pnpm run build-fast --dts-resolve --dts && pnpm run doc:md",
+    "clean": "rm -fr web docs dist",
     "doc": "typedoc --plugin none --out web",
     "doc:md": "typedoc --plugin typedoc-plugin-markdown --out docs",
     "style": "pnpm run format -c && pnpm run lint",

@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:15](https://github.com/isdk/ai-tool-sqlite.js/blob/3a8af7e372deb90905c47b3a58d4c8157346e3cc/src/kvsqlite.ts#L15)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:15](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L15)

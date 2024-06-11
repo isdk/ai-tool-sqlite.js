@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:377](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L377)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:377](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L377)
 
 ## Properties
 
@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:377](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L377)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:377](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L377)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:377](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L377)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:377](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L377)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:363](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L363)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:363](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L363)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:373](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L373)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:373](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L373)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:374](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L374)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:374](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L374)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:375](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L375)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:375](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L375)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:369](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L369)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:369](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L369)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:370](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L370)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:370](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L370)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:367](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L367)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:367](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L367)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:368](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L368)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:368](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L368)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:365](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L365)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:365](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L365)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:366](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L366)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:366](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L366)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:371](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L371)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:371](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L371)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:372](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L372)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:372](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L372)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:364](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L364)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:364](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L364)
 
 ## Methods
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:424](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L424)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:424](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L424)
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:467](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L467)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:467](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L467)
 
 ___
 
@@ -277,7 +277,7 @@ Get file content
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:415](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L415)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:415](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L415)
 
 ___
 
@@ -298,7 +298,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:420](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L420)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:420](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L420)
 
 ___
 
@@ -323,4 +323,4 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:441](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L441)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:441](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L441)

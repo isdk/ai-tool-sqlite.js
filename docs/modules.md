@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:12](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L12)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:12](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L12)
 
 ## Variables
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L30)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L30)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L32)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L32)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/kvsqlite.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/kvsqlite.ts#L31)
+[packages/ai-tool-sqlite/src/kvsqlite.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/kvsqlite.ts#L31)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:8](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/sqlite-store.ts#L8)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:8](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-store.ts#L8)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:6](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/sqlite-store.ts#L6)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:6](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-store.ts#L6)
 
 ## Functions
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:17](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/sqlite-store.ts#L17)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:17](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-store.ts#L17)
 
 ___
 
@@ -141,4 +141,4 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:57](https://github.com/isdk/ai-tool-sqlite.js/blob/e7311db52ae92bc8b044507d9c239bcd77e10f6e/src/sqlite-store.ts#L57)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:57](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-store.ts#L57)

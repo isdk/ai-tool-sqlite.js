@@ -2,7 +2,7 @@
 import fastify from 'fastify'
 import fs from 'fs'
 import path from 'path'
-import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServerTools, ServerTools, ToolFunc, wait } from "@isdk/ai-tool"
+import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServerTools, ServerTools, ToolFunc, saveConfigFile, wait } from "@isdk/ai-tool"
 import { findPort } from '@isdk/ai-tool/test/util'
 
 import { KVSqliteResFunc } from '../src/sqlite-res'
@@ -110,6 +110,29 @@ describe('KVSqliteRes server api', () => {
   })
 
   it('should updateDB from dir', async () => {
+    const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
+    expect(res.$count()).toBe(4)
+
+    const configs = [
+      {_id: 5, name: 'test5'},
+      {_id: 6, name: 'test6'},
+    ]
+
+    const updateDir = '/tmp/testUpdateDB'
+    fs.mkdirSync(updateDir, {recursive: true})
+    saveConfigFile(updateDir + '/1.yaml', configs)
+
+    res.updateDBFromDir(updateDir)
+    expect(res.$count()).toBe(6)
+    let result = res.get({id: 5})
+    expect(result).toMatchObject({_id: 5, name: 'test5'})
+    const len = res.updateDBFromDir(updateDir)
+    expect(len).toBe(0)
+
+    fs.rmdirSync(updateDir, {recursive: true})
+  })
+
+  it('should updateDB from dir do not overwrite already exists', async () => {
     const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
     expect(res.$count()).toBe(4)
     let result = res.get({id: 3})

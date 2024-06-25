@@ -1,3 +1,4 @@
+import fs from 'fs'
 import {
   AlreadyExistsError,
   ResServerTools,
@@ -9,12 +10,15 @@ import {
   getConfigs,
 } from "@isdk/ai-tool";
 
-import { IKVObjItem, KVSqlite } from "./kvsqlite";
+import { DefaultKVCollection, IKVObjItem, KVSqlite, SYS_KV_COLLECTION } from "./kvsqlite";
 
 export interface SqliteRunResult {
   changes: number;
   lastInsertRowid: number | bigint;
 }
+
+const lastImportFilesFieldName = 'lastImportFiles'
+const lastImportDateFieldName = 'lastInitDate'
 
 // const eventBus = event.runSync()
 
@@ -64,13 +68,23 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   }
 
   getDocsFromDir(dir: string) {
-    return getConfigs(dir).flat()
+    const sysCollection = this.db.collections[SYS_KV_COLLECTION]
+    const lastImportFiles = sysCollection.getExtend(DefaultKVCollection, lastImportFilesFieldName)
+    const result = getConfigs(dir, {after: lastImportFiles})
+    if (result.length) {
+      const filenames = Object.fromEntries(result.map(item => [item.$cfgPath, fs.statSync(item.$cfgPath).mtimeMs]))
+      sysCollection.setExtend(DefaultKVCollection, lastImportFilesFieldName, filenames, {overwrite: false})
+    }
+    return result.flat()
   }
 
   updateDBFromDir(dir = this.initDir) {
     if (dir) {
       const docs = this.getDocsFromDir(dir)
-      this.db.bulkDocs(docs, {ignoreExists: true})
+      if (docs.length) {
+        this.db.bulkDocs(docs, {ignoreExists: true})
+      }
+      return docs.length
     }
   }
 

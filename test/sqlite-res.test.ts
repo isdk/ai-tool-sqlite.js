@@ -147,12 +147,37 @@ describe('KVSqliteRes server api', () => {
     expect(result).toMatchObject({_id: 3, name: 'test3-updated'})
   })
 
+  testBaseOperations()
+
+  describe('collection', () => {
+    const testCollection = 'testCollection'
+
+    beforeAll(() => {
+      const resClient = ResClientTools.get(FUNC_NAME)
+      expect(resClient).toBeInstanceOf(ResClientTools)
+      resClient.createCollection({collection: testCollection})
+    })
+
+    afterAll(() => {
+      let count = res.db.prepare(`SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = '${testCollection}'`).pluck().get()
+      expect(count).toBe(1)
+      res.$deleteCollection({collection: testCollection})
+      count = res.db.prepare(`SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = '${testCollection}'`).pluck().get()
+      expect(count).toBe(0)
+    })
+
+    testBaseOperations(testCollection)
+
+  })
+});
+
+function testBaseOperations(collection?: string) {
   it('should raise error to get non-exists item', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
     let err: any
     try {
-      const res = await result.get({id: "123"})
+      const res = await result.get({id: "123", collection})
     } catch(e) {
       err = e
     }
@@ -167,54 +192,54 @@ describe('KVSqliteRes server api', () => {
   it('should post an object', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
-    let res = await result.post({id: "1", val: {name: 'hello'}})
+    let res = await result.post({id: "1", val: {name: 'hello'}, collection})
     expect(res).toHaveProperty('changes', 1)
     expect(res).toHaveProperty('lastInsertRowid', 1)
-    res = await result.get({id: "1"})
+    res = await result.get({id: "1", collection})
     expect(res).toHaveProperty('name', 'hello')
-    res = await result.delete({id: "1"})
+    res = await result.delete({id: "1", collection})
     expect(res).toHaveProperty('changes', 1)
   })
   it('should post multi objects', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
-    let res = await result.post({val: [{_id: "1", name: 'hello'}, {_id: "2", name: 'world'}]})
+    let res = await result.post({val: [{_id: "1", name: 'hello'}, {_id: "2", name: 'world'}], collection})
     expect(res).toHaveLength(2)
-    res = await result.get({id: "1"})
+    res = await result.get({id: "1", collection})
     expect(res).toHaveProperty('name', 'hello')
-    res = await result.get({id: "2"})
+    res = await result.get({id: "2", collection})
     expect(res).toHaveProperty('name', 'world')
-    res = await result.delete({id: ["1","2"]})
+    res = await result.delete({id: ["1","2"], collection})
     expect(res).toHaveLength(2)
   })
 
   it('should delete', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
-    let res = await result.post({val: [{_id: "1", name: 'hello'}, {_id: "2", name: 'world'}]})
+    let res = await result.post({val: [{_id: "1", name: 'hello'}, {_id: "2", name: 'world'}], collection})
     expect(res).toHaveLength(2)
-    res = await result.delete({id: "1"})
+    res = await result.delete({id: "1", collection})
     expect(res).toHaveProperty('changes', 1)
-    res = await result.list()
+    res = await result.list({collection})
     expect(res.length).toStrictEqual(1)
-    res = await result.delete({id: "2"})
+    res = await result.delete({id: "2", collection})
     expect(res).toHaveProperty('changes', 1)
-    res = await result.list()
+    res = await result.list({collection})
     expect(res.length).toStrictEqual(0)
   })
 
   it('should list', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
-    let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'world'}, {_id: "3", name: 'd'}]})
+    let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'world'}, {_id: "3", name: 'd'}], collection})
     expect(res).toHaveLength(3)
-    res = await result.list()
+    res = await result.list({collection})
     expect(res.length).toStrictEqual(3)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }, {_id: "3", name: 'd'}])
 
-    res = await result.list({size: 2})
+    res = await result.list({size: 2, collection})
     expect(res.length).toBe(2)
-    res = await result.list({query: 'x%'})
+    res = await result.list({query: 'x%', collection})
     expect(res.length).toBe(2)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, { name: 'world', _id: 'x2' }])
   })
@@ -222,15 +247,15 @@ describe('KVSqliteRes server api', () => {
   it('should search', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)
-    let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'hi world'}, {_id: "3", name: 'd'}]})
+    let res = await result.post({val: [{_id: "x1", name: 'hello'}, {_id: "x2", name: 'hi world'}, {_id: "3", name: 'd'}], collection})
     expect(res).toHaveLength(3)
 
-    res = await result.searchEx({query: "val->>'$.name' = 'hello' OR val->>'$.name' = 'd'"})
+    res = await result.searchEx({query: "val->>'$.name' = 'hello' OR val->>'$.name' = 'd'", collection})
     expect(res.length).toStrictEqual(2)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }, {_id: "3", name: 'd'}])
 
-    res = await result.searchEx({query: {'name': 'hello'}})
+    res = await result.searchEx({query: {'name': 'hello'}, collection})
     expect(res.length).toStrictEqual(1)
     expect(res).toMatchObject([ { name: 'hello', _id: 'x1' }])
   })
-});
+}

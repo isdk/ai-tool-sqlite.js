@@ -29,6 +29,7 @@ export interface KVSqliteResFuncParams extends ResServerFuncParams {
   size?: number
   page?: number
   overwrite?: boolean
+  collection?: string
 }
 
 export interface KVSqliteResFuncItem extends FuncItem {
@@ -55,15 +56,15 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     }
   }
 
-  initDB(initDir = this.initDir) {
+  initDB(initDir = this.initDir, collection?: string) {
     if (initDir) {
-      this.intDBFromDir(initDir)
+      this.intDBFromDir(initDir, collection)
     }
   }
 
-  intDBFromDir(dir: string) {
+  intDBFromDir(dir: string, collection?: string) {
     const docs = this.getDocsFromDir(dir)
-    this.db.bulkDocs(docs)
+    this.db.bulkDocs(docs, {collection})
   }
 
   getDocsFromDir(dir: string) {
@@ -77,11 +78,11 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     return result.flat()
   }
 
-  updateDBFromDir(dir = this.initDir) {
+  updateDBFromDir(dir = this.initDir, collection?: string) {
     if (dir) {
       const docs = this.getDocsFromDir(dir)
       if (docs.length) {
-        this.db.bulkDocs(docs, {ignoreExists: true})
+        this.db.bulkDocs(docs, {ignoreExists: true, collection})
       }
       return docs.length
     }
@@ -96,14 +97,15 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
 
   list(options?: KVSqliteResFuncParams){
     const { query, size, page } = options || {}
-    const result = this.db.list(query, size, page) as unknown as T[]
+    const result = this.db.list(query, size, page, options as any) as unknown as T[]
 
     return result;
   }
 
-  get({id}: KVSqliteResFuncParams) {
+  get(options: KVSqliteResFuncParams) {
+    const id = options?.id
     if (id !== undefined) {
-      const result = this.db.get(id as any) as T
+      const result = this.db.get(id as any, options as any) as T
       if (!result) {
         throw new NotFoundError(id, this.name + '.get')
       }
@@ -124,8 +126,8 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
       throw new CommonError('object val is required', this.name + '.put', ErrorCode.InvalidArgument)
     }
 
-    if (this.db.isExists(id as any)) {
-      return this.db.set(id as any, model.val, { overwrite }) as SqliteRunResult
+    if (this.db.isExists(id as any, model as any)) {
+      return this.db.set(id as any, model.val, { ...model as any, overwrite }) as SqliteRunResult
     } else {
       throw new NotFoundError(id, this.name + '.put')
     }
@@ -137,7 +139,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     let result: SqliteRunResult[]|SqliteRunResult
 
     if (Array.isArray(val)) {
-      result = this.db.bulkDocs(val)
+      result = this.db.bulkDocs(val, model as any)
     } else {
       if (!id) {
         throw new CommonError('id is required', this.name + '.post', ErrorCode.InvalidArgument)
@@ -146,23 +148,24 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
         throw new CommonError('object val is required', this.name + '.post', ErrorCode.InvalidArgument)
       }
 
-      if (this.db.isExists(id as any)) {
+      if (this.db.isExists(id as any, model as any)) {
         throw new AlreadyExistsError(id, this.name + '.post')
       }
 
-      result = this.db.set(id as any, model.val)
+      result = this.db.set(id as any, model.val, model as any)
     }
     return result
   }
 
-  delete({id}: KVSqliteResFuncParams): SqliteRunResult | SqliteRunResult[] {
+  delete(options: KVSqliteResFuncParams): SqliteRunResult | SqliteRunResult[] {
+    const id = options?.id
     if (Array.isArray(id)) {
       return this.db.del(id)
     }
 
     if (id !== undefined) {
-      if (this.db.isExists(id as any)) {
-        return this.db.del(id as any)
+      if (this.db.isExists(id as any, options as any)) {
+        return this.db.del(id as any, options as any)
       } else {
         throw new NotFoundError(id, this.name + '.delete')
       }
@@ -176,7 +179,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     if (!query) {
       throw new CommonError('query is required', this.name + '.searchEx', ErrorCode.InvalidArgument)
     }
-    const result = this.db.searchEx(query, size, page) as unknown as T[]
+    const result = this.db.searchEx(query, size, page, options as any) as unknown as T[]
 
     return result;
   }
@@ -186,15 +189,37 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     if (!filter) {
       throw new CommonError('filter is required', this.name + '.search', ErrorCode.InvalidArgument)
     }
-    const result = this.db.search(filter, size, page) as unknown as T[]
+    const result = this.db.search(filter, size, page, options as any) as unknown as T[]
 
     return result;
   }
 
   $count(options?: KVSqliteResFuncParams){
     const { query } = options || {}
-    const result = this.db.count(query)
+    const result = this.db.count(query, options as any)
     return result
+  }
+
+  $createCollection({collection}: KVSqliteResFuncParams) {
+    if (!collection) {
+      throw new CommonError('collection name is required', this.name + '.createCollection', ErrorCode.InvalidArgument)
+    }
+    if (this.db.collections[collection]) {
+      throw new AlreadyExistsError(collection, this.name + '.createCollection')
+    }
+    this.db.create(collection)
+    return true
+  }
+
+  $deleteCollection({collection}: KVSqliteResFuncParams) {
+    if (!collection) {
+      throw new CommonError('collection name is required', this.name + '.deleteCollection', ErrorCode.InvalidArgument)
+    }
+    if (!this.db.collections[collection]) {
+      throw new NotFoundError(collection, this.name + '.deleteCollection')
+    }
+    this.db.drop(collection)
+    return true
   }
 }
 

@@ -18,7 +18,6 @@ export interface SqliteRunResult {
 }
 
 const lastImportFilesFieldName = 'lastImportFiles'
-const lastImportDateFieldName = 'lastInitDate'
 
 // const eventBus = event.runSync()
 

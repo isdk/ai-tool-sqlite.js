@@ -162,7 +162,7 @@ describe('KVSqliteRes server api', () => {
       let count = res.db.prepare(`SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = '${testCollection}'`).pluck().get()
       expect(count).toBe(1)
       res.$deleteCollection({collection: testCollection})
-      count = res.db.prepare(`SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = '${testCollection}'`).pluck().get()
+      count = res.db.isCollectionExists(testCollection)
       expect(count).toBe(0)
     })
 

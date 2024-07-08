@@ -51,6 +51,8 @@
 ### Methods
 
 - [$count](KVSqliteResFunc.md#$count)
+- [$createCollection](KVSqliteResFunc.md#$createcollection)
+- [$deleteCollection](KVSqliteResFunc.md#$deletecollection)
 - [$search](KVSqliteResFunc.md#$search)
 - [$searchEx](KVSqliteResFunc.md#$searchex)
 - [arr2ObjParams](KVSqliteResFunc.md#arr2objparams)
@@ -166,7 +168,7 @@ ResServerTools.constructor
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L41)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:45](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L45)
 
 ## Properties
 
@@ -194,7 +196,7 @@ ResServerTools.action
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:550
+packages/ai-tool/dist/index-japi6bEq.d.ts:539
 
 ___
 
@@ -208,7 +210,7 @@ ResServerTools.allowExportFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:396
+packages/ai-tool/dist/index-japi6bEq.d.ts:396
 
 ___
 
@@ -222,7 +224,7 @@ ResServerTools.apiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:130
+packages/ai-tool/dist/index-japi6bEq.d.ts:130
 
 ___
 
@@ -244,11 +246,11 @@ ___
 
 ### db
 
-• **db**: [`KVSqlite`](KVSqlite.md)
+• **db**: `KVSqlite`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:39](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L39)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:43](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L43)
 
 ___
 
@@ -258,7 +260,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L37)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L41)
 
 ___
 
@@ -295,7 +297,7 @@ ResServerTools.fetchOptions
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:132
+packages/ai-tool/dist/index-japi6bEq.d.ts:132
 
 ___
 
@@ -305,7 +307,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L38)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L42)
 
 ___
 
@@ -319,7 +321,7 @@ ResServerTools.methods
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:542
+packages/ai-tool/dist/index-japi6bEq.d.ts:531
 
 ___
 
@@ -333,7 +335,7 @@ ResServerTools.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:22
+packages/ai-tool/dist/index-japi6bEq.d.ts:22
 
 ___
 
@@ -363,7 +365,7 @@ ResServerTools.params
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:551
+packages/ai-tool/dist/index-japi6bEq.d.ts:540
 
 ___
 
@@ -377,7 +379,7 @@ ResServerTools.result
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:24
+packages/ai-tool/dist/index-japi6bEq.d.ts:24
 
 ___
 
@@ -391,7 +393,7 @@ ResServerTools.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:25
+packages/ai-tool/dist/index-japi6bEq.d.ts:25
 
 ___
 
@@ -420,7 +422,7 @@ ResServerTools.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:27
+packages/ai-tool/dist/index-japi6bEq.d.ts:27
 
 ___
 
@@ -434,7 +436,7 @@ ResServerTools.stream
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:133
+packages/ai-tool/dist/index-japi6bEq.d.ts:133
 
 ___
 
@@ -448,7 +450,7 @@ ResServerTools.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:26
+packages/ai-tool/dist/index-japi6bEq.d.ts:26
 
 ___
 
@@ -462,7 +464,7 @@ ResServerTools.dataPath
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:43
+packages/ai-tool/dist/index-japi6bEq.d.ts:43
 
 ___
 
@@ -476,7 +478,7 @@ ResServerTools.items
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:42
+packages/ai-tool/dist/index-japi6bEq.d.ts:42
 
 ## Accessors
 
@@ -494,7 +496,7 @@ ResServerTools.apiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:403
+packages/ai-tool/dist/index-japi6bEq.d.ts:403
 
 ## Methods
 
@@ -514,7 +516,47 @@ packages/ai-tool/dist/index-D4KjfAKl.d.ts:403
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:181](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L181)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:197](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L197)
+
+___
+
+### $createCollection
+
+▸ **$createCollection**(`«destructured»`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L203)
+
+___
+
+### $deleteCollection
+
+▸ **$deleteCollection**(`«destructured»`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:214](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L214)
 
 ___
 
@@ -534,7 +576,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:171](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L171)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:187](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L187)
 
 ___
 
@@ -554,7 +596,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:161](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L161)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:177](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L177)
 
 ___
 
@@ -578,7 +620,7 @@ ResServerTools.arr2ObjParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:61
+packages/ai-tool/dist/index-japi6bEq.d.ts:61
 
 ___
 
@@ -724,7 +766,7 @@ ResServerTools.cast
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:77](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L77)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L91)
 
 ___
 
@@ -815,13 +857,13 @@ ___
 
 ### delete
 
-▸ **delete**(`«destructured»`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
+▸ **delete**(`options`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+| `options` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
 
 #### Returns
 
@@ -833,7 +875,7 @@ ResServerTools.delete
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:145](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L145)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:160](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L160)
 
 ___
 
@@ -886,19 +928,19 @@ ResServerTools.func
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:555
+packages/ai-tool/dist/index-japi6bEq.d.ts:544
 
 ___
 
 ### get
 
-▸ **get**(`«destructured»`): `T`
+▸ **get**(`options`): `T`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+| `options` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
 
 #### Returns
 
@@ -910,7 +952,7 @@ ResServerTools.get
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L91)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:105](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L105)
 
 ___
 
@@ -930,7 +972,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L66)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:70](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L70)
 
 ___
 
@@ -954,7 +996,7 @@ ResServerTools.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:67
+packages/ai-tool/dist/index-japi6bEq.d.ts:67
 
 ___
 
@@ -978,7 +1020,7 @@ ResServerTools.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:72
+packages/ai-tool/dist/index-japi6bEq.d.ts:72
 
 ___
 
@@ -1002,7 +1044,7 @@ ResServerTools.getMethodFromParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:554
+packages/ai-tool/dist/index-japi6bEq.d.ts:543
 
 ___
 
@@ -1058,13 +1100,14 @@ ___
 
 ### initDB
 
-▸ **initDB**(`initDir?`): `void`
+▸ **initDB**(`initDir?`, `collection?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `initDir` | `undefined` \| `string` |
+| `collection?` | `string` |
 
 #### Returns
 
@@ -1072,7 +1115,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:55](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L55)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:59](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L59)
 
 ___
 
@@ -1106,13 +1149,14 @@ ___
 
 ### intDBFromDir
 
-▸ **intDBFromDir**(`dir`): `void`
+▸ **intDBFromDir**(`dir`, `collection?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `dir` | `string` |
+| `collection?` | `string` |
 
 #### Returns
 
@@ -1120,7 +1164,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:61](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L61)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:65](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L65)
 
 ___
 
@@ -1197,7 +1241,7 @@ ResServerTools.isStream
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:408
+packages/ai-tool/dist/index-japi6bEq.d.ts:408
 
 ___
 
@@ -1221,7 +1265,7 @@ ResServerTools.list
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:84](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L84)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:98](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L98)
 
 ___
 
@@ -1274,7 +1318,7 @@ ResServerTools.obj2ArrParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:62
+packages/ai-tool/dist/index-japi6bEq.d.ts:62
 
 ___
 
@@ -1298,7 +1342,7 @@ ResServerTools.post
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L121)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:136](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L136)
 
 ___
 
@@ -1348,7 +1392,7 @@ ResServerTools.put
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:103](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L103)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:118](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L118)
 
 ___
 
@@ -1366,7 +1410,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:59
+packages/ai-tool/dist/index-japi6bEq.d.ts:59
 
 ___
 
@@ -1390,7 +1434,7 @@ ResServerTools.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:64
+packages/ai-tool/dist/index-japi6bEq.d.ts:64
 
 ___
 
@@ -1415,7 +1459,7 @@ ResServerTools.runAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:65
+packages/ai-tool/dist/index-japi6bEq.d.ts:65
 
 ___
 
@@ -1440,7 +1484,7 @@ ResServerTools.runAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:66
+packages/ai-tool/dist/index-japi6bEq.d.ts:66
 
 ___
 
@@ -1464,7 +1508,7 @@ ResServerTools.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:63
+packages/ai-tool/dist/index-japi6bEq.d.ts:63
 
 ___
 
@@ -1488,7 +1532,7 @@ ResServerTools.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:70
+packages/ai-tool/dist/index-japi6bEq.d.ts:70
 
 ___
 
@@ -1513,7 +1557,7 @@ ResServerTools.runWithPosAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:71
+packages/ai-tool/dist/index-japi6bEq.d.ts:71
 
 ___
 
@@ -1538,7 +1582,7 @@ ResServerTools.runWithPosAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:69
+packages/ai-tool/dist/index-japi6bEq.d.ts:69
 
 ___
 
@@ -1562,7 +1606,7 @@ ResServerTools.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:68
+packages/ai-tool/dist/index-japi6bEq.d.ts:68
 
 ___
 
@@ -1666,27 +1710,28 @@ ResServerTools.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:60
+packages/ai-tool/dist/index-japi6bEq.d.ts:60
 
 ___
 
 ### updateDBFromDir
 
-▸ **updateDBFromDir**(`dir?`): `void`
+▸ **updateDBFromDir**(`dir?`, `collection?`): `undefined` \| `number`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `dir` | `undefined` \| `string` |
+| `collection?` | `string` |
 
 #### Returns
 
-`void`
+`undefined` \| `number`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:70](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L70)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:81](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L81)
 
 ___
 
@@ -2163,7 +2208,7 @@ ResServerTools.get
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:44
+packages/ai-tool/dist/index-japi6bEq.d.ts:44
 
 ___
 
@@ -2187,7 +2232,7 @@ ResServerTools.getAllByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:47
+packages/ai-tool/dist/index-japi6bEq.d.ts:47
 
 ___
 
@@ -2211,7 +2256,7 @@ ResServerTools.getByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:46
+packages/ai-tool/dist/index-japi6bEq.d.ts:46
 
 ___
 
@@ -2235,7 +2280,7 @@ ResServerTools.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:50
+packages/ai-tool/dist/index-japi6bEq.d.ts:50
 
 ___
 
@@ -2259,7 +2304,7 @@ ResServerTools.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:53
+packages/ai-tool/dist/index-japi6bEq.d.ts:53
 
 ___
 
@@ -2589,7 +2634,7 @@ ResServerTools.list
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:45
+packages/ai-tool/dist/index-japi6bEq.d.ts:45
 
 ___
 
@@ -2646,7 +2691,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:54
+packages/ai-tool/dist/index-japi6bEq.d.ts:54
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2667,7 +2712,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:55
+packages/ai-tool/dist/index-japi6bEq.d.ts:55
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2688,7 +2733,7 @@ ResServerTools.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:56
+packages/ai-tool/dist/index-japi6bEq.d.ts:56
 
 ___
 
@@ -2713,7 +2758,7 @@ ResServerTools.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:48
+packages/ai-tool/dist/index-japi6bEq.d.ts:48
 
 ___
 
@@ -2738,7 +2783,7 @@ ResServerTools.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:49
+packages/ai-tool/dist/index-japi6bEq.d.ts:49
 
 ___
 
@@ -2763,7 +2808,7 @@ ResServerTools.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:51
+packages/ai-tool/dist/index-japi6bEq.d.ts:51
 
 ___
 
@@ -2788,7 +2833,7 @@ ResServerTools.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:52
+packages/ai-tool/dist/index-japi6bEq.d.ts:52
 
 ___
 
@@ -2844,7 +2889,7 @@ ResServerTools.setApiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:404
+packages/ai-tool/dist/index-japi6bEq.d.ts:404
 
 ___
 
@@ -2889,7 +2934,7 @@ ResServerTools.toJSON
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:405
+packages/ai-tool/dist/index-japi6bEq.d.ts:405
 
 ___
 
@@ -2913,7 +2958,7 @@ ResServerTools.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:57
+packages/ai-tool/dist/index-japi6bEq.d.ts:57
 
 ___
 

@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L32)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L36)
 
 ___
 
@@ -44,7 +44,7 @@ FuncItem.func
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:30
+packages/ai-tool/dist/index-japi6bEq.d.ts:30
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/0324ebadddad49b1d2b97d356e532dcec9b8a887/src/sqlite-res.ts#L33)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L37)
 
 ___
 
@@ -68,7 +68,7 @@ FuncItem.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:22
+packages/ai-tool/dist/index-japi6bEq.d.ts:22
 
 ___
 
@@ -82,7 +82,7 @@ FuncItem.params
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:23
+packages/ai-tool/dist/index-japi6bEq.d.ts:23
 
 ___
 
@@ -96,7 +96,7 @@ FuncItem.result
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:24
+packages/ai-tool/dist/index-japi6bEq.d.ts:24
 
 ___
 
@@ -110,7 +110,7 @@ FuncItem.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:25
+packages/ai-tool/dist/index-japi6bEq.d.ts:25
 
 ___
 
@@ -139,7 +139,7 @@ FuncItem.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:27
+packages/ai-tool/dist/index-japi6bEq.d.ts:27
 
 ___
 
@@ -153,4 +153,4 @@ FuncItem.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:26
+packages/ai-tool/dist/index-japi6bEq.d.ts:26

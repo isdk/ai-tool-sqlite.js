@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.5](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.4...v0.0.5) (2024-07-08)
+
+
+### Features
+
+* add FTS supports ([3823e97](https://github.com/isdk/ai-tool-sqlite.js/commit/3823e97a287fbcf563c77a38db59b53ee44a817c))
+* **kvsqlite:** additional fields supports ([acf1dc4](https://github.com/isdk/ai-tool-sqlite.js/commit/acf1dc44e60fceffa18de7670ce348b1b0598f03))
+* **res:** record the last import files and date to avoid duplicate import ([f2b3ca4](https://github.com/isdk/ai-tool-sqlite.js/commit/f2b3ca4dfb73d35a81d5e4e0cbf485c01dad2876))
+* **sqlite-res:** add multi collections supports ([6fa3800](https://github.com/isdk/ai-tool-sqlite.js/commit/6fa380047bfe2c95e5501b89b3e6e0485de16efa))
+
 ## [0.0.4](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.3...v0.0.4) (2024-06-11)
 
 ## [0.0.3](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.2...v0.0.3) (2024-06-09)

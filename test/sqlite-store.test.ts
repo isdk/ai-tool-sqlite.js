@@ -1,6 +1,6 @@
 import { StoreCacheName, _sqliteStore, createSqliteStore } from '../src/sqlite-store';
 import { ToolFunc } from '@isdk/ai-tool';
-import { IKVSetOptions, KVSqlite } from '../src/kvsqlite';
+import { KVSqlite } from '@isdk/kvsqlite';
 
 const conf = createSqliteStore('conf')
 

@@ -10,7 +10,7 @@ import {
   getConfigs,
 } from "@isdk/ai-tool";
 
-import { DefaultKVCollection, IKVObjItem, KVSqlite, SYS_KV_COLLECTION } from "./kvsqlite";
+import { DefaultKVCollection, IKVObjItem, KVSqlite, SYS_KV_COLLECTION } from "@isdk/kvsqlite";
 
 export interface SqliteRunResult {
   changes: number;

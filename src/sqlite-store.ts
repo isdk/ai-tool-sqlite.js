@@ -1,7 +1,7 @@
 import path from 'path'
 import { createLRUCache, ToolFunc } from '@isdk/ai-tool'
 
-import { IKVObjItem, IKVSetOptions, KVSqlite as _KVSqlite } from './kvsqlite';
+import { IKVObjItem, IKVSetOptions, KVSqlite as _KVSqlite } from '@isdk/kvsqlite';
 
 export const StoreCacheName = 'cache.store'
 

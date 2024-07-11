@@ -58,16 +58,16 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
 
   initDB(initDir = this.initDir, collection?: string) {
     if (initDir) {
-      this.intDBFromDir(initDir, collection)
+      this.intDBFromDir(initDir, collection).then()
     }
   }
 
-  intDBFromDir(dir: string, collection?: string) {
-    const docs = this.getDocsFromDir(dir)
+  async intDBFromDir(dir: string, collection?: string) {
+    const docs = await this.getDocsFromDir(dir)
     this.db.bulkDocs(docs, {collection})
   }
 
-  getDocsFromDir(dir: string) {
+  async getDocsFromDir(dir: string) {
     const sysCollection = this.db.collections[SYS_KV_COLLECTION]
     const lastImportFiles = sysCollection.getExtend(DefaultKVCollection, lastImportFilesFieldName)
     const result = getConfigs(dir, {after: lastImportFiles})
@@ -78,9 +78,9 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     return result.flat()
   }
 
-  updateDBFromDir(dir = this.initDir, collection?: string) {
+  async updateDBFromDir(dir = this.initDir, collection?: string) {
     if (dir) {
-      const docs = this.getDocsFromDir(dir)
+      const docs = await this.getDocsFromDir(dir)
       if (docs.length) {
         this.db.bulkDocs(docs, {ignoreExists: true, collection})
       }
@@ -96,8 +96,8 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   }
 
   list(options?: KVSqliteResFuncParams){
-    const { query, size, page } = options || {}
-    const result = this.db.list(query, size, page, options as any) as unknown as T[]
+    const { query } = options || {}
+    const result = this.db.list(query, options as any) as unknown as T[]
 
     return result;
   }
@@ -115,7 +115,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     }
   }
 
-  put(model: KVSqliteResFuncParams) {
+  put(model: KVSqliteResFuncParams): Promise<SqliteRunResult>|SqliteRunResult {
     const val = model.val
     const id = model.id ?? val?._id
     const overwrite = model.overwrite || false
@@ -133,7 +133,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     }
   }
 
-  post(model: KVSqliteResFuncParams) {
+  post(model: KVSqliteResFuncParams): Promise<SqliteRunResult[]|SqliteRunResult>|SqliteRunResult[]|SqliteRunResult {
     const id = model.id
     const val = model.val
     let result: SqliteRunResult[]|SqliteRunResult
@@ -175,21 +175,21 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   }
 
   $searchEx(options?: KVSqliteResFuncParams){
-    const { query, size, page } = options || {}
+    const { query } = options || {}
     if (!query) {
       throw new CommonError('query is required', this.name + '.searchEx', ErrorCode.InvalidArgument)
     }
-    const result = this.db.searchEx(query, size, page, options as any) as unknown as T[]
+    const result = this.db.searchEx(query, options as any) as unknown as T[]
 
     return result;
   }
 
   $search(options?: KVSqliteResFuncParams){
-    const { filter, size, page } = options || {}
+    const { filter } = options || {}
     if (!filter) {
       throw new CommonError('filter is required', this.name + '.search', ErrorCode.InvalidArgument)
     }
-    const result = this.db.search(filter, size, page, options as any) as unknown as T[]
+    const result = this.db.search(filter, options as any) as unknown as T[]
 
     return result;
   }

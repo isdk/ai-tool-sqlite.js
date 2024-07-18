@@ -37,9 +37,11 @@ export interface KVSqliteResFuncItem extends FuncItem {
   initDir: string|undefined
 }
 
-export class KVSqliteResFunc<T extends KVSqliteResFuncParams = KVSqliteResFuncParams> extends ResServerTools {
-  declare initDB: (db: KVSqlite) => void|undefined
+export interface KVSqliteResFunc {
+  initDB(db: KVSqlite): void
+}
 
+export class KVSqliteResFunc<T extends KVSqliteResFuncParams = KVSqliteResFuncParams> extends ResServerTools {
   dbPath: string|undefined
   initDir: string|undefined
   db: KVSqlite

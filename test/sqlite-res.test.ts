@@ -6,6 +6,7 @@ import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServer
 import { findPort } from '@isdk/ai-tool/test/util'
 
 import { KVSqliteResFunc } from '../src/sqlite-res'
+import { KVSqlite } from '@isdk/kvsqlite'
 
 // const dbPath = __dirname + '/test.db'
 // const dbPath = '/tmp/aikvsqlite-test.db'
@@ -102,7 +103,29 @@ describe('KVSqliteRes server api', () => {
     res.db.del()
   });
 
-  it('should initDB from dir', async () => {
+  it('should initDB', async () => {
+    class KVTestInit extends KVSqliteResFunc {
+
+      initDB(db: KVSqlite) {
+        db.create('test', {
+          fields: {
+            'test': {type: 'TEXT'}
+          },
+        })
+      }
+    }
+    const res = new KVTestInit('testInitDB', {dbPath})
+    expect(res.db.isCollectionExists('test'))
+    const collection = res.db.collections.test
+    const fields = collection.tableInfo()
+    expect(fields).toMatchObject({
+      test: { name: 'test', type: 'TEXT', notNull: false, primary: false },
+      _id: { name: '_id', type: 'TEXT', notNull: false, primary: true },
+      val: { name: 'val', type: 'JSONB', notNull: false, primary: false },
+    })
+  })
+
+  it('should initData from dir', async () => {
     const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
     await wait(10)
     expect(res.$count()).toBe(4)
@@ -110,7 +133,7 @@ describe('KVSqliteRes server api', () => {
     expect(result).toMatchObject({_id: 3, name: 'test3'})
   })
 
-  it('should updateDB from dir', async () => {
+  it('should updateData from dir', async () => {
     const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
     await wait(10)
     expect(res.$count()).toBe(4)

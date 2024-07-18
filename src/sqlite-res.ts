@@ -41,6 +41,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
   dbPath: string|undefined
   initDir: string|undefined
   db: KVSqlite
+  initingData: boolean|undefined
 
   constructor(name: string|Function|FuncItem, options: FuncItem|any = {}) {
     super(name, options)
@@ -49,22 +50,25 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
       const db = this.db = new KVSqlite(this.dbPath)
       const count = db.count()
       if (count === 0) {
-        this.initDB()
+        this.initData()
       }
     } else {
       throw new CommonError('dbPath is required', this.name, ErrorCode.InvalidArgument)
     }
   }
 
-  initDB(initDir = this.initDir, collection?: string) {
+  initData(initDir = this.initDir, collection?: string) {
     if (initDir) {
-      this.intDBFromDir(initDir, collection).then()
+      this.initDataFromDir(initDir, collection).then()
     }
   }
 
-  async intDBFromDir(dir: string, collection?: string) {
+  async initDataFromDir(dir: string, collection?: string) {
+    if (this.initingData) { throw new CommonError('The initializing data is already running', this.name + '.initData') }
+    this.initingData = true
     const docs = await this.getDocsFromDir(dir)
     this.db.bulkDocs(docs, {collection})
+    this.initingData = false
   }
 
   async getDocsFromDir(dir: string) {
@@ -78,12 +82,15 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
     return result.flat()
   }
 
-  async updateDBFromDir(dir = this.initDir, collection?: string) {
+  async updateDataFromDir(dir = this.initDir, collection?: string) {
+    if (this.initingData) { throw new CommonError('The initializing data is already running', this.name + '.updateData') }
     if (dir) {
+      this.initingData = true
       const docs = await this.getDocsFromDir(dir)
       if (docs.length) {
         this.db.bulkDocs(docs, {ignoreExists: true, collection})
       }
+      this.initingData = false
       return docs.length
     }
   }

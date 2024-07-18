@@ -124,11 +124,11 @@ describe('KVSqliteRes server api', () => {
     fs.mkdirSync(updateDir, {recursive: true})
     saveConfigFile(updateDir + '/1.yaml', configs)
 
-    await res.updateDBFromDir(updateDir)
+    await res.updateDataFromDir(updateDir)
     expect(res.$count()).toBe(6)
     let result = res.get({id: 5})
     expect(result).toMatchObject({_id: 5, name: 'test5'})
-    const len = await res.updateDBFromDir(updateDir)
+    const len = await res.updateDataFromDir(updateDir)
     expect(len).toBe(0)
 
     fs.rmdirSync(updateDir, {recursive: true})
@@ -145,7 +145,7 @@ describe('KVSqliteRes server api', () => {
     result = res.get({id: 3})
     expect(result).toMatchObject({_id: 3, name: 'test3-updated'})
 
-    await res.updateDBFromDir()
+    await res.updateDataFromDir()
     result = res.get({id: 3})
     expect(result).toMatchObject({_id: 3, name: 'test3-updated'})
   })

@@ -38,6 +38,8 @@ export interface KVSqliteResFuncItem extends FuncItem {
 }
 
 export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerTools {
+  declare initDB: (db: KVSqlite) => void|undefined
+
   dbPath: string|undefined
   initDir: string|undefined
   db: KVSqlite
@@ -48,6 +50,7 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams> extends ResServerT
 
     if (this.dbPath) {
       const db = this.db = new KVSqlite(this.dbPath)
+      if (this.initDB) this.initDB(db)
       const count = db.count()
       if (count === 0) {
         this.initData()

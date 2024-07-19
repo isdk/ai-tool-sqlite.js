@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'fs';
 import {
   AlreadyExistsError,
   ResServerTools,
@@ -11,6 +11,8 @@ import {
 } from "@isdk/ai-tool";
 
 import { DefaultKVCollection, IKVObjItem, KVSqlite, SYS_KV_COLLECTION } from "@isdk/kvsqlite";
+
+export { KV_NAME_SYMBOL, KV_TYPE_SYMBOL, KV_VALUE_SYMBOL, DefaultKVCollection, SYS_KV_COLLECTION, updateKVFieldSymbol } from '@isdk/kvsqlite';
 
 export interface SqliteRunResult {
   changes: number;
@@ -30,6 +32,7 @@ export interface KVSqliteResFuncParams extends ResServerFuncParams {
   page?: number
   overwrite?: boolean
   collection?: string
+  options?: any
 }
 
 export interface KVSqliteResFuncItem extends FuncItem {
@@ -212,14 +215,14 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams = KVSqliteResFuncPa
     return result
   }
 
-  $createCollection({collection}: KVSqliteResFuncParams) {
+  $createCollection({collection, options}: KVSqliteResFuncParams) {
     if (!collection) {
       throw new CommonError('collection name is required', this.name + '.createCollection', ErrorCode.InvalidArgument)
     }
     if (this.db.collections[collection]) {
       throw new AlreadyExistsError(collection, this.name + '.createCollection')
     }
-    this.db.create(collection)
+    this.db.create(collection, options)
     return true
   }
 

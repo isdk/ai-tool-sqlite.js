@@ -87,4 +87,5 @@ export function createSqliteStore(name: string, dbPath?: string, options?: IKVSe
   return result
 }
 
-// export const sqlite = createSqliteStore('sqlite', 'config.db')
+export const SqliteStoresName = 'stores'
+export const sqliteStores = createSqliteStore(SqliteStoresName)

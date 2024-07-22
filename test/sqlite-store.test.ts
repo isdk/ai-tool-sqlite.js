@@ -14,8 +14,18 @@ describe('sqliteStore function', async () => {
     store.del()
   });
 
-  it('should return a KVSqlite store when key is null', () => {
+  it('should return a KVSqlite store when key is null', async () => {
     expect(store).toBeInstanceOf(KVSqlite);
+    expect(await conf.run()).toBe(store)
+  });
+
+  it('should return a new KVSqlite store when pass location to options', async () => {
+    const store1 = await conf.run({options: {location: ':memory:test1'}})
+    expect(store1).toBeInstanceOf(KVSqlite);
+    const store2 = await conf.run({options: {location: ':memory:test1'}})
+    expect(store2).toBe(store1)
+    expect(store2.memory).toBeTruthy()
+    expect(store2).not.toBe(store)
   });
 
   it('should delete a key-value pair when value is null', async () => {
@@ -49,7 +59,7 @@ describe('createSqliteStore function', () => {
     await sleep(200)
     const cache = ToolFunc.runSync(StoreCacheName)
     // trigger the clean expires item
-    cache.get(name + dbPath) // name + dbPath just for :memory:
+    cache.get(dbPath + name) // dbPath + name just for :memory:
     expect(result.open).toBeFalsy()
   });
 });

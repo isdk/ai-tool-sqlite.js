@@ -14,16 +14,30 @@ cache.on('del', function (key: string, store: _KVSqlite) {
 
 declare const KVSqlite: typeof _KVSqlite
 
+/**
+ *
+ * return the database directly if no key is provided
+ * return the value if key is provided and value is undefined
+ * remove the key if key is provided and value is null
+ * set the value if key is provided and value is provided
+ * @param this
+ * @param params.options the database options
+ * @param params.options.location the database location
+ * @param params.options.expires the database LRU expires time(ms)
+ * @returns
+ */
 export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: string | IKVObjItem | IKVSetOptions, value?: IKVObjItem | IKVSetOptions, options?: IKVSetOptions} = {}) {
-  if (typeof key === 'object' && !key.hasOwnProperty('_id')) {
-    options = key as IKVSetOptions
-    key = value as IKVObjItem
-    // value = options
+
+  let loc: string = options?.location || this.location || ':memory:'
+  let storeId = options?.location || this.location || ':memory:'
+  if (storeId.startsWith(':memory:')) {
+    loc = ':memory:'
+    if (storeId.length === 8) {storeId += this.name!}
   }
-  const loc = options?.location || this.location || ':memory:'
-  const storeId = loc !== ':memory:' ? loc : this.name + loc
+
   let store = cache.get(storeId) as _KVSqlite;
   if (!store) {
+    // constrain the database file path, all database should be in the same dataPath directory if exists
     const dataPath = (this.constructor as any).dataPath
     let _loc = loc
     if (loc[0] !== ':' && dataPath) {
@@ -48,7 +62,8 @@ export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: strin
     }
     value = { ...value, _id: key }
   } else {
-    options = value as IKVSetOptions
+    // key is doc object
+    // options = value as IKVSetOptions
     value = key as IKVObjItem
   }
   return store.set(value as IKVObjItem, options)
@@ -68,7 +83,7 @@ export function createSqliteStore(name: string, dbPath?: string, options?: IKVSe
   })
   // if (!dbPath) { dbPath = ToolFunc.dataPath ? path.join(ToolFunc.dataPath, name) : ':memory:' }
   // result.store = new KVSqlite(dbPath, options)
-  result.location = dbPath
+  if (dbPath) { result.location = dbPath }
   return result
 }
 

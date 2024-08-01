@@ -12,8 +12,6 @@ import {
 
 import { DefaultKVCollection, IKVObjItem, KVSqlite, SYS_KV_COLLECTION } from "@isdk/kvsqlite";
 
-export { KV_NAME_SYMBOL, KV_TYPE_SYMBOL, KV_VALUE_SYMBOL, DefaultKVCollection, SYS_KV_COLLECTION, updateKVFieldSymbol } from '@isdk/kvsqlite';
-
 export interface SqliteRunResult {
   changes: number;
   lastInsertRowid: number | bigint;

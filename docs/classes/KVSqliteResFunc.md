@@ -6,7 +6,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+| `T` | extends [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) = [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
 
 ## Hierarchy
 
@@ -32,6 +32,7 @@
 - [defaultOptions](KVSqliteResFunc.md#defaultoptions)
 - [fetchOptions](KVSqliteResFunc.md#fetchoptions)
 - [initDir](KVSqliteResFunc.md#initdir)
+- [initingData](KVSqliteResFunc.md#initingdata)
 - [methods](KVSqliteResFunc.md#methods)
 - [name](KVSqliteResFunc.md#name)
 - [nonExported1stChar](KVSqliteResFunc.md#nonexported1stchar)
@@ -73,10 +74,12 @@
 - [getFuncWithPos](KVSqliteResFunc.md#getfuncwithpos)
 - [getMethodFromParams](KVSqliteResFunc.md#getmethodfromparams)
 - [getProperties](KVSqliteResFunc.md#getproperties)
+- [hasAsyncFeature](KVSqliteResFunc.md#hasasyncfeature)
 - [hasOwnProperty](KVSqliteResFunc.md#hasownproperty)
 - [initDB](KVSqliteResFunc.md#initdb)
+- [initData](KVSqliteResFunc.md#initdata)
+- [initDataFromDir](KVSqliteResFunc.md#initdatafromdir)
 - [initialize](KVSqliteResFunc.md#initialize)
-- [intDBFromDir](KVSqliteResFunc.md#intdbfromdir)
 - [isPrototypeOf](KVSqliteResFunc.md#isprototypeof)
 - [isSame](KVSqliteResFunc.md#issame)
 - [isStream](KVSqliteResFunc.md#isstream)
@@ -100,7 +103,7 @@
 - [toObject](KVSqliteResFunc.md#toobject)
 - [toString](KVSqliteResFunc.md#tostring)
 - [unregister](KVSqliteResFunc.md#unregister)
-- [updateDBFromDir](KVSqliteResFunc.md#updatedbfromdir)
+- [updateDataFromDir](KVSqliteResFunc.md#updatedatafromdir)
 - [valueOf](KVSqliteResFunc.md#valueof)
 - [assign](KVSqliteResFunc.md#assign-1)
 - [create](KVSqliteResFunc.md#create)
@@ -120,6 +123,7 @@
 - [getOwnPropertySymbols](KVSqliteResFunc.md#getownpropertysymbols)
 - [getProperties](KVSqliteResFunc.md#getproperties-1)
 - [getPrototypeOf](KVSqliteResFunc.md#getprototypeof)
+- [hasAsyncFeature](KVSqliteResFunc.md#hasasyncfeature-1)
 - [is](KVSqliteResFunc.md#is)
 - [isExtensible](KVSqliteResFunc.md#isextensible)
 - [isFrozen](KVSqliteResFunc.md#isfrozen)
@@ -149,7 +153,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+| `T` | extends [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) = [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
 
 #### Parameters
 
@@ -162,23 +166,15 @@
 
 [`KVSqliteResFunc`](KVSqliteResFunc.md)\<`T`\>
 
-#### Overrides
-
-ResServerTools.constructor
-
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:45](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L45)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L51)
 
 ## Properties
 
 ### $attributes
 
 • **$attributes**: `Properties`
-
-#### Inherited from
-
-ResServerTools.$attributes
 
 #### Defined in
 
@@ -190,13 +186,9 @@ ___
 
 • **action**: ``"list"`` \| ``"get"`` \| ``"put"`` \| ``"post"`` \| ``"delete"`` \| ``"patch"`` \| ``"res"``
 
-#### Inherited from
-
-ResServerTools.action
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:539
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:565
 
 ___
 
@@ -204,13 +196,9 @@ ___
 
 • `Optional` **allowExportFunc**: `boolean`
 
-#### Inherited from
-
-ResServerTools.allowExportFunc
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:396
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:422
 
 ___
 
@@ -218,13 +206,9 @@ ___
 
 • `Optional` **apiRoot**: `string`
 
-#### Inherited from
-
-ResServerTools.apiRoot
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:130
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:154
 
 ___
 
@@ -234,10 +218,6 @@ ___
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
-#### Inherited from
-
-ResServerTools.constructor
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:125
@@ -246,11 +226,11 @@ ___
 
 ### db
 
-• **db**: `KVSqlite`
+• **db**: [`KVSqlite`](KVSqlite.md)
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:43](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L43)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L48)
 
 ___
 
@@ -260,7 +240,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L41)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L46)
 
 ___
 
@@ -277,10 +257,6 @@ The default options for export and assign
 | `assign?` | `IMergeOptions` |
 | `export?` | `IMergeOptions` |
 
-#### Inherited from
-
-ResServerTools.defaultOptions
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:74
@@ -291,13 +267,9 @@ ___
 
 • `Optional` **fetchOptions**: `any`
 
-#### Inherited from
-
-ResServerTools.fetchOptions
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:132
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:156
 
 ___
 
@@ -307,7 +279,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L42)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L47)
+
+___
+
+### initingData
+
+• **initingData**: `undefined` \| `boolean`
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L49)
 
 ___
 
@@ -315,13 +297,9 @@ ___
 
 • **methods**: `string`[]
 
-#### Inherited from
-
-ResServerTools.methods
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:531
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:557
 
 ___
 
@@ -329,13 +307,9 @@ ___
 
 • `Optional` **name**: `string`
 
-#### Inherited from
-
-ResServerTools.name
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:22
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:36
 
 ___
 
@@ -344,10 +318,6 @@ ___
 • **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
-
-#### Inherited from
-
-ResServerTools.nonExported1stChar
 
 #### Defined in
 
@@ -359,13 +329,9 @@ ___
 
 • **params**: `FuncParams`
 
-#### Inherited from
-
-ResServerTools.params
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:540
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:566
 
 ___
 
@@ -373,13 +339,9 @@ ___
 
 • `Optional` **result**: `string`
 
-#### Inherited from
-
-ResServerTools.result
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:24
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:38
 
 ___
 
@@ -387,13 +349,9 @@ ___
 
 • `Optional` **scope**: `any`
 
-#### Inherited from
-
-ResServerTools.scope
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:25
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:39
 
 ___
 
@@ -416,13 +374,9 @@ ___
 
 `void`
 
-#### Inherited from
-
-ResServerTools.setup
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:27
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:41
 
 ___
 
@@ -430,13 +384,9 @@ ___
 
 • `Optional` **stream**: `boolean`
 
-#### Inherited from
-
-ResServerTools.stream
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:133
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:157
 
 ___
 
@@ -444,13 +394,9 @@ ___
 
 • `Optional` **tags**: `string` \| `string`[]
 
-#### Inherited from
-
-ResServerTools.tags
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:26
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:40
 
 ___
 
@@ -458,13 +404,9 @@ ___
 
 ▪ `Static` **dataPath**: `string`
 
-#### Inherited from
-
-ResServerTools.dataPath
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:43
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:62
 
 ___
 
@@ -472,13 +414,9 @@ ___
 
 ▪ `Static` **items**: `Funcs`
 
-#### Inherited from
-
-ResServerTools.items
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:42
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:61
 
 ## Accessors
 
@@ -490,13 +428,9 @@ packages/ai-tool/dist/index-japi6bEq.d.ts:42
 
 `undefined` \| `string`
 
-#### Inherited from
-
-ResServerTools.apiRoot
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:403
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:429
 
 ## Methods
 
@@ -516,7 +450,7 @@ packages/ai-tool/dist/index-japi6bEq.d.ts:403
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:197](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L197)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:210](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L210)
 
 ___
 
@@ -536,7 +470,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L203)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:216](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L216)
 
 ___
 
@@ -556,7 +490,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:214](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L214)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:227](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L227)
 
 ___
 
@@ -576,7 +510,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:187](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L187)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:200](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L200)
 
 ___
 
@@ -596,7 +530,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:177](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L177)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:190](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L190)
 
 ___
 
@@ -614,13 +548,9 @@ ___
 
 `any`[]
 
-#### Inherited from
-
-ResServerTools.arr2ObjParams
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:61
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:81
 
 ___
 
@@ -642,10 +572,6 @@ Assign the values from the src object.
 `this`
 
 this object
-
-#### Inherited from
-
-ResServerTools.assign
 
 #### Defined in
 
@@ -672,10 +598,6 @@ Assign a property of src to this object.
 #### Returns
 
 `void`
-
-#### Inherited from
-
-ResServerTools.assignProperty
 
 #### Defined in
 
@@ -706,10 +628,6 @@ Assign the property value from the src to destination object.
 
 **`Abstract`**
 
-#### Inherited from
-
-ResServerTools.assignPropertyTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:131
@@ -735,10 +653,6 @@ Assign this attributes to the dest object
 
 the dest object
 
-#### Inherited from
-
-ResServerTools.assignTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:191
@@ -760,13 +674,9 @@ ___
 
 `any`
 
-#### Overrides
-
-ResServerTools.cast
-
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L91)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:104](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L104)
 
 ___
 
@@ -787,10 +697,6 @@ Create a new object with the same values of attributes.
 `any`
 
 the new object
-
-#### Inherited from
-
-ResServerTools.clone
 
 #### Defined in
 
@@ -817,10 +723,6 @@ Create and assign the values to the destination object.
 
 the new dest object
 
-#### Inherited from
-
-ResServerTools.cloneTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:148
@@ -845,10 +747,6 @@ Define the attributes of this object.
 
 **`Abstract`**
 
-#### Inherited from
-
-ResServerTools.defineProperties
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:89
@@ -869,13 +767,9 @@ ___
 
 [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
 
-#### Overrides
-
-ResServerTools.delete
-
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:160](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L160)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:173](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L173)
 
 ___
 
@@ -898,10 +792,6 @@ Export attributes to the dest json object.
 
 the dest object.
 
-#### Inherited from
-
-ResServerTools.exportTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:173
@@ -922,13 +812,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.func
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:544
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:570
 
 ___
 
@@ -946,19 +832,15 @@ ___
 
 `T`
 
-#### Overrides
-
-ResServerTools.get
-
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:105](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L105)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:118](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L118)
 
 ___
 
 ### getDocsFromDir
 
-▸ **getDocsFromDir**(`dir`): `any`[]
+▸ **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
 
 #### Parameters
 
@@ -968,11 +850,11 @@ ___
 
 #### Returns
 
-`any`[]
+`Promise`\<`any`[]\>
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:70](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L70)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:80](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L80)
 
 ___
 
@@ -990,13 +872,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.getFunc
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:67
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:87
 
 ___
 
@@ -1014,13 +892,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.getFuncWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:72
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:92
 
 ___
 
@@ -1038,13 +912,9 @@ ___
 
 `undefined` \| `string`
 
-#### Inherited from
-
-ResServerTools.getMethodFromParams
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:543
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:569
 
 ___
 
@@ -1062,13 +932,29 @@ the descriptors of properties object
 
 **`Abstract`**
 
-#### Inherited from
-
-ResServerTools.getProperties
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+
+___
+
+### hasAsyncFeature
+
+▸ **hasAsyncFeature**(`feature`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feature` | `AsyncFeatureBits` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:93
 
 ___
 
@@ -1088,10 +974,6 @@ Determines whether an object has a property with the specified name.
 
 `boolean`
 
-#### Inherited from
-
-ResServerTools.hasOwnProperty
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:140
@@ -1100,7 +982,27 @@ ___
 
 ### initDB
 
-▸ **initDB**(`initDir?`, `collection?`): `void`
+▸ **initDB**(`db`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `db` | [`KVSqlite`](KVSqlite.md) |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L42)
+
+___
+
+### initData
+
+▸ **initData**(`initDir?`, `collection?`): `void`
 
 #### Parameters
 
@@ -1115,7 +1017,28 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:59](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L59)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L66)
+
+___
+
+### initDataFromDir
+
+▸ **initDataFromDir**(`dir`, `collection?`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dir` | `string` |
+| `collection?` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L72)
 
 ___
 
@@ -1137,34 +1060,9 @@ Initialize object and assign attribute values from src if src exists.
 
 this object.
 
-#### Inherited from
-
-ResServerTools.initialize
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:139
-
-___
-
-### intDBFromDir
-
-▸ **intDBFromDir**(`dir`, `collection?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `dir` | `string` |
-| `collection?` | `string` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:65](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L65)
 
 ___
 
@@ -1183,10 +1081,6 @@ Determines whether an object exists in another object's prototype chain.
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-ResServerTools.isPrototypeOf
 
 #### Defined in
 
@@ -1211,10 +1105,6 @@ Check the src object whether “equals” this object.
 
 `boolean`
 
-#### Inherited from
-
-ResServerTools.isSame
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:200
@@ -1235,13 +1125,9 @@ ___
 
 `undefined` \| `boolean`
 
-#### Inherited from
-
-ResServerTools.isStream
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:408
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:434
 
 ___
 
@@ -1259,13 +1145,9 @@ ___
 
 `T`[]
 
-#### Overrides
-
-ResServerTools.list
-
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:98](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L98)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:111](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L111)
 
 ___
 
@@ -1288,10 +1170,6 @@ Merge this attributes to dest object.
 
 the dest object.
 
-#### Inherited from
-
-ResServerTools.mergeTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:164
@@ -1312,19 +1190,15 @@ ___
 
 `any`[]
 
-#### Inherited from
-
-ResServerTools.obj2ArrParams
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:62
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:82
 
 ___
 
 ### post
 
-▸ **post**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
+▸ **post**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[] \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]\>
 
 #### Parameters
 
@@ -1334,15 +1208,11 @@ ___
 
 #### Returns
 
-[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
-
-#### Overrides
-
-ResServerTools.post
+[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[] \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]\>
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:136](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L136)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:149](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L149)
 
 ___
 
@@ -1362,10 +1232,6 @@ Determines whether a specified property is enumerable.
 
 `boolean`
 
-#### Inherited from
-
-ResServerTools.propertyIsEnumerable
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
@@ -1374,7 +1240,7 @@ ___
 
 ### put
 
-▸ **put**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md)
+▸ **put**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
 
 #### Parameters
 
@@ -1384,15 +1250,11 @@ ___
 
 #### Returns
 
-[`SqliteRunResult`](../interfaces/SqliteRunResult.md)
-
-#### Overrides
-
-ResServerTools.put
+[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:118](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L118)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:131](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L131)
 
 ___
 
@@ -1404,13 +1266,9 @@ ___
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:59
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:79
 
 ___
 
@@ -1428,13 +1286,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-ResServerTools.run
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:64
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:84
 
 ___
 
@@ -1453,13 +1307,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-ResServerTools.runAs
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:65
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:85
 
 ___
 
@@ -1478,13 +1328,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.runAsSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:66
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:86
 
 ___
 
@@ -1502,13 +1348,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.runSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:63
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:83
 
 ___
 
@@ -1526,13 +1368,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-ResServerTools.runWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:70
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:90
 
 ___
 
@@ -1551,13 +1389,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-ResServerTools.runWithPosAs
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:71
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:91
 
 ___
 
@@ -1576,13 +1410,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.runWithPosAsSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:69
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:89
 
 ___
 
@@ -1600,13 +1430,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.runWithPosSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:68
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:88
 
 ___
 
@@ -1617,10 +1443,6 @@ ___
 #### Returns
 
 `any`
-
-#### Inherited from
-
-ResServerTools.toJSON
 
 #### Defined in
 
@@ -1637,10 +1459,6 @@ Returns a date converted to a string using the current locale.
 #### Returns
 
 `string`
-
-#### Inherited from
-
-ResServerTools.toLocaleString
 
 #### Defined in
 
@@ -1666,10 +1484,6 @@ Convert the attributes to the json object
 
 the json object.
 
-#### Inherited from
-
-ResServerTools.toObject
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:181
@@ -1686,10 +1500,6 @@ Returns a string representation of an object.
 
 `string`
 
-#### Inherited from
-
-ResServerTools.toString
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
@@ -1704,19 +1514,15 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.unregister
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:60
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:80
 
 ___
 
-### updateDBFromDir
+### updateDataFromDir
 
-▸ **updateDBFromDir**(`dir?`, `collection?`): `undefined` \| `number`
+▸ **updateDataFromDir**(`dir?`, `collection?`): `Promise`\<`undefined` \| `number`\>
 
 #### Parameters
 
@@ -1727,11 +1533,11 @@ ___
 
 #### Returns
 
-`undefined` \| `number`
+`Promise`\<`undefined` \| `number`\>
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:81](https://github.com/isdk/ai-tool-sqlite.js/blob/7285b68dc861f40bf3933f0fbf14e3d01892f056/src/sqlite-res.ts#L81)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/70665bd696c561f89d226d5daf75e81a89b12e5f/src/sqlite-res.ts#L91)
 
 ___
 
@@ -1744,10 +1550,6 @@ Returns the primitive value of the specified object.
 #### Returns
 
 `Object`
-
-#### Inherited from
-
-ResServerTools.valueOf
 
 #### Defined in
 
@@ -1780,10 +1582,6 @@ target object. Returns the target object.
 
 `T` & `U`
 
-#### Inherited from
-
-ResServerTools.assign
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
@@ -1812,10 +1610,6 @@ target object. Returns the target object.
 #### Returns
 
 `T` & `U` & `V`
-
-#### Inherited from
-
-ResServerTools.assign
 
 #### Defined in
 
@@ -1848,10 +1642,6 @@ target object. Returns the target object.
 
 `T` & `U` & `V` & `W`
 
-#### Inherited from
-
-ResServerTools.assign
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
@@ -1871,10 +1661,6 @@ target object. Returns the target object.
 #### Returns
 
 `any`
-
-#### Inherited from
-
-ResServerTools.assign
 
 #### Defined in
 
@@ -1898,10 +1684,6 @@ Creates an object that has the specified prototype or that has null prototype.
 
 `any`
 
-#### Inherited from
-
-ResServerTools.create
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
@@ -1920,10 +1702,6 @@ Creates an object that has the specified prototype, and that optionally contains
 #### Returns
 
 `any`
-
-#### Inherited from
-
-ResServerTools.create
 
 #### Defined in
 
@@ -1946,10 +1724,6 @@ ___
 #### Returns
 
 `any`
-
-#### Inherited from
-
-ResServerTools.defineProperties
 
 #### Defined in
 
@@ -1981,10 +1755,6 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 `T`
 
-#### Inherited from
-
-ResServerTools.defineProperty
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
@@ -2013,10 +1783,6 @@ Returns an array of key/values of the enumerable properties of an object
 
 [`string`, `T`][]
 
-#### Inherited from
-
-ResServerTools.entries
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
@@ -2034,10 +1800,6 @@ Returns an array of key/values of the enumerable properties of an object
 #### Returns
 
 [`string`, `any`][]
-
-#### Inherited from
-
-ResServerTools.entries
 
 #### Defined in
 
@@ -2067,10 +1829,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 `T`
 
-#### Inherited from
-
-ResServerTools.freeze
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
@@ -2096,10 +1854,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 `Readonly`\<`T`\>
 
-#### Inherited from
-
-ResServerTools.freeze
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
@@ -2123,10 +1877,6 @@ Prevents the modification of existing property attributes and values, and preven
 #### Returns
 
 `Readonly`\<`T`\>
-
-#### Inherited from
-
-ResServerTools.freeze
 
 #### Defined in
 
@@ -2156,10 +1906,6 @@ Returns an object created by key-value entries for properties and methods
 
 `Object`
 
-#### Inherited from
-
-ResServerTools.fromEntries
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
@@ -2177,10 +1923,6 @@ Returns an object created by key-value entries for properties and methods
 #### Returns
 
 `any`
-
-#### Inherited from
-
-ResServerTools.fromEntries
 
 #### Defined in
 
@@ -2202,13 +1944,9 @@ ___
 
 `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.get
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:44
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:63
 
 ___
 
@@ -2226,13 +1964,9 @@ ___
 
 `ToolFunc`[]
 
-#### Inherited from
-
-ResServerTools.getAllByTag
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:47
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:66
 
 ___
 
@@ -2250,13 +1984,9 @@ ___
 
 `undefined` \| `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.getByTag
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:46
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:65
 
 ___
 
@@ -2274,13 +2004,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.getFunc
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:50
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:70
 
 ___
 
@@ -2298,13 +2024,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.getFuncWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:53
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:73
 
 ___
 
@@ -2325,10 +2047,6 @@ An own property descriptor is one that is defined directly on the object and is 
 #### Returns
 
 `undefined` \| `PropertyDescriptor`
-
-#### Inherited from
-
-ResServerTools.getOwnPropertyDescriptor
 
 #### Defined in
 
@@ -2358,10 +2076,6 @@ Returns an object containing all own property descriptors of an object
 
 \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
 
-#### Inherited from
-
-ResServerTools.getOwnPropertyDescriptors
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
@@ -2385,10 +2099,6 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 `string`[]
 
-#### Inherited from
-
-ResServerTools.getOwnPropertyNames
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
@@ -2411,10 +2121,6 @@ Returns an array of all symbol properties found directly on object o.
 
 `symbol`[]
 
-#### Inherited from
-
-ResServerTools.getOwnPropertySymbols
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
@@ -2430,10 +2136,6 @@ get all properties descriptor include inherited.
 #### Returns
 
 `PropDescriptors`
-
-#### Inherited from
-
-ResServerTools.getProperties
 
 #### Defined in
 
@@ -2457,13 +2159,29 @@ Returns the prototype of an object.
 
 `any`
 
-#### Inherited from
-
-ResServerTools.getPrototypeOf
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+
+___
+
+### hasAsyncFeature
+
+▸ **hasAsyncFeature**(`feature`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feature` | `AsyncFeatureBits` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:67
 
 ___
 
@@ -2483,10 +2201,6 @@ Returns true if the values are the same value, false otherwise.
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-ResServerTools.is
 
 #### Defined in
 
@@ -2510,10 +2224,6 @@ Returns a value that indicates whether new properties can be added to an object.
 
 `boolean`
 
-#### Inherited from
-
-ResServerTools.isExtensible
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
@@ -2535,10 +2245,6 @@ Returns true if existing property attributes and values cannot be modified in an
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-ResServerTools.isFrozen
 
 #### Defined in
 
@@ -2562,10 +2268,6 @@ Returns true if existing property attributes cannot be modified in an object and
 
 `boolean`
 
-#### Inherited from
-
-ResServerTools.isSealed
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
@@ -2588,10 +2290,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 `string`[]
 
-#### Inherited from
-
-ResServerTools.keys
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
@@ -2610,10 +2308,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 `string`[]
 
-#### Inherited from
-
-ResServerTools.keys
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
@@ -2628,13 +2322,9 @@ ___
 
 `Funcs`
 
-#### Inherited from
-
-ResServerTools.list
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:45
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:64
 
 ___
 
@@ -2660,10 +2350,6 @@ Prevents the addition of new properties to an object.
 
 `T`
 
-#### Inherited from
-
-ResServerTools.preventExtensions
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
@@ -2685,13 +2371,9 @@ ___
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:54
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:74
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2706,13 +2388,9 @@ packages/ai-tool/dist/index-japi6bEq.d.ts:54
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:55
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:75
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2727,13 +2405,9 @@ packages/ai-tool/dist/index-japi6bEq.d.ts:55
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:56
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:76
 
 ___
 
@@ -2752,13 +2426,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-ResServerTools.run
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:48
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:68
 
 ___
 
@@ -2777,13 +2447,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.runSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:49
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:69
 
 ___
 
@@ -2802,13 +2468,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-ResServerTools.runWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:51
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:71
 
 ___
 
@@ -2827,13 +2489,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-ResServerTools.runWithPosSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:52
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:72
 
 ___
 
@@ -2859,10 +2517,6 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 `T`
 
-#### Inherited from
-
-ResServerTools.seal
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
@@ -2883,13 +2537,9 @@ ___
 
 `void`
 
-#### Inherited from
-
-ResServerTools.setApiRoot
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:404
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:430
 
 ___
 
@@ -2910,10 +2560,6 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 `any`
 
-#### Inherited from
-
-ResServerTools.setPrototypeOf
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
@@ -2928,13 +2574,9 @@ ___
 
 `Object`
 
-#### Inherited from
-
-ResServerTools.toJSON
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:405
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:431
 
 ___
 
@@ -2952,13 +2594,9 @@ ___
 
 `undefined` \| `ToolFunc`
 
-#### Inherited from
-
-ResServerTools.unregister
-
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:57
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:77
 
 ___
 
@@ -2984,10 +2622,6 @@ Returns an array of values of the enumerable properties of an object
 
 `T`[]
 
-#### Inherited from
-
-ResServerTools.values
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
@@ -3005,10 +2639,6 @@ Returns an array of values of the enumerable properties of an object
 #### Returns
 
 `any`[]
-
-#### Inherited from
-
-ResServerTools.values
 
 #### Defined in
 

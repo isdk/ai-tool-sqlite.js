@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.5...v0.0.6) (2024-08-11)
+
+
+### Features
+
+* add initDB optional method ([c2d9220](https://github.com/isdk/ai-tool-sqlite.js/commit/c2d92202748470afb10fe6c77910a5912e43cf4c))
+* export from kvsqlite ([bfdbfa4](https://github.com/isdk/ai-tool-sqlite.js/commit/bfdbfa4404f3ce423be07abea4c61d74b8908d52))
+* export IKVCreateFtsOptions from kvsqlite ([70665bd](https://github.com/isdk/ai-tool-sqlite.js/commit/70665bd696c561f89d226d5daf75e81a89b12e5f))
+* export IKVSetOptions from kvsqlite ([b7997b2](https://github.com/isdk/ai-tool-sqlite.js/commit/b7997b232efa134393d97b1b8262dfc5e5aaadf9))
+* **store:** add sqliteStores as default ([c3fc8d7](https://github.com/isdk/ai-tool-sqlite.js/commit/c3fc8d78b37a7075d379802dd33205a1d0f8bdd8))
+
+
+### Bug Fixes
+
+* KVSqliteResFuncParams should be optional for KVSqliteResFunc ([30dee4c](https://github.com/isdk/ai-tool-sqlite.js/commit/30dee4c729f8ba1c8ff1ad509b3d994b9d7d855c))
+* make ts happy ([11c177e](https://github.com/isdk/ai-tool-sqlite.js/commit/11c177e99fb45f224ee640c51cdef62b25d5a9db))
+
+
+### Refactor
+
+* add options to $createCollection ([61cc767](https://github.com/isdk/ai-tool-sqlite.js/commit/61cc767e9b74fb285e98bcd534de830313496c62))
+* list, put, post etc ([9a97da8](https://github.com/isdk/ai-tool-sqlite.js/commit/9a97da84e5d434724fd3be9e9669170b1ee518b7))
+* rename initDB to initData, updateDBFromDir to updateDataFromDir; add initingData property ([ca852fe](https://github.com/isdk/ai-tool-sqlite.js/commit/ca852fe91f2015e575bbe99042ef21a6c535bc48))
+* **store:** location as id and remove pos arguments processing. ([02bcc52](https://github.com/isdk/ai-tool-sqlite.js/commit/02bcc5285576eb69920174ef1cf4715c7edb45b5))
+
 ## [0.0.5](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.4...v0.0.5) (2024-07-08)
 
 

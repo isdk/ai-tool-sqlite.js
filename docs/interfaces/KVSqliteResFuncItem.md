@@ -15,11 +15,13 @@
 - [dbPath](KVSqliteResFuncItem.md#dbpath)
 - [func](KVSqliteResFuncItem.md#func)
 - [initDir](KVSqliteResFuncItem.md#initdir)
+- [isApi](KVSqliteResFuncItem.md#isapi)
 - [name](KVSqliteResFuncItem.md#name)
 - [params](KVSqliteResFuncItem.md#params)
 - [result](KVSqliteResFuncItem.md#result)
 - [scope](KVSqliteResFuncItem.md#scope)
 - [setup](KVSqliteResFuncItem.md#setup)
+- [stream](KVSqliteResFuncItem.md#stream)
 - [tags](KVSqliteResFuncItem.md#tags)
 
 ## Properties
@@ -30,7 +32,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/e5c256d26ef27aead78ba0d9137e44349549f4ef/src/sqlite-res.ts#L37)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/f6d30018f0c3d6d02a52143a2cf8a486d443a8ce/src/sqlite-res.ts#L37)
 
 ___
 
@@ -44,7 +46,7 @@ FuncItem.func
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:44
+packages/ai-tool/dist/index-DvpywQaE.d.ts:46
 
 ___
 
@@ -54,7 +56,21 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/e5c256d26ef27aead78ba0d9137e44349549f4ef/src/sqlite-res.ts#L38)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/f6d30018f0c3d6d02a52143a2cf8a486d443a8ce/src/sqlite-res.ts#L38)
+
+___
+
+### isApi
+
+• `Optional` **isApi**: `boolean`
+
+#### Inherited from
+
+FuncItem.isApi
+
+#### Defined in
+
+packages/ai-tool/dist/index-DvpywQaE.d.ts:42
 
 ___
 
@@ -68,7 +84,7 @@ FuncItem.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:36
+packages/ai-tool/dist/index-DvpywQaE.d.ts:36
 
 ___
 
@@ -82,7 +98,7 @@ FuncItem.params
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:37
+packages/ai-tool/dist/index-DvpywQaE.d.ts:37
 
 ___
 
@@ -96,7 +112,7 @@ FuncItem.result
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:38
+packages/ai-tool/dist/index-DvpywQaE.d.ts:38
 
 ___
 
@@ -110,7 +126,7 @@ FuncItem.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:39
+packages/ai-tool/dist/index-DvpywQaE.d.ts:39
 
 ___
 
@@ -139,7 +155,21 @@ FuncItem.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:41
+packages/ai-tool/dist/index-DvpywQaE.d.ts:41
+
+___
+
+### stream
+
+• `Optional` **stream**: `boolean`
+
+#### Inherited from
+
+FuncItem.stream
+
+#### Defined in
+
+packages/ai-tool/dist/index-DvpywQaE.d.ts:43
 
 ___
 
@@ -153,4 +183,4 @@ FuncItem.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:40
+packages/ai-tool/dist/index-DvpywQaE.d.ts:40

@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/f6d30018f0c3d6d02a52143a2cf8a486d443a8ce/src/sqlite-res.ts#L37)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L37)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/f6d30018f0c3d6d02a52143a2cf8a486d443a8ce/src/sqlite-res.ts#L38)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L38)
 
 ___
 

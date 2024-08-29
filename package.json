@@ -36,7 +36,7 @@
     "@isdk/ai-tool": "workspace:*",
     "@isdk/kvsqlite": "workspace:*",
     "lodash-es": "^4.17.21",
-    "mime-type": "^5.0.0-alpha.2"
+    "mime-type": "^5.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.15.0",

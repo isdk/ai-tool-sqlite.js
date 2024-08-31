@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.12](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.11...v0.0.12) (2024-08-31)
+
+
+### Refactor
+
+* export kvsqlite ([41fc700](https://github.com/isdk/ai-tool-sqlite.js/commit/41fc700da83ea6fac13e95b6f40b7a6ce13d2967))
+
 ## [0.0.11](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.10...v0.0.11) (2024-08-28)
 
 ## [0.0.10](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.9...v0.0.10) (2024-08-23)

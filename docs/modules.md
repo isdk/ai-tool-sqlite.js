@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:90](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-store.ts#L90)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:90](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-store.ts#L90)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:8](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-store.ts#L8)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:8](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-store.ts#L8)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:6](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-store.ts#L6)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:6](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-store.ts#L6)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-store.ts#L91)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-store.ts#L91)
 
 ## Functions
 
@@ -210,7 +210,7 @@ set the value if key is provided and value is provided
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-store.ts#L29)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-store.ts#L29)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-store.ts#L72)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-store.ts#L72)
 
 ___
 

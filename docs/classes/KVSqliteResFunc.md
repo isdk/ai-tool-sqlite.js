@@ -173,7 +173,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L51)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L51)
 
 ## Properties
 
@@ -183,7 +183,7 @@
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:5
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L48)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L48)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L46)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L46)
 
 ___
 
@@ -264,7 +264,7 @@ The default options for export and assign
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:74
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L47)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L47)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L49)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L49)
 
 ___
 
@@ -336,7 +336,7 @@ the property with the default prefix '$' will not be exported.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:78
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
 
 ___
 
@@ -489,7 +489,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:431
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:210](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L210)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:210](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L210)
 
 ___
 
@@ -509,7 +509,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:216](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L216)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:216](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L216)
 
 ___
 
@@ -529,7 +529,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:227](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L227)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:227](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L227)
 
 ___
 
@@ -549,7 +549,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:200](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L200)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:200](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L200)
 
 ___
 
@@ -569,7 +569,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:190](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L190)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:190](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L190)
 
 ___
 
@@ -614,7 +614,7 @@ this object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:106
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
 
 ___
 
@@ -640,7 +640,7 @@ Assign a property of src to this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:117
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
 
 ___
 
@@ -669,7 +669,7 @@ Assign the property value from the src to destination object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:131
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
 
 ___
 
@@ -694,7 +694,7 @@ the dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:191
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:104](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L104)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:104](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L104)
 
 ___
 
@@ -759,7 +759,7 @@ the new object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:155
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
 
 ___
 
@@ -784,7 +784,7 @@ the new dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:148
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
 
 ___
 
@@ -808,7 +808,7 @@ Define the attributes of this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:89
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
 
 ___
 
@@ -828,7 +828,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:173](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L173)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:173](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L173)
 
 ___
 
@@ -853,7 +853,7 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:173
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
 
 ___
 
@@ -893,7 +893,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:118](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L118)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:118](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L118)
 
 ___
 
@@ -913,7 +913,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:80](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L80)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:80](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L80)
 
 ___
 
@@ -993,7 +993,7 @@ the descriptors of properties object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
 
 ___
 
@@ -1055,7 +1055,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L42)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L42)
 
 ___
 
@@ -1076,7 +1076,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L66)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L66)
 
 ___
 
@@ -1097,7 +1097,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L72)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L72)
 
 ___
 
@@ -1141,7 +1141,7 @@ this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:139
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
 
 ___
 
@@ -1186,7 +1186,7 @@ Check the src object whether “equals” this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:200
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
 
 ___
 
@@ -1226,7 +1226,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:111](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L111)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:111](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L111)
 
 ___
 
@@ -1251,7 +1251,7 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:164
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
 
 ___
 
@@ -1291,7 +1291,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:149](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L149)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:149](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L149)
 
 ___
 
@@ -1333,7 +1333,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:131](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L131)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:131](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L131)
 
 ___
 
@@ -1525,7 +1525,7 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:182
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
 
 ___
 
@@ -1565,7 +1565,7 @@ the json object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:181
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
 
 ___
 
@@ -1616,7 +1616,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/38aac1552e1fd8f06c43bc7673d38ede024b9580/src/sqlite-res.ts#L91)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/26cc9969643cc5b9e7b82bab10a8c7c5072a025c/src/sqlite-res.ts#L91)
 
 ___
 
@@ -1806,7 +1806,7 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:11
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
 
 ___
 
@@ -2218,7 +2218,7 @@ get all properties descriptor include inherited.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:10
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
 
 ___
 

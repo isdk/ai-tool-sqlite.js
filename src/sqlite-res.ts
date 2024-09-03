@@ -54,18 +54,21 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams = KVSqliteResFuncPa
     if (this.dbPath) {
       const db = this.db = new KVSqlite(this.dbPath)
       if (this.initDB) this.initDB(db)
-      const count = db.count()
-      if (count === 0) {
-        this.initData()
-      }
+      // const count = db.count()
+      // if (count === 0) {
+      //   this.initData()
+      // }
     } else {
       throw new CommonError('dbPath is required', this.name, ErrorCode.InvalidArgument)
     }
   }
 
-  initData(initDir = this.initDir, collection?: string) {
+  async initData(initDir?: string, collection?: string) {
+    if (!initDir && this.db.count() === 0) {
+      initDir = this.initDir
+    }
     if (initDir) {
-      this.initDataFromDir(initDir, collection).then()
+      return this.initDataFromDir(initDir, collection)
     }
   }
 

@@ -127,7 +127,7 @@ describe('KVSqliteRes server api', () => {
 
   it('should initData from dir', async () => {
     const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
-    await wait(10)
+    await res.initData()
     expect(res.$count()).toBe(4)
     let result = res.get({id: 3})
     expect(result).toMatchObject({_id: 3, name: 'test3'})
@@ -135,7 +135,7 @@ describe('KVSqliteRes server api', () => {
 
   it('should updateData from dir', async () => {
     const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
-    await wait(10)
+    await res.initData()
     expect(res.$count()).toBe(4)
 
     const configs = [
@@ -159,7 +159,7 @@ describe('KVSqliteRes server api', () => {
 
   it('should updateDB from dir do not overwrite already exists', async () => {
     const res = new KVSqliteResFunc('testInitData', {dbPath, initDir: path.join(__dirname, 'init')})
-    await wait(10)
+    await res.initData()
     expect(res.$count()).toBe(4)
     let result = res.get({id: 3})
     expect(result).toMatchObject({_id: 3, name: 'test3'})

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.15...v0.1.0) (2024-09-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove aysnc intData in constructor
+
+### Refactor
+
+* remove aysnc intData in constructor ([7d1b3d5](https://github.com/isdk/ai-tool-sqlite.js/commit/7d1b3d5fe34c6739df2d032e93295c040045959b))
+
 ## [0.0.15](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.14...v0.0.15) (2024-09-02)
 
 ## [0.0.14](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.0.13...v0.0.14) (2024-09-02)

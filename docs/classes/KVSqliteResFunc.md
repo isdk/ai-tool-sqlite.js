@@ -173,7 +173,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L51)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L51)
 
 ## Properties
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:579
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:431
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:424
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:276
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:160
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:160
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L48)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L48)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L46)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L46)
 
 ___
 
@@ -274,7 +274,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:162
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:162
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L47)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L47)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L49)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L49)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:42
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
 
 ___
 
@@ -314,7 +314,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:552
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:404
 
 ___
 
@@ -324,7 +324,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:36
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
 
 ___
 
@@ -346,7 +346,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:580
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:432
 
 ___
 
@@ -356,7 +356,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:38
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:38
 
 ___
 
@@ -366,7 +366,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:39
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:41
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
 
 ___
 
@@ -401,7 +401,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:43
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
 
 ___
 
@@ -411,7 +411,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:40
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
 
 ___
 
@@ -421,7 +421,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:578
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:430
 
 ___
 
@@ -431,7 +431,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:64
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:64
 
 ___
 
@@ -441,7 +441,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:63
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
 
 ## Accessors
 
@@ -455,7 +455,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:63
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:557
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:409
 
 ___
 
@@ -469,7 +469,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:431
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:283
 
 ## Methods
 
@@ -489,7 +489,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:431
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:210](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L210)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L213)
 
 ___
 
@@ -509,7 +509,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:216](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L216)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L219)
 
 ___
 
@@ -529,7 +529,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:227](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L227)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L230)
 
 ___
 
@@ -549,7 +549,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:200](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L200)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L203)
 
 ___
 
@@ -569,7 +569,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:190](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L190)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L193)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:83
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:83
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:104](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L104)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L107)
 
 ___
 
@@ -735,7 +735,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:583
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:435
 
 ___
 
@@ -828,7 +828,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:173](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L173)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L176)
 
 ___
 
@@ -873,7 +873,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:563
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:415
 
 ___
 
@@ -893,7 +893,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:118](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L118)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L121)
 
 ___
 
@@ -913,7 +913,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:80](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L80)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L83)
 
 ___
 
@@ -933,7 +933,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:89
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:89
 
 ___
 
@@ -953,7 +953,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:94
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:94
 
 ___
 
@@ -973,7 +973,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:582
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:434
 
 ___
 
@@ -1013,7 +1013,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:95
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:95
 
 ___
 
@@ -1055,28 +1055,28 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L42)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L42)
 
 ___
 
 ### initData
 
-▸ **initData**(`initDir?`, `collection?`): `void`
+▸ **initData**(`initDir?`, `collection?`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `initDir` | `undefined` \| `string` |
+| `initDir?` | `string` |
 | `collection?` | `string` |
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L66)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L66)
 
 ___
 
@@ -1097,7 +1097,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L72)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L75)
 
 ___
 
@@ -1117,7 +1117,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:558
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:410
 
 ___
 
@@ -1206,7 +1206,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:96
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:96
 
 ___
 
@@ -1226,7 +1226,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:111](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L111)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L114)
 
 ___
 
@@ -1271,7 +1271,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:84
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:84
 
 ___
 
@@ -1291,7 +1291,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:149](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L149)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L152)
 
 ___
 
@@ -1333,7 +1333,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:131](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L131)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L134)
 
 ___
 
@@ -1347,7 +1347,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:81
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:81
 
 ___
 
@@ -1367,7 +1367,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:86
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:86
 
 ___
 
@@ -1388,7 +1388,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:87
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:87
 
 ___
 
@@ -1409,7 +1409,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:88
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:88
 
 ___
 
@@ -1429,7 +1429,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:85
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:85
 
 ___
 
@@ -1449,7 +1449,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:92
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:92
 
 ___
 
@@ -1470,7 +1470,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:93
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:93
 
 ___
 
@@ -1491,7 +1491,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:91
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:91
 
 ___
 
@@ -1511,7 +1511,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:90
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:90
 
 ___
 
@@ -1595,7 +1595,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:82
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:82
 
 ___
 
@@ -1616,7 +1616,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:91](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L91)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L94)
 
 ___
 
@@ -2025,7 +2025,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:65
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:65
 
 ___
 
@@ -2045,7 +2045,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:68
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:68
 
 ___
 
@@ -2065,7 +2065,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:67
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:67
 
 ___
 
@@ -2085,7 +2085,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:72
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:72
 
 ___
 
@@ -2105,7 +2105,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:75
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:75
 
 ___
 
@@ -2260,7 +2260,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:69
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:69
 
 ___
 
@@ -2403,7 +2403,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:66
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:66
 
 ___
 
@@ -2452,7 +2452,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:76
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:76
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2469,7 +2469,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:76
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:77
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:77
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2486,7 +2486,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:77
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:78
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:78
 
 ___
 
@@ -2507,7 +2507,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:70
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:70
 
 ___
 
@@ -2528,7 +2528,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:71
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:71
 
 ___
 
@@ -2549,7 +2549,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:73
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:73
 
 ___
 
@@ -2570,7 +2570,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:74
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:74
 
 ___
 
@@ -2618,7 +2618,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:432
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:284
 
 ___
 
@@ -2655,7 +2655,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:433
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:285
 
 ___
 
@@ -2675,7 +2675,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:79
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:79
 
 ___
 

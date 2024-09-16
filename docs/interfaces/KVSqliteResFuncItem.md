@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L37)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L37)
 
 ___
 
@@ -46,7 +46,7 @@ FuncItem.func
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:46
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:46
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L38)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L38)
 
 ___
 
@@ -70,7 +70,7 @@ FuncItem.isApi
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:42
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
 
 ___
 
@@ -84,7 +84,7 @@ FuncItem.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:36
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
 
 ___
 
@@ -98,7 +98,7 @@ FuncItem.params
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:37
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:37
 
 ___
 
@@ -112,7 +112,7 @@ FuncItem.result
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:38
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:38
 
 ___
 
@@ -126,7 +126,7 @@ FuncItem.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:39
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
 
 ___
 
@@ -155,7 +155,7 @@ FuncItem.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:41
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
 
 ___
 
@@ -169,7 +169,7 @@ FuncItem.stream
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:43
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
 
 ___
 
@@ -183,4 +183,4 @@ FuncItem.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:40
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:40

@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:25](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L25)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:25](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L25)
 
 ___
 
@@ -48,7 +48,7 @@ ResServerFuncParams.\_req
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:419
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:271
 
 ___
 
@@ -62,7 +62,7 @@ ResServerFuncParams.\_res
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:420
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:272
 
 ___
 
@@ -76,7 +76,7 @@ ResServerFuncParams.act
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:549
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:401
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L32)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L32)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:28](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L28)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:28](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L28)
 
 ___
 
@@ -110,7 +110,7 @@ ResServerFuncParams.id
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:567
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:419
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L33)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L33)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L31)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L31)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L30)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L30)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L27)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L27)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L29)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L29)
 
 ___
 
@@ -174,4 +174,4 @@ ResServerFuncParams.val
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:26](https://github.com/isdk/ai-tool-sqlite.js/blob/f390cca995d926b1f7a25c7b378ff07f17d595b5/src/sqlite-res.ts#L26)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:26](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L26)

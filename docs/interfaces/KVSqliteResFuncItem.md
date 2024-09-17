@@ -1,186 +1,167 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / KVSqliteResFuncItem
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / KVSqliteResFuncItem
 
 # Interface: KVSqliteResFuncItem
 
-## Hierarchy
+## Extends
 
 - `FuncItem`
-
-  ↳ **`KVSqliteResFuncItem`**
-
-## Table of contents
-
-### Properties
-
-- [dbPath](KVSqliteResFuncItem.md#dbpath)
-- [func](KVSqliteResFuncItem.md#func)
-- [initDir](KVSqliteResFuncItem.md#initdir)
-- [isApi](KVSqliteResFuncItem.md#isapi)
-- [name](KVSqliteResFuncItem.md#name)
-- [params](KVSqliteResFuncItem.md#params)
-- [result](KVSqliteResFuncItem.md#result)
-- [scope](KVSqliteResFuncItem.md#scope)
-- [setup](KVSqliteResFuncItem.md#setup)
-- [stream](KVSqliteResFuncItem.md#stream)
-- [tags](KVSqliteResFuncItem.md#tags)
 
 ## Properties
 
 ### dbPath
 
-• **dbPath**: `undefined` \| `string`
+> **dbPath**: `undefined` \| `string`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L37)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L37)
 
-___
+***
 
-### func
+### func?
 
-• `Optional` **func**: `TFunc`
+> `optional` **func**: `TFunc`
 
 #### Inherited from
 
-FuncItem.func
+`FuncItem.func`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:46
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:46
 
-___
+***
 
 ### initDir
 
-• **initDir**: `undefined` \| `string`
+> **initDir**: `undefined` \| `string`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L38)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L38)
 
-___
+***
 
-### isApi
+### isApi?
 
-• `Optional` **isApi**: `boolean`
+> `optional` **isApi**: `boolean`
 
 #### Inherited from
 
-FuncItem.isApi
+`FuncItem.isApi`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 #### Inherited from
 
-FuncItem.name
+`FuncItem.name`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
 
-___
+***
 
-### params
+### params?
 
-• `Optional` **params**: `FuncParams` \| `FuncParam`[]
+> `optional` **params**: `FuncParams` \| `FuncParam`[]
 
 #### Inherited from
 
-FuncItem.params
+`FuncItem.params`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:37
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:37
 
-___
+***
 
-### result
+### result?
 
-• `Optional` **result**: `string`
+> `optional` **result**: `string`
 
 #### Inherited from
 
-FuncItem.result
+`FuncItem.result`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:38
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:38
 
-___
+***
 
-### scope
+### scope?
 
-• `Optional` **scope**: `any`
+> `optional` **scope**: `any`
 
 #### Inherited from
 
-FuncItem.scope
+`FuncItem.scope`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
 
-___
+***
 
-### setup
+### setup()?
 
-• `Optional` **setup**: (`this`: `ToolFunc`, `options?`: `FuncItem`) => `void`
+> `optional` **setup**: (`this`, `options`?) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`this`, `options?`): `void`
+• **this**: `ToolFunc`
 
-##### Parameters
+• **options?**: `FuncItem`
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `ToolFunc` |
-| `options?` | `FuncItem` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-FuncItem.setup
+`FuncItem.setup`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
 
-___
+***
 
-### stream
+### stream?
 
-• `Optional` **stream**: `boolean`
+> `optional` **stream**: `boolean`
 
 #### Inherited from
 
-FuncItem.stream
+`FuncItem.stream`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
-___
+***
 
-### tags
+### tags?
 
-• `Optional` **tags**: `string` \| `string`[]
+> `optional` **tags**: `string` \| `string`[]
 
 #### Inherited from
 
-FuncItem.tags
+`FuncItem.tags`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:40

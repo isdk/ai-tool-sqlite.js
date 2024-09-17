@@ -1,62 +1,56 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVFieldOption
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVFieldOption
 
 # Interface: IKVFieldOption
 
-## Table of contents
-
-### Properties
-
-- [default](IKVFieldOption.md#default)
-- [name](IKVFieldOption.md#name)
-- [notNull](IKVFieldOption.md#notnull)
-- [primary](IKVFieldOption.md#primary)
-- [type](IKVFieldOption.md#type)
-
 ## Properties
 
-### default
+### default?
 
-• `Optional` **default**: `any`
+> `optional` **default**: `any`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:83
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:79
 
-___
+***
 
-### notNull
+### notNull?
 
-• `Optional` **notNull**: `boolean`
+> `optional` **notNull**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:81
 
-___
+***
 
-### primary
+### primary?
 
-• `Optional` **primary**: `boolean`
+> `optional` **primary**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:82
 
-___
+***
 
-### type
+### type?
 
-• `Optional` **type**: `string`
+> `optional` **type**: `string`
 
 #### Defined in
 

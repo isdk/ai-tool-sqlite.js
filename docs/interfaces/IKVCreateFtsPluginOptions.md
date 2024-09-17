@@ -1,38 +1,28 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVCreateFtsPluginOptions
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateFtsPluginOptions
 
 # Interface: IKVCreateFtsPluginOptions
 
 ## Indexable
 
-▪ [name: `string`]: `any`
-
-An object holding additional configurations for the plugin related to this language.
-
-## Table of contents
-
-### Properties
-
-- [load](IKVCreateFtsPluginOptions.md#load)
-- [path](IKVCreateFtsPluginOptions.md#path)
+ \[`name`: `string`\]: `any`
 
 ## Properties
 
-### load
+### load()?
 
-• `Optional` **load**: (`db`: [`KVSqlite`](../classes/KVSqlite.md), `options`: [`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md)) => `void`
+> `optional` **load**: (`db`, `options`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`db`, `options`): `void`
+• **db**: [`KVSqlite`](../classes/KVSqlite.md)
 
-##### Parameters
+• **options**: [`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md)
 
-| Name | Type |
-| :------ | :------ |
-| `db` | [`KVSqlite`](../classes/KVSqlite.md) |
-| `options` | [`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md) |
-
-##### Returns
+#### Returns
 
 `void`
 
@@ -40,11 +30,11 @@ An object holding additional configurations for the plugin related to this langu
 
 packages/kvsqlite/dist/index.d.ts:36
 
-___
+***
 
 ### path
 
-• **path**: `string`
+> **path**: `string`
 
 The path to the plugin specific to this language.
 

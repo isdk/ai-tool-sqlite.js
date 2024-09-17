@@ -1,171 +1,30 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / KVSqliteResFunc
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / KVSqliteResFunc
 
 # Class: KVSqliteResFunc\<T\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) = [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
-
-## Hierarchy
+## Extends
 
 - `ResServerTools`
 
-  ↳ **`KVSqliteResFunc`**
+## Type Parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](KVSqliteResFunc.md#constructor)
-
-### Properties
-
-- [$attributes](KVSqliteResFunc.md#$attributes)
-- [action](KVSqliteResFunc.md#action)
-- [allowExportFunc](KVSqliteResFunc.md#allowexportfunc)
-- [apiRoot](KVSqliteResFunc.md#apiroot)
-- [constructor](KVSqliteResFunc.md#constructor-1)
-- [db](KVSqliteResFunc.md#db)
-- [dbPath](KVSqliteResFunc.md#dbpath)
-- [defaultOptions](KVSqliteResFunc.md#defaultoptions)
-- [fetchOptions](KVSqliteResFunc.md#fetchoptions)
-- [initDir](KVSqliteResFunc.md#initdir)
-- [initingData](KVSqliteResFunc.md#initingdata)
-- [isApi](KVSqliteResFunc.md#isapi)
-- [methods](KVSqliteResFunc.md#methods)
-- [name](KVSqliteResFunc.md#name)
-- [nonExported1stChar](KVSqliteResFunc.md#nonexported1stchar)
-- [params](KVSqliteResFunc.md#params)
-- [result](KVSqliteResFunc.md#result)
-- [scope](KVSqliteResFunc.md#scope)
-- [setup](KVSqliteResFunc.md#setup)
-- [stream](KVSqliteResFunc.md#stream)
-- [tags](KVSqliteResFunc.md#tags)
-- [SpecialRpcMethodNames](KVSqliteResFunc.md#specialrpcmethodnames)
-- [dataPath](KVSqliteResFunc.md#datapath)
-- [items](KVSqliteResFunc.md#items)
-
-### Accessors
-
-- [SpecialRpcMethodNames](KVSqliteResFunc.md#specialrpcmethodnames-1)
-- [apiRoot](KVSqliteResFunc.md#apiroot-1)
-
-### Methods
-
-- [$count](KVSqliteResFunc.md#$count)
-- [$createCollection](KVSqliteResFunc.md#$createcollection)
-- [$deleteCollection](KVSqliteResFunc.md#$deletecollection)
-- [$search](KVSqliteResFunc.md#$search)
-- [$searchEx](KVSqliteResFunc.md#$searchex)
-- [arr2ObjParams](KVSqliteResFunc.md#arr2objparams)
-- [assign](KVSqliteResFunc.md#assign)
-- [assignProperty](KVSqliteResFunc.md#assignproperty)
-- [assignPropertyTo](KVSqliteResFunc.md#assignpropertyto)
-- [assignTo](KVSqliteResFunc.md#assignto)
-- [cast](KVSqliteResFunc.md#cast)
-- [castParams](KVSqliteResFunc.md#castparams)
-- [clone](KVSqliteResFunc.md#clone)
-- [cloneTo](KVSqliteResFunc.md#cloneto)
-- [defineProperties](KVSqliteResFunc.md#defineproperties)
-- [delete](KVSqliteResFunc.md#delete)
-- [exportTo](KVSqliteResFunc.md#exportto)
-- [func](KVSqliteResFunc.md#func)
-- [get](KVSqliteResFunc.md#get)
-- [getDocsFromDir](KVSqliteResFunc.md#getdocsfromdir)
-- [getFunc](KVSqliteResFunc.md#getfunc)
-- [getFuncWithPos](KVSqliteResFunc.md#getfuncwithpos)
-- [getMethodFromParams](KVSqliteResFunc.md#getmethodfromparams)
-- [getProperties](KVSqliteResFunc.md#getproperties)
-- [hasAsyncFeature](KVSqliteResFunc.md#hasasyncfeature)
-- [hasOwnProperty](KVSqliteResFunc.md#hasownproperty)
-- [initDB](KVSqliteResFunc.md#initdb)
-- [initData](KVSqliteResFunc.md#initdata)
-- [initDataFromDir](KVSqliteResFunc.md#initdatafromdir)
-- [initRpcMethods](KVSqliteResFunc.md#initrpcmethods)
-- [initialize](KVSqliteResFunc.md#initialize)
-- [isPrototypeOf](KVSqliteResFunc.md#isprototypeof)
-- [isSame](KVSqliteResFunc.md#issame)
-- [isStream](KVSqliteResFunc.md#isstream)
-- [list](KVSqliteResFunc.md#list)
-- [mergeTo](KVSqliteResFunc.md#mergeto)
-- [obj2ArrParams](KVSqliteResFunc.md#obj2arrparams)
-- [post](KVSqliteResFunc.md#post)
-- [propertyIsEnumerable](KVSqliteResFunc.md#propertyisenumerable)
-- [put](KVSqliteResFunc.md#put)
-- [register](KVSqliteResFunc.md#register)
-- [run](KVSqliteResFunc.md#run)
-- [runAs](KVSqliteResFunc.md#runas)
-- [runAsSync](KVSqliteResFunc.md#runassync)
-- [runSync](KVSqliteResFunc.md#runsync)
-- [runWithPos](KVSqliteResFunc.md#runwithpos)
-- [runWithPosAs](KVSqliteResFunc.md#runwithposas)
-- [runWithPosAsSync](KVSqliteResFunc.md#runwithposassync)
-- [runWithPosSync](KVSqliteResFunc.md#runwithpossync)
-- [toJSON](KVSqliteResFunc.md#tojson)
-- [toLocaleString](KVSqliteResFunc.md#tolocalestring)
-- [toObject](KVSqliteResFunc.md#toobject)
-- [toString](KVSqliteResFunc.md#tostring)
-- [unregister](KVSqliteResFunc.md#unregister)
-- [updateDataFromDir](KVSqliteResFunc.md#updatedatafromdir)
-- [valueOf](KVSqliteResFunc.md#valueof)
-- [assign](KVSqliteResFunc.md#assign-1)
-- [create](KVSqliteResFunc.md#create)
-- [defineProperties](KVSqliteResFunc.md#defineproperties-1)
-- [defineProperty](KVSqliteResFunc.md#defineproperty)
-- [entries](KVSqliteResFunc.md#entries)
-- [freeze](KVSqliteResFunc.md#freeze)
-- [fromEntries](KVSqliteResFunc.md#fromentries)
-- [get](KVSqliteResFunc.md#get-1)
-- [getAllByTag](KVSqliteResFunc.md#getallbytag)
-- [getByTag](KVSqliteResFunc.md#getbytag)
-- [getFunc](KVSqliteResFunc.md#getfunc-1)
-- [getFuncWithPos](KVSqliteResFunc.md#getfuncwithpos-1)
-- [getOwnPropertyDescriptor](KVSqliteResFunc.md#getownpropertydescriptor)
-- [getOwnPropertyDescriptors](KVSqliteResFunc.md#getownpropertydescriptors)
-- [getOwnPropertyNames](KVSqliteResFunc.md#getownpropertynames)
-- [getOwnPropertySymbols](KVSqliteResFunc.md#getownpropertysymbols)
-- [getProperties](KVSqliteResFunc.md#getproperties-1)
-- [getPrototypeOf](KVSqliteResFunc.md#getprototypeof)
-- [hasAsyncFeature](KVSqliteResFunc.md#hasasyncfeature-1)
-- [is](KVSqliteResFunc.md#is)
-- [isExtensible](KVSqliteResFunc.md#isextensible)
-- [isFrozen](KVSqliteResFunc.md#isfrozen)
-- [isSealed](KVSqliteResFunc.md#issealed)
-- [keys](KVSqliteResFunc.md#keys)
-- [list](KVSqliteResFunc.md#list-1)
-- [preventExtensions](KVSqliteResFunc.md#preventextensions)
-- [register](KVSqliteResFunc.md#register-1)
-- [run](KVSqliteResFunc.md#run-1)
-- [runSync](KVSqliteResFunc.md#runsync-1)
-- [runWithPos](KVSqliteResFunc.md#runwithpos-1)
-- [runWithPosSync](KVSqliteResFunc.md#runwithpossync-1)
-- [seal](KVSqliteResFunc.md#seal)
-- [setApiRoot](KVSqliteResFunc.md#setapiroot)
-- [setPrototypeOf](KVSqliteResFunc.md#setprototypeof)
-- [toJSON](KVSqliteResFunc.md#tojson-1)
-- [unregister](KVSqliteResFunc.md#unregister-1)
-- [values](KVSqliteResFunc.md#values)
+• **T** *extends* [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) = [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 ## Constructors
 
-### constructor
+### new KVSqliteResFunc()
 
-• **new KVSqliteResFunc**\<`T`\>(`name`, `options?`): [`KVSqliteResFunc`](KVSqliteResFunc.md)\<`T`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) = [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+> **new KVSqliteResFunc**\<`T`\>(`name`, `options`): [`KVSqliteResFunc`](KVSqliteResFunc.md)\<`T`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `FuncItem` |
-| `options` | `any` |
+• **name**: `string` \| `Function` \| `FuncItem`
+
+• **options**: `any` = `{}`
 
 #### Returns
 
@@ -173,281 +32,277 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L51)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L51)
 
 ## Properties
 
 ### $attributes
 
-• **$attributes**: `Properties`
+> **$attributes**: `Properties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:5
 
-___
+***
 
 ### action
 
-• **action**: ``"list"`` \| ``"get"`` \| ``"put"`` \| ``"post"`` \| ``"delete"`` \| ``"patch"`` \| ``"res"``
+> **action**: `"list"` \| `"get"` \| `"put"` \| `"post"` \| `"delete"` \| `"patch"` \| `"res"`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:431
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:431
 
-___
+***
 
-### allowExportFunc
+### allowExportFunc?
 
-• `Optional` **allowExportFunc**: `boolean`
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:276
-
-___
-
-### apiRoot
-
-• `Optional` **apiRoot**: `string`
+> `optional` **allowExportFunc**: `boolean`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:160
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:276
 
-___
+***
+
+### apiRoot?
+
+> `optional` **apiRoot**: `string`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:160
+
+***
 
 ### constructor
 
-• **constructor**: `Function`
+> **constructor**: `Function`
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:125
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:125
 
-___
+***
 
 ### db
 
-• **db**: [`KVSqlite`](KVSqlite.md)
+> **db**: [`KVSqlite`](KVSqlite.md)
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L48)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L48)
 
-___
+***
 
 ### dbPath
 
-• **dbPath**: `undefined` \| `string`
+> **dbPath**: `undefined` \| `string`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L46)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L46)
 
-___
+***
 
 ### defaultOptions
 
-• **defaultOptions**: `Object`
+> **defaultOptions**: `object`
 
 The default options for export and assign
 
-#### Type declaration
+#### assign?
 
-| Name | Type |
-| :------ | :------ |
-| `assign?` | `IMergeOptions` |
-| `export?` | `IMergeOptions` |
+> `optional` **assign**: `IMergeOptions`
 
-#### Defined in
+#### export?
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
-
-___
-
-### fetchOptions
-
-• `Optional` **fetchOptions**: `any`
+> `optional` **export**: `IMergeOptions`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:162
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:74
 
-___
+***
+
+### fetchOptions?
+
+> `optional` **fetchOptions**: `any`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:162
+
+***
 
 ### initDir
 
-• **initDir**: `undefined` \| `string`
+> **initDir**: `undefined` \| `string`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L47)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L47)
 
-___
+***
 
 ### initingData
 
-• **initingData**: `undefined` \| `boolean`
+> **initingData**: `undefined` \| `boolean`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L49)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L49)
 
-___
+***
 
-### isApi
+### isApi?
 
-• `Optional` **isApi**: `boolean`
+> `optional` **isApi**: `boolean`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
 
-___
+***
 
 ### methods
 
-• **methods**: `string`[]
+> **methods**: `string`[]
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:404
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:404
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
 
-___
+***
 
 ### nonExported1stChar
 
-• **nonExported1stChar**: `string`
+> **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:78
 
-___
+***
 
 ### params
 
-• **params**: `FuncParams`
+> **params**: `FuncParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:432
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:432
 
-___
+***
 
-### result
+### result?
 
-• `Optional` **result**: `string`
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:38
-
-___
-
-### scope
-
-• `Optional` **scope**: `any`
+> `optional` **result**: `string`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:38
 
-___
+***
 
-### setup
+### scope?
 
-• `Optional` **setup**: (`this`: `ToolFunc`, `options?`: `FuncItem`) => `void`
+> `optional` **scope**: `any`
 
-#### Type declaration
+#### Defined in
 
-▸ (`this`, `options?`): `void`
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
 
-##### Parameters
+***
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `ToolFunc` |
-| `options?` | `FuncItem` |
+### setup()?
 
-##### Returns
+> `optional` **setup**: (`this`, `options`?) => `void`
+
+#### Parameters
+
+• **this**: `ToolFunc`
+
+• **options?**: `FuncItem`
+
+#### Returns
 
 `void`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
 
-___
+***
 
-### stream
+### stream?
 
-• `Optional` **stream**: `boolean`
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
-
-___
-
-### tags
-
-• `Optional` **tags**: `string` \| `string`[]
+> `optional` **stream**: `boolean`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
-___
+***
 
-### SpecialRpcMethodNames
+### tags?
 
-▪ `Static` **SpecialRpcMethodNames**: `any`
+> `optional` **tags**: `string` \| `string`[]
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:430
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:40
 
-___
+***
 
 ### dataPath
 
-▪ `Static` **dataPath**: `string`
+> `static` **dataPath**: `string`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:64
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:64
 
-___
+***
 
 ### items
 
-▪ `Static` **items**: `Funcs`
+> `static` **items**: `Funcs`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:63
+
+***
+
+### SpecialRpcMethodNames
+
+> `static` **SpecialRpcMethodNames**: `any`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:430
 
 ## Accessors
 
 ### SpecialRpcMethodNames
 
-• `get` **SpecialRpcMethodNames**(): `any`
+> `get` **SpecialRpcMethodNames**(): `any`
 
 #### Returns
 
@@ -455,13 +310,13 @@ packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:409
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:409
 
-___
+***
 
 ### apiRoot
 
-• `get` **apiRoot**(): `undefined` \| `string`
+> `get` `static` **apiRoot**(): `undefined` \| `string`
 
 #### Returns
 
@@ -469,19 +324,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:283
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 ## Methods
 
-### $count
+### $count()
 
-▸ **$count**(`options?`): `number`
+> **$count**(`options`?): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **options?**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -489,19 +342,17 @@ packages/ai-tool/dist/index-nP9lSU6E.d.ts:283
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L213)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L213)
 
-___
+***
 
-### $createCollection
+### $createCollection()
 
-▸ **$createCollection**(`«destructured»`): `boolean`
+> **$createCollection**(`__namedParameters`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **\_\_namedParameters**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -509,19 +360,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L219)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L219)
 
-___
+***
 
-### $deleteCollection
+### $deleteCollection()
 
-▸ **$deleteCollection**(`«destructured»`): `boolean`
+> **$deleteCollection**(`__namedParameters`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **\_\_namedParameters**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -529,19 +378,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L230)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L230)
 
-___
+***
 
-### $search
+### $search()
 
-▸ **$search**(`options?`): `T`[]
+> **$search**(`options`?): `T`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **options?**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -549,19 +396,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L203)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L203)
 
-___
+***
 
-### $searchEx
+### $searchEx()
 
-▸ **$searchEx**(`options?`): `T`[]
+> **$searchEx**(`options`?): `T`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **options?**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -569,19 +414,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L193)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L193)
 
-___
+***
 
-### arr2ObjParams
+### arr2ObjParams()
 
-▸ **arr2ObjParams**(`params`): `any`[]
+> **arr2ObjParams**(`params`): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any`[] |
+• **params**: `any`[]
 
 #### Returns
 
@@ -589,22 +432,23 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:83
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:83
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**(`src`, `options?`): `this`
+> **assign**(`src`, `options`?): `this`
 
 Assign the values from the src object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+the source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -614,25 +458,35 @@ this object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:106
 
-___
+***
 
-### assignProperty
+### assignProperty()
 
-▸ **assignProperty**(`src`, `name`, `value`, `attrs?`, `options?`): `void`
+> **assignProperty**(`src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign a property of src to this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the src object |
-| `name` | `string` | the property name to assign |
-| `value` | `any` | the property value to assign |
-| `attrs?` | `any` | the attributes object |
-| `options?` | `IMergeOptions` |  |
+• **src**: `any`
+
+the src object
+
+• **name**: `string`
+
+the property name to assign
+
+• **value**: `any`
+
+the property value to assign
+
+• **attrs?**: `any`
+
+the attributes object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -640,51 +494,63 @@ Assign a property of src to this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:117
 
-___
+***
 
-### assignPropertyTo
+### assignPropertyTo()
 
-▸ **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs?`, `options?`): `void`
+> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign the property value from the src to destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `src` | `any` | The src object |
-| `name` | `string` | The property name |
-| `value` | `any` | The property value |
-| `attrs?` | `any` | The attributes object of the property |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+The destination object
+
+• **src**: `any`
+
+The src object
+
+• **name**: `string`
+
+The property name
+
+• **value**: `any`
+
+The property value
+
+• **attrs?**: `any`
+
+The attributes object of the property
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
 `void`
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:131
 
-___
+***
 
-### assignTo
+### assignTo()
 
-▸ **assignTo**(`dest?`, `options?`): `any`
+> **assignTo**(`dest`?, `options`?): `any`
 
 Assign this attributes to the dest object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest?` | `any` | the destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest?**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -694,20 +560,19 @@ the dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:191
 
-___
+***
 
-### cast
+### cast()
 
-▸ **cast**(`key`, `value`): `any`
+> **cast**(`key`, `value`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
-| `value` | `any` |
+• **key**: `string`
+
+• **value**: `any`
 
 #### Returns
 
@@ -715,19 +580,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L107)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L107)
 
-___
+***
 
-### castParams
+### castParams()
 
-▸ **castParams**(`params`): `RpcMethodsServerFuncParams`
+> **castParams**(`params`): `RpcMethodsServerFuncParams`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `RpcMethodsServerFuncParams` |
+• **params**: `RpcMethodsServerFuncParams`
 
 #### Returns
 
@@ -735,21 +598,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:435
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:435
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`options?`): `any`
+> **clone**(`options`?): `any`
 
 Create a new object with the same values of attributes.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `IMergeOptions` |
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -759,22 +620,23 @@ the new object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:155
 
-___
+***
 
-### cloneTo
+### cloneTo()
 
-▸ **cloneTo**(`dest`, `options?`): `any`
+> **cloneTo**(`dest`, `options`?): `any`
 
 Create and assign the values to the destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -784,43 +646,39 @@ the new dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:148
 
-___
+***
 
-### defineProperties
+### defineProperties()
 
-▸ **defineProperties**(`aProperties`): `any`
+> `abstract` **defineProperties**(`aProperties`): `any`
 
 Define the attributes of this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `aProperties` | `SimplePropDescriptors` | the defined attributes of the object |
+• **aProperties**: `SimplePropDescriptors`
+
+the defined attributes of the object
 
 #### Returns
 
 `any`
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:89
 
-___
+***
 
-### delete
+### delete()
 
-▸ **delete**(`options`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
+> **delete**(`options`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **options**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -828,22 +686,23 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L176)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L176)
 
-___
+***
 
-### exportTo
+### exportTo()
 
-▸ **exportTo**(`dest`, `options?`): `any`
+> **exportTo**(`dest`, `options`?): `any`
 
 Export attributes to the dest json object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IExportOptions` | - |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IExportOptions`
 
 #### Returns
 
@@ -853,19 +712,17 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:173
 
-___
+***
 
-### func
+### func()
 
-▸ **func**(`params`): `any`
+> **func**(`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `RpcMethodsServerFuncParams` |
+• **params**: `RpcMethodsServerFuncParams`
 
 #### Returns
 
@@ -873,19 +730,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:415
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:415
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`options`): `T`
+> **get**(`options`): `T`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **options**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -893,19 +748,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L121)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L121)
 
-___
+***
 
-### getDocsFromDir
+### getDocsFromDir()
 
-▸ **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
+> **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dir` | `string` |
+• **dir**: `string`
 
 #### Returns
 
@@ -913,19 +766,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L83)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L83)
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name?`): `any`
+> **getFunc**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -933,19 +784,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:89
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:89
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name?`): `any`
+> **getFuncWithPos**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -953,19 +802,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:94
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:94
 
-___
+***
 
-### getMethodFromParams
+### getMethodFromParams()
 
-▸ **getMethodFromParams**(`params`): `undefined` \| `string`
+> **getMethodFromParams**(`params`): `undefined` \| `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `ResServerFuncParams` |
+• **params**: `ResServerFuncParams`
 
 #### Returns
 
@@ -973,13 +820,13 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:434
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:434
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `abstract` **getProperties**(): `PropDescriptors`
 
 Get the defined attributes.
 
@@ -989,23 +836,19 @@ Get the defined attributes.
 
 the descriptors of properties object
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:98
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -1013,21 +856,21 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:95
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:95
 
-___
+***
 
-### hasOwnProperty
+### hasOwnProperty()
 
-▸ **hasOwnProperty**(`v`): `boolean`
+> **hasOwnProperty**(`v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1035,40 +878,19 @@ Determines whether an object has a property with the specified name.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:140
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:140
 
-___
+***
 
-### initDB
+### initData()
 
-▸ **initDB**(`db`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `db` | [`KVSqlite`](KVSqlite.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L42)
-
-___
-
-### initData
-
-▸ **initData**(`initDir?`, `collection?`): `Promise`\<`void`\>
+> **initData**(`initDir`?, `collection`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `initDir?` | `string` |
-| `collection?` | `string` |
+• **initDir?**: `string`
+
+• **collection?**: `string`
 
 #### Returns
 
@@ -1076,20 +898,19 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L66)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L66)
 
-___
+***
 
-### initDataFromDir
+### initDataFromDir()
 
-▸ **initDataFromDir**(`dir`, `collection?`): `Promise`\<`void`\>
+> **initDataFromDir**(`dir`, `collection`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dir` | `string` |
-| `collection?` | `string` |
+• **dir**: `string`
+
+• **collection?**: `string`
 
 #### Returns
 
@@ -1097,19 +918,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L75)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L75)
 
-___
+***
 
-### initRpcMethods
+### initDB()
 
-▸ **initRpcMethods**(`methods?`): `void`
+> **initDB**(`db`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `methods?` | `string`[] |
+• **db**: [`KVSqlite`](KVSqlite.md)
 
 #### Returns
 
@@ -1117,21 +936,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:410
+[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L42)
 
-___
+***
 
-### initialize
+### initialize()
 
-▸ **initialize**(`src?`): `this`
+> **initialize**(`src`?): `this`
 
 Initialize object and assign attribute values from src if src exists.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src?` | `any` |
+• **src?**: `any`
 
 #### Returns
 
@@ -1141,21 +958,39 @@ this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:139
 
-___
+***
 
-### isPrototypeOf
+### initRpcMethods()
 
-▸ **isPrototypeOf**(`v`): `boolean`
+> **initRpcMethods**(`methods`?): `void`
+
+#### Parameters
+
+• **methods?**: `string`[]
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:410
+
+***
+
+### isPrototypeOf()
+
+> **isPrototypeOf**(`v`): `boolean`
 
 Determines whether an object exists in another object's prototype chain.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `Object` | Another object whose prototype chain is to be checked. |
+• **v**: `Object`
+
+Another object whose prototype chain is to be checked.
 
 #### Returns
 
@@ -1163,22 +998,23 @@ Determines whether an object exists in another object's prototype chain.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:146
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:146
 
-___
+***
 
-### isSame
+### isSame()
 
-▸ **isSame**(`src`, `options?`): `boolean`
+> **isSame**(`src`, `options`?): `boolean`
 
 Check the src object whether “equals” this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | The source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+The source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1186,19 +1022,17 @@ Check the src object whether “equals” this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:200
 
-___
+***
 
-### isStream
+### isStream()
 
-▸ **isStream**(`params`): `undefined` \| `boolean`
+> **isStream**(`params`): `undefined` \| `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any` |
+• **params**: `any`
 
 #### Returns
 
@@ -1206,19 +1040,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:96
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:96
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`options?`): `T`[]
+> **list**(`options`?): `T`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **options?**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -1226,22 +1058,23 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L114)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L114)
 
-___
+***
 
-### mergeTo
+### mergeTo()
 
-▸ **mergeTo**(`dest`, `options?`): `any`
+> **mergeTo**(`dest`, `options`?): `any`
 
 Merge this attributes to dest object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest**: `any`
+
+The destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1251,19 +1084,17 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:164
 
-___
+***
 
-### obj2ArrParams
+### obj2ArrParams()
 
-▸ **obj2ArrParams**(`params?`): `any`[]
+> **obj2ArrParams**(`params`?): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1271,19 +1102,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:84
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
-___
+***
 
-### post
+### post()
 
-▸ **post**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[] \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]\>
+> **post**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[] \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **model**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -1291,21 +1120,21 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L152)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L152)
 
-___
+***
 
-### propertyIsEnumerable
+### propertyIsEnumerable()
 
-▸ **propertyIsEnumerable**(`v`): `boolean`
+> **propertyIsEnumerable**(`v`): `boolean`
 
 Determines whether a specified property is enumerable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1313,19 +1142,17 @@ Determines whether a specified property is enumerable.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:152
 
-___
+***
 
-### put
+### put()
 
-▸ **put**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
+> **put**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md) |
+• **model**: [`KVSqliteResFuncParams`](../interfaces/KVSqliteResFuncParams.md)
 
 #### Returns
 
@@ -1333,13 +1160,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L134)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L134)
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(): `boolean` \| `ToolFunc`
+> **register**(): `boolean` \| `ToolFunc`
 
 #### Returns
 
@@ -1347,19 +1174,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:81
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:81
 
-___
+***
 
-### run
+### run()
 
-▸ **run**(`params?`): `Promise`\<`any`\>
+> **run**(`params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1367,20 +1192,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:86
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:86
 
-___
+***
 
-### runAs
+### runAs()
 
-▸ **runAs**(`name`, `params?`): `Promise`\<`any`\>
+> **runAs**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1388,20 +1212,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:87
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:87
 
-___
+***
 
-### runAsSync
+### runAsSync()
 
-▸ **runAsSync**(`name`, `params?`): `any`
+> **runAsSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1409,19 +1232,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:88
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:88
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`params?`): `any`
+> **runSync**(`params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1429,19 +1250,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:85
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:85
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`...params`): `Promise`\<`any`\>
+> **runWithPos**(...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1449,20 +1268,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:92
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:92
 
-___
+***
 
-### runWithPosAs
+### runWithPosAs()
 
-▸ **runWithPosAs**(`name`, `...params`): `Promise`\<`any`\>
+> **runWithPosAs**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1470,40 +1288,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:93
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:93
 
-___
+***
 
-### runWithPosAsSync
+### runWithPosAsSync()
 
-▸ **runWithPosAsSync**(`name`, `...params`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:91
-
-___
-
-### runWithPosSync
-
-▸ **runWithPosSync**(`...params`): `any`
+> **runWithPosAsSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1511,13 +1308,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:90
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:91
 
-___
+***
 
-### toJSON
+### runWithPosSync()
 
-▸ **toJSON**(): `any`
+> **runWithPosSync**(...`params`): `any`
+
+#### Parameters
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1525,13 +1326,27 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:90
 
-___
+***
 
-### toLocaleString
+### toJSON()
 
-▸ **toLocaleString**(): `string`
+> **toJSON**(): `any`
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:182
+
+***
+
+### toLocaleString()
+
+> **toLocaleString**(): `string`
 
 Returns a date converted to a string using the current locale.
 
@@ -1541,21 +1356,19 @@ Returns a date converted to a string using the current locale.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:131
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:131
 
-___
+***
 
-### toObject
+### toObject()
 
-▸ **toObject**(`options?`): `any`
+> **toObject**(`options`?): `any`
 
 Convert the attributes to the json object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `any` |
+• **options?**: `any`
 
 #### Returns
 
@@ -1565,13 +1378,13 @@ the json object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:181
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of an object.
 
@@ -1581,13 +1394,13 @@ Returns a string representation of an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:128
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(): `any`
+> **unregister**(): `any`
 
 #### Returns
 
@@ -1595,20 +1408,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:82
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:82
 
-___
+***
 
-### updateDataFromDir
+### updateDataFromDir()
 
-▸ **updateDataFromDir**(`dir?`, `collection?`): `Promise`\<`undefined` \| `number`\>
+> **updateDataFromDir**(`dir`, `collection`?): `Promise`\<`undefined` \| `number`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dir` | `undefined` \| `string` |
-| `collection?` | `string` |
+• **dir**: `undefined` \| `string` = `...`
+
+• **collection?**: `string`
 
 #### Returns
 
@@ -1616,13 +1428,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L94)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L94)
 
-___
+***
 
-### valueOf
+### valueOf()
 
-▸ **valueOf**(): `Object`
+> **valueOf**(): `Object`
 
 Returns the primitive value of the specified object.
 
@@ -1632,151 +1444,211 @@ Returns the primitive value of the specified object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:134
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:134
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
+#### assign(target, source)
+
+> `static` **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source` | `U` | The source object from which to copy properties. |
+##### Parameters
 
-#### Returns
+• **target**: `T`
+
+The target object to copy to.
+
+• **source**: `U`
+
+The source object from which to copy properties.
+
+##### Returns
 
 `T` & `U`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
 
-▸ **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
+#### assign(target, source1, source2)
+
+> `static` **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
+• **V**
 
-#### Returns
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:293
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
 
-▸ **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
+#### assign(target, source1, source2, source3)
+
+> `static` **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
-| `W` | `W` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
-| `source3` | `W` | The third source object from which to copy properties. |
+• **V**
 
-#### Returns
+• **W**
+
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+• **source3**: `W`
+
+The third source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V` & `W`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
 
-▸ **assign**(`target`, `...sources`): `any`
+#### assign(target, sources)
+
+> `static` **assign**(`target`, ...`sources`): `any`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `object` | The target object to copy to. |
-| `...sources` | `any`[] | One or more source objects from which to copy properties |
+• **target**: `object`
 
-#### Returns
+The target object to copy to.
+
+• ...**sources**: `any`[]
+
+One or more source objects from which to copy properties
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:311
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`o`): `any`
+#### create(o)
+
+> `static` **create**(`o`): `any`
 
 Creates an object that has the specified prototype or that has null prototype.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null. |
+• **o**: `null` \| `object`
 
-#### Returns
+Object to use as a prototype. May be null.
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:188
 
-▸ **create**(`o`, `properties`): `any`
+#### create(o, properties)
+
+> `static` **create**(`o`, `properties`): `any`
 
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
+##### Parameters
+
+• **o**: `null` \| `object`
+
+Object to use as a prototype. May be null
+
+• **properties**: `PropertyDescriptorMap` & `ThisType`\<`any`\>
+
+JavaScript object that contains one or more property descriptors.
+
+##### Returns
+
+`any`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:195
+
+***
+
+### defineProperties()
+
+> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate`?): `any`
+
+Adds one or more properties to an object, and/or modifies attributes of existing properties.
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null |
-| `properties` | `PropertyDescriptorMap` & `ThisType`\<`any`\> | JavaScript object that contains one or more property descriptors. |
+• **aTarget**: `any`
+
+• **aProperties**: `PropDescriptors`
+
+• **recreate?**: `boolean`
 
 #### Returns
 
@@ -1784,51 +1656,33 @@ Creates an object that has the specified prototype, and that optionally contains
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:195
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:11
 
-___
+***
 
-### defineProperties
+### defineProperty()
 
-▸ **defineProperties**(`aTarget`, `aProperties`, `recreate?`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `aTarget` | `any` |
-| `aProperties` | `PropDescriptors` |
-| `recreate?` | `boolean` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
-
-___
-
-### defineProperty
-
-▸ **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
+> `static` **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object. |
-| `p` | `PropertyKey` | The property name. |
-| `attributes` | `PropertyDescriptor` & `ThisType`\<`any`\> | Descriptor for the property. It can be for a data property or an accessor property. |
+• **o**: `T`
+
+Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+
+• **p**: `PropertyKey`
+
+The property name.
+
+• **attributes**: `PropertyDescriptor` & `ThisType`\<`any`\>
+
+Descriptor for the property. It can be for a data property or an accessor property.
 
 #### Returns
 
@@ -1836,188 +1690,191 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:203
 
-___
+***
 
-### entries
+### entries()
 
-▸ **entries**\<`T`\>(`o`): [`string`, `T`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**\<`T`\>(`o`): [`string`, `T`][]
 
-#### Type parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `T`][]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
 
-▸ **entries**(`o`): [`string`, `any`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**(`o`): [`string`, `any`][]
 
-#### Parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `any`][]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:42
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
 
-___
+***
 
-### freeze
+### freeze()
 
-▸ **freeze**\<`T`\>(`f`): `T`
+#### freeze(f)
+
+> `static` **freeze**\<`T`\>(`f`): `T`
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Function` |
+• **T** *extends* `Function`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `f` | `T` | Object on which to lock the attributes. |
+• **f**: `T`
 
-#### Returns
+Object on which to lock the attributes.
+
+##### Returns
 
 `T`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:222
 
-▸ **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
+#### freeze(o)
 
-Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | extends `string` \| `number` \| `bigint` \| `boolean` \| `symbol` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
-
-#### Returns
-
-`Readonly`\<`T`\>
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
-
-▸ **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
+> `static` **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U** *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+##### Parameters
 
-#### Returns
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
 
 `Readonly`\<`T`\>
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:234
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:228
 
-___
+#### freeze(o)
 
-### fromEntries
+> `static` **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
 
-▸ **fromEntries**\<`T`\>(`entries`): `Object`
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+
+##### Type Parameters
+
+• **T**
+
+##### Parameters
+
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
+
+`Readonly`\<`T`\>
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:234
+
+***
+
+### fromEntries()
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**\<`T`\>(`entries`): `object`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `any` |
+• **T** = `any`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly [`PropertyKey`, `T`]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly [`PropertyKey`, `T`], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
 
-`Object`
+##### Returns
 
-#### Defined in
+`object`
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
+##### Defined in
 
-▸ **fromEntries**(`entries`): `any`
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**(`entries`): `any`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly `any`[]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly `any`[], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:32
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`name`): `ToolFunc`
+> `static` **get**(`name`): `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2025,19 +1882,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:65
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:65
 
-___
+***
 
-### getAllByTag
+### getAllByTag()
 
-▸ **getAllByTag**(`tagName`): `ToolFunc`[]
+> `static` **getAllByTag**(`tagName`): `ToolFunc`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2045,19 +1900,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:68
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:68
 
-___
+***
 
-### getByTag
+### getByTag()
 
-▸ **getByTag**(`tagName`): `undefined` \| `ToolFunc`
+> `static` **getByTag**(`tagName`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2065,19 +1918,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:67
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:67
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name`): `any`
+> `static` **getFunc**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2085,19 +1936,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:72
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:72
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name`): `any`
+> `static` **getFuncWithPos**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2105,23 +1954,26 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:75
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:75
 
-___
+***
 
-### getOwnPropertyDescriptor
+### getOwnPropertyDescriptor()
 
-▸ **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
+> `static` **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
 
 Gets the own property descriptor of the specified object.
 An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the property. |
-| `p` | `PropertyKey` | Name of the property. |
+• **o**: `any`
+
+Object that contains the property.
+
+• **p**: `PropertyKey`
+
+Name of the property.
 
 #### Returns
 
@@ -2129,50 +1981,48 @@ An own property descriptor is one that is defined directly on the object and is 
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:175
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:175
 
-___
+***
 
-### getOwnPropertyDescriptors
+### getOwnPropertyDescriptors()
 
-▸ **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+> `static` **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 Returns an object containing all own property descriptors of an object
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `T`
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
 #### Returns
 
-\{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+\{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
 
-___
+***
 
-### getOwnPropertyNames
+### getOwnPropertyNames()
 
-▸ **getOwnPropertyNames**(`o`): `string`[]
+> `static` **getOwnPropertyNames**(`o`): `string`[]
 
 Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
 on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the own properties. |
+• **o**: `any`
+
+Object that contains the own properties.
 
 #### Returns
 
@@ -2180,21 +2030,21 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:182
 
-___
+***
 
-### getOwnPropertySymbols
+### getOwnPropertySymbols()
 
-▸ **getOwnPropertySymbols**(`o`): `symbol`[]
+> `static` **getOwnPropertySymbols**(`o`): `symbol`[]
 
 Returns an array of all symbol properties found directly on object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to retrieve the symbols from. |
+• **o**: `any`
+
+Object to retrieve the symbols from.
 
 #### Returns
 
@@ -2202,13 +2052,13 @@ Returns an array of all symbol properties found directly on object o.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `static` **getProperties**(): `PropDescriptors`
 
 get all properties descriptor include inherited.
 
@@ -2218,21 +2068,21 @@ get all properties descriptor include inherited.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:10
 
-___
+***
 
-### getPrototypeOf
+### getPrototypeOf()
 
-▸ **getPrototypeOf**(`o`): `any`
+> `static` **getPrototypeOf**(`o`): `any`
 
 Returns the prototype of an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object that references the prototype. |
+• **o**: `any`
+
+The object that references the prototype.
 
 #### Returns
 
@@ -2240,19 +2090,17 @@ Returns the prototype of an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:167
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> `static` **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -2260,22 +2108,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:69
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:69
 
-___
+***
 
-### is
+### is()
 
-▸ **is**(`value1`, `value2`): `boolean`
+> `static` **is**(`value1`, `value2`): `boolean`
 
 Returns true if the values are the same value, false otherwise.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value1` | `any` | The first value. |
-| `value2` | `any` | The second value. |
+• **value1**: `any`
+
+The first value.
+
+• **value2**: `any`
+
+The second value.
 
 #### Returns
 
@@ -2283,21 +2134,21 @@ Returns true if the values are the same value, false otherwise.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:330
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
 
-___
+***
 
-### isExtensible
+### isExtensible()
 
-▸ **isExtensible**(`o`): `boolean`
+> `static` **isExtensible**(`o`): `boolean`
 
 Returns a value that indicates whether new properties can be added to an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2305,21 +2156,21 @@ Returns a value that indicates whether new properties can be added to an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:258
 
-___
+***
 
-### isFrozen
+### isFrozen()
 
-▸ **isFrozen**(`o`): `boolean`
+> `static` **isFrozen**(`o`): `boolean`
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2327,21 +2178,21 @@ Returns true if existing property attributes and values cannot be modified in an
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:252
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:252
 
-___
+***
 
-### isSealed
+### isSealed()
 
-▸ **isSealed**(`o`): `boolean`
+> `static` **isSealed**(`o`): `boolean`
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2349,53 +2200,57 @@ Returns true if existing property attributes cannot be modified in an object and
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:246
 
-___
+***
 
-### keys
+### keys()
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
 
-Returns the names of the enumerable string properties and methods of an object.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
-
-▸ **keys**(`o`): `string`[]
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `object`
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:264
 
-___
+#### keys(o)
 
-### list
+> `static` **keys**(`o`): `string`[]
 
-▸ **list**(): `Funcs`
+Returns the names of the enumerable string properties and methods of an object.
+
+##### Parameters
+
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
+
+`string`[]
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
+
+***
+
+### list()
+
+> `static` **list**(): `Funcs`
 
 #### Returns
 
@@ -2403,27 +2258,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:66
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:66
 
-___
+***
 
-### preventExtensions
+### preventExtensions()
 
-▸ **preventExtensions**\<`T`\>(`o`): `T`
+> `static` **preventExtensions**\<`T`\>(`o`): `T`
 
 Prevents the addition of new properties to an object.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object to make non-extensible. |
+• **o**: `T`
+
+Object to make non-extensible.
 
 #### Returns
 
@@ -2431,75 +2284,77 @@ Prevents the addition of new properties to an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:240
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(`name`, `options`): `boolean` \| `ToolFunc`
+#### register(name, options)
 
-#### Parameters
+> `static` **register**(`name`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **name**: `string`
 
-`boolean` \| `ToolFunc`
+• **options**: `FuncItem`
 
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:76
-
-▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `func` | `Function` |
-| `options` | `FuncItem` |
-
-#### Returns
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:77
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:76
 
-▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
+#### register(func, options)
 
-#### Parameters
+> `static` **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `ToolFunc` \| `FuncItem` |
-| `options?` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **func**: `Function`
+
+• **options**: `FuncItem`
+
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:78
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:77
 
-___
+#### register(name, options)
 
-### run
+> `static` **register**(`name`, `options`?): `boolean` \| `ToolFunc`
 
-▸ **run**(`name`, `params?`): `Promise`\<`any`\>
+##### Parameters
+
+• **name**: `string` \| `Function` \| `ToolFunc` \| `FuncItem`
+
+• **options?**: `FuncItem`
+
+##### Returns
+
+`boolean` \| `ToolFunc`
+
+##### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:78
+
+***
+
+### run()
+
+> `static` **run**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -2507,20 +2362,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:70
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:70
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`name`, `params?`): `any`
+> `static` **runSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -2528,20 +2382,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:71
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:71
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`name`, `...params`): `Promise`\<`any`\>
+> `static` **runWithPos**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -2549,20 +2402,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:73
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:73
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`name`, `...params`): `any`
+> `static` **runWithPosSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -2570,27 +2422,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:74
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:74
 
-___
+***
 
-### seal
+### seal()
 
-▸ **seal**\<`T`\>(`o`): `T`
+> `static` **seal**\<`T`\>(`o`): `T`
 
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+• **o**: `T`
+
+Object on which to lock the attributes.
 
 #### Returns
 
@@ -2598,19 +2448,17 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:216
 
-___
+***
 
-### setApiRoot
+### setApiRoot()
 
-▸ **setApiRoot**(`v`): `void`
+> `static` **setApiRoot**(`v`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
+• **v**: `string`
 
 #### Returns
 
@@ -2618,22 +2466,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:284
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:284
 
-___
+***
 
-### setPrototypeOf
+### setPrototypeOf()
 
-▸ **setPrototypeOf**(`o`, `proto`): `any`
+> `static` **setPrototypeOf**(`o`, `proto`): `any`
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object to change its prototype. |
-| `proto` | ``null`` \| `object` | The value of the new prototype or null. |
+• **o**: `any`
+
+The object to change its prototype.
+
+• **proto**: `null` \| `object`
+
+The value of the new prototype or null.
 
 #### Returns
 
@@ -2641,33 +2492,31 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `Object`
+> `static` **toJSON**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:285
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:285
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(`name`): `undefined` \| `ToolFunc`
+> `static` **unregister**(`name`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2675,50 +2524,52 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:79
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:79
 
-___
+***
 
-### values
+### values()
 
-▸ **values**\<`T`\>(`o`): `T`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**\<`T`\>(`o`): `T`[]
 
-#### Type parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `T`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
 
-▸ **values**(`o`): `any`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**(`o`): `any`[]
 
-#### Parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `any`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:30
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:30

@@ -1,51 +1,46 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVIndexOptions
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVIndexOptions
 
 # Interface: IKVIndexOptions
-
-## Table of contents
-
-### Properties
-
-- [fields](IKVIndexOptions.md#fields)
-- [name](IKVIndexOptions.md#name)
-- [partial](IKVIndexOptions.md#partial)
-- [unique](IKVIndexOptions.md#unique)
 
 ## Properties
 
 ### fields
 
-• **fields**: `string`[]
+> **fields**: `string`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:90
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:89
 
-___
+***
 
-### partial
+### partial?
 
-• `Optional` **partial**: `string`
+> `optional` **partial**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:92
 
-___
+***
 
-### unique
+### unique?
 
-• `Optional` **unique**: `boolean`
+> `optional` **unique**: `boolean`
 
 #### Defined in
 

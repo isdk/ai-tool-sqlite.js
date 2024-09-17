@@ -1,295 +1,265 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVSetOptions
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVSetOptions
 
 # Interface: IKVSetOptions
 
-## Hierarchy
+## Extends
 
 - `Options`
 
-  ↳ **`IKVSetOptions`**
-
 ## Indexable
 
-▪ [name: `string`]: `any`
-
-## Table of contents
-
-### Properties
-
-- [collection](IKVSetOptions.md#collection)
-- [collections](IKVSetOptions.md#collections)
-- [dictPath](IKVSetOptions.md#dictpath)
-- [fieldNames](IKVSetOptions.md#fieldnames)
-- [fileMustExist](IKVSetOptions.md#filemustexist)
-- [ftsQueryStyle](IKVSetOptions.md#ftsquerystyle)
-- [id](IKVSetOptions.md#id)
-- [ignoreExists](IKVSetOptions.md#ignoreexists)
-- [location](IKVSetOptions.md#location)
-- [mapped](IKVSetOptions.md#mapped)
-- [nativeBinding](IKVSetOptions.md#nativebinding)
-- [order](IKVSetOptions.md#order)
-- [overwrite](IKVSetOptions.md#overwrite)
-- [page](IKVSetOptions.md#page)
-- [query](IKVSetOptions.md#query)
-- [readonly](IKVSetOptions.md#readonly)
-- [singleValue](IKVSetOptions.md#singlevalue)
-- [size](IKVSetOptions.md#size)
-- [sort](IKVSetOptions.md#sort)
-- [timeout](IKVSetOptions.md#timeout)
-- [usingJsonb](IKVSetOptions.md#usingjsonb)
-- [verbose](IKVSetOptions.md#verbose)
+ \[`name`: `string`\]: `any`
 
 ## Properties
 
-### collection
+### collection?
 
-• `Optional` **collection**: `string`
+> `optional` **collection**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:14
 
-___
+***
 
-### collections
+### collections?
 
-• `Optional` **collections**: `string`[]
+> `optional` **collections**: `string`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:15
 
-___
+***
 
-### dictPath
+### dictPath?
 
-• `Optional` **dictPath**: `string`
+> `optional` **dictPath**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:20
 
-___
+***
 
-### fieldNames
+### fieldNames?
 
-• `Optional` **fieldNames**: `string`[]
+> `optional` **fieldNames**: `string`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:22
 
-___
+***
 
-### fileMustExist
+### fileMustExist?
 
-• `Optional` **fileMustExist**: `boolean`
+> `optional` **fileMustExist**: `boolean`
 
 #### Inherited from
 
-Database.Options.fileMustExist
+`Database.Options.fileMustExist`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:110
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:110
 
-___
+***
 
-### ftsQueryStyle
+### ftsQueryStyle?
 
-• `Optional` **ftsQueryStyle**: `string` \| ``false``
+> `optional` **ftsQueryStyle**: `string` \| `false`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:19
 
-___
+***
 
-### id
+### id?
 
-• `Optional` **id**: `string`
+> `optional` **id**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:12
 
-___
+***
 
-### ignoreExists
+### ignoreExists?
 
-• `Optional` **ignoreExists**: `boolean`
+> `optional` **ignoreExists**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:18
 
-___
+***
 
-### location
+### location?
 
-• `Optional` **location**: `string`
+> `optional` **location**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:13
 
-___
+***
 
-### mapped
+### mapped?
 
-• `Optional` **mapped**: `boolean`
+> `optional` **mapped**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:28
 
-___
+***
 
-### nativeBinding
+### nativeBinding?
 
-• `Optional` **nativeBinding**: `string`
+> `optional` **nativeBinding**: `string`
 
 #### Inherited from
 
-Database.Options.nativeBinding
+`Database.Options.nativeBinding`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:113
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:113
 
-___
+***
 
-### order
+### order?
 
-• `Optional` **order**: ``"ASC"`` \| ``"DESC"``
+> `optional` **order**: `"ASC"` \| `"DESC"`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:24
 
-___
+***
 
-### overwrite
+### overwrite?
 
-• `Optional` **overwrite**: `boolean`
+> `optional` **overwrite**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:16
 
-___
+***
 
-### page
+### page?
 
-• `Optional` **page**: `number`
+> `optional` **page**: `number`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:26
 
-___
+***
 
-### query
+### query?
 
-• `Optional` **query**: `string`
+> `optional` **query**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:27
 
-___
+***
 
-### readonly
+### readonly?
 
-• `Optional` **readonly**: `boolean`
+> `optional` **readonly**: `boolean`
 
 #### Inherited from
 
-Database.Options.readonly
+`Database.Options.readonly`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:109
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:109
 
-___
+***
 
-### singleValue
+### singleValue?
 
-• `Optional` **singleValue**: `boolean`
+> `optional` **singleValue**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:17
 
-___
+***
 
-### size
+### size?
 
-• `Optional` **size**: `number`
+> `optional` **size**: `number`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:25
 
-___
+***
 
-### sort
+### sort?
 
-• `Optional` **sort**: `string` \| `string`[]
+> `optional` **sort**: `string` \| `string`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:23
 
-___
+***
 
-### timeout
+### timeout?
 
-• `Optional` **timeout**: `number`
+> `optional` **timeout**: `number`
 
 #### Inherited from
 
-Database.Options.timeout
+`Database.Options.timeout`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:111
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:111
 
-___
+***
 
-### usingJsonb
+### usingJsonb?
 
-• `Optional` **usingJsonb**: `boolean`
+> `optional` **usingJsonb**: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:21
 
-___
+***
 
-### verbose
+### verbose()?
 
-• `Optional` **verbose**: (`message?`: `unknown`, ...`additionalArgs`: `unknown`[]) => `void`
+> `optional` **verbose**: (`message`?, ...`additionalArgs`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`message?`, `...additionalArgs`): `void`
+• **message?**: `unknown`
 
-##### Parameters
+• ...**additionalArgs?**: `unknown`[]
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `unknown` |
-| `...additionalArgs` | `unknown`[] |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-Database.Options.verbose
+`Database.Options.verbose`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:112
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:112

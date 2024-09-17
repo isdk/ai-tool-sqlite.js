@@ -1,71 +1,24 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / KVSqliteCollection
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / KVSqliteCollection
 
 # Class: KVSqliteCollection
 
-## Table of contents
-
-### Constructors
-
-- [constructor](KVSqliteCollection.md#constructor)
-
-### Properties
-
-- [db](KVSqliteCollection.md#db)
-- [jsonb](KVSqliteCollection.md#jsonb)
-- [name](KVSqliteCollection.md#name)
-- [preAdd](KVSqliteCollection.md#preadd)
-- [preAll](KVSqliteCollection.md#preall)
-- [preAllLimit](KVSqliteCollection.md#prealllimit)
-- [preCount](KVSqliteCollection.md#precount)
-- [preCountW](KVSqliteCollection.md#precountw)
-- [preDel](KVSqliteCollection.md#predel)
-- [preDelAll](KVSqliteCollection.md#predelall)
-- [preExists](KVSqliteCollection.md#preexists)
-- [preGet](KVSqliteCollection.md#preget)
-- [preSearchKey](KVSqliteCollection.md#presearchkey)
-- [preSearchKeyAll](KVSqliteCollection.md#presearchkeyall)
-- [preUpdate](KVSqliteCollection.md#preupdate)
-
-### Methods
-
-- [\_set](KVSqliteCollection.md#_set)
-- [\_setExtend](KVSqliteCollection.md#_setextend)
-- [bulkDocs](KVSqliteCollection.md#bulkdocs)
-- [count](KVSqliteCollection.md#count)
-- [createIndex](KVSqliteCollection.md#createindex)
-- [createIndexes](KVSqliteCollection.md#createindexes)
-- [createJsonIndex](KVSqliteCollection.md#createjsonindex)
-- [createTableIndex](KVSqliteCollection.md#createtableindex)
-- [del](KVSqliteCollection.md#del)
-- [drop](KVSqliteCollection.md#drop)
-- [enableFts](KVSqliteCollection.md#enablefts)
-- [get](KVSqliteCollection.md#get)
-- [getEx](KVSqliteCollection.md#getex)
-- [getExtend](KVSqliteCollection.md#getextend)
-- [getExtends](KVSqliteCollection.md#getextends)
-- [isExists](KVSqliteCollection.md#isexists)
-- [list](KVSqliteCollection.md#list)
-- [search](KVSqliteCollection.md#search)
-- [searchEx](KVSqliteCollection.md#searchex)
-- [searchFts](KVSqliteCollection.md#searchfts)
-- [set](KVSqliteCollection.md#set)
-- [setExtend](KVSqliteCollection.md#setextend)
-- [setExtends](KVSqliteCollection.md#setextends)
-- [tableInfo](KVSqliteCollection.md#tableinfo)
-
 ## Constructors
 
-### constructor
+### new KVSqliteCollection()
 
-• **new KVSqliteCollection**(`name`, `db`, `options?`): [`KVSqliteCollection`](KVSqliteCollection.md)
+> **new KVSqliteCollection**(`name`, `db`, `options`?): [`KVSqliteCollection`](KVSqliteCollection.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `db` | [`KVSqlite`](KVSqlite.md) |
-| `options?` | [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md) |
+• **name**: `string`
+
+• **db**: [`KVSqlite`](KVSqlite.md)
+
+• **options?**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
@@ -79,147 +32,147 @@ packages/kvsqlite/dist/index.d.ts:169
 
 ### db
 
-• `Protected` **db**: [`KVSqlite`](KVSqlite.md)
+> `protected` **db**: [`KVSqlite`](KVSqlite.md)
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:155
 
-___
+***
 
 ### jsonb
 
-• **jsonb**: `string`
+> **jsonb**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:168
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:154
 
-___
+***
 
 ### preAdd
 
-• **preAdd**: `Statement`\<`unknown`[], `unknown`\>
+> **preAdd**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:156
 
-___
+***
 
 ### preAll
 
-• **preAll**: `Statement`\<`unknown`[], `unknown`\>
+> **preAll**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:166
 
-___
+***
 
 ### preAllLimit
 
-• **preAllLimit**: `Statement`\<`unknown`[], `unknown`\>
+> **preAllLimit**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:167
 
-___
+***
 
 ### preCount
 
-• **preCount**: `Statement`\<`unknown`[], `unknown`\>
+> **preCount**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:162
 
-___
+***
 
 ### preCountW
 
-• **preCountW**: `Statement`\<`unknown`[], `unknown`\>
+> **preCountW**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:163
 
-___
+***
 
 ### preDel
 
-• **preDel**: `Statement`\<`unknown`[], `unknown`\>
+> **preDel**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:160
 
-___
+***
 
 ### preDelAll
 
-• **preDelAll**: `Statement`\<`unknown`[], `unknown`\>
+> **preDelAll**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:161
 
-___
+***
 
 ### preExists
 
-• **preExists**: `Statement`\<`unknown`[], `unknown`\>
+> **preExists**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:158
 
-___
+***
 
 ### preGet
 
-• **preGet**: `Statement`\<`unknown`[], `unknown`\>
+> **preGet**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:159
 
-___
+***
 
 ### preSearchKey
 
-• **preSearchKey**: `Statement`\<`unknown`[], `unknown`\>
+> **preSearchKey**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:164
 
-___
+***
 
 ### preSearchKeyAll
 
-• **preSearchKeyAll**: `Statement`\<`unknown`[], `unknown`\>
+> **preSearchKeyAll**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:165
 
-___
+***
 
 ### preUpdate
 
-• **preUpdate**: `Statement`\<`unknown`[], `unknown`\>
+> **preUpdate**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
@@ -227,16 +180,15 @@ packages/kvsqlite/dist/index.d.ts:157
 
 ## Methods
 
-### \_set
+### \_set()
 
-▸ **_set**(`obj`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **\_set**(`obj`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `obj` | [`IKVObjItem`](../interfaces/IKVObjItem.md) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **obj**: [`IKVObjItem`](../interfaces/IKVObjItem.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -246,20 +198,21 @@ packages/kvsqlite/dist/index.d.ts:157
 
 packages/kvsqlite/dist/index.d.ts:170
 
-___
+***
 
-### \_setExtend
+### \_setExtend()
 
-▸ **_setExtend**(`docId`, `key`, `value`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **\_setExtend**(`docId`, `key`, `value`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `key` | `string` |
-| `value` | `any` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **key**: `string`
+
+• **value**: `any`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -269,18 +222,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:172
 
-___
+***
 
-### bulkDocs
+### bulkDocs()
 
-▸ **bulkDocs**(`objs`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **bulkDocs**(`objs`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `objs` | [`IKVObjItem`](../interfaces/IKVObjItem.md)[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **objs**: [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -290,17 +242,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:175
 
-___
+***
 
-### count
+### count()
 
-▸ **count**(`query?`): `number`
+> **count**(`query`?): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query?` | `string` |
+• **query?**: `string`
 
 #### Returns
 
@@ -310,18 +260,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:196
 
-___
+***
 
-### createIndex
+### createIndex()
 
-▸ **createIndex**(`index`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **createIndex**(`index`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `index` | [`IKVIndexOptions`](../interfaces/IKVIndexOptions.md) |
-| `options?` | [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md) |
+• **index**: [`IKVIndexOptions`](../interfaces/IKVIndexOptions.md)
+
+• **options?**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
@@ -331,17 +280,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:200
 
-___
+***
 
-### createIndexes
+### createIndexes()
 
-▸ **createIndexes**(`options`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **createIndexes**(`options`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md) |
+• **options**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
@@ -351,18 +298,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:201
 
-___
+***
 
-### createJsonIndex
+### createJsonIndex()
 
-▸ **createJsonIndex**(`indexName`, `fields`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **createJsonIndex**(`indexName`, `fields`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `indexName` | `string` |
-| `fields` | `string` \| `string`[] |
+• **indexName**: `string`
+
+• **fields**: `string` \| `string`[]
 
 #### Returns
 
@@ -372,18 +318,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:198
 
-___
+***
 
-### createTableIndex
+### createTableIndex()
 
-▸ **createTableIndex**(`indexName`, `fields`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **createTableIndex**(`indexName`, `fields`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `indexName` | `string` |
-| `fields` | `string` \| `string`[] |
+• **indexName**: `string`
+
+• **fields**: `string` \| `string`[]
 
 #### Returns
 
@@ -393,17 +338,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:199
 
-___
+***
 
-### del
+### del()
 
-▸ **del**(`_id?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **del**(`_id`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id?` | [`IKVDocumentId`](../modules.md#ikvdocumentid) \| [`IKVDocumentId`](../modules.md#ikvdocumentid)[] |
+• **\_id?**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md) \| [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)[]
 
 #### Returns
 
@@ -413,11 +356,11 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:194
 
-___
+***
 
-### drop
+### drop()
 
-▸ **drop**(): `void`
+> **drop**(): `void`
 
 #### Returns
 
@@ -427,17 +370,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:210
 
-___
+***
 
-### enableFts
+### enableFts()
 
-▸ **enableFts**(`options?`): `void`
+> **enableFts**(`options`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md) |
+• **options?**: [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
 
 #### Returns
 
@@ -447,17 +388,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:205
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`_id`): [`IKVObjItem`](../interfaces/IKVObjItem.md)
+> **get**(`_id`): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
+• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
 #### Returns
 
@@ -467,17 +406,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:176
 
-___
+***
 
-### getEx
+### getEx()
 
-▸ **getEx**(`_id`): `string` \| `number` \| `boolean` \| [`IKVObjItem`](../interfaces/IKVObjItem.md)
+> **getEx**(`_id`): `string` \| `number` \| `boolean` \| [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
+• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
 #### Returns
 
@@ -487,20 +424,23 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:177
 
-___
+***
 
-### getExtend
+### getExtend()
 
-▸ **getExtend**(`docId`, `aPropName?`): `any`
+> **getExtend**(`docId`, `aPropName`?): `any`
 
 get the value of the document's property
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) | the document id |
-| `aPropName?` | `string` | the property name of the document id |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+the document id
+
+• **aPropName?**: `string`
+
+the property name of the document id
 
 #### Returns
 
@@ -512,21 +452,27 @@ the property value object
 
 packages/kvsqlite/dist/index.d.ts:184
 
-___
+***
 
-### getExtends
+### getExtends()
 
-▸ **getExtends**(`docId`, `aPropName?`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)
+> **getExtends**(`docId`, `aPropName`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
 get extends of the document
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) | the document id |
-| `aPropName?` | `string` \| `string`[] | the property name(s) of the document id |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) | optional options |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+the document id
+
+• **aPropName?**: `string` \| `string`[]
+
+the property name(s) of the document id
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+optional options
 
 #### Returns
 
@@ -538,17 +484,15 @@ all extends property key-value object
 
 packages/kvsqlite/dist/index.d.ts:193
 
-___
+***
 
-### isExists
+### isExists()
 
-▸ **isExists**(`_id`): `boolean`
+> **isExists**(`_id`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
+• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
 #### Returns
 
@@ -558,18 +502,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:195
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`query?`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+> **list**(`query`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query?` | `string` \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **query?**: `string` \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -579,18 +522,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:197
 
-___
+***
 
-### search
+### search()
 
-▸ **search**(`filter`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+> **search**(`filter`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `filter` | `Record`\<`string`, `any`\> |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **filter**: `Record`\<`string`, `any`\>
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -600,18 +542,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:203
 
-___
+***
 
-### searchEx
+### searchEx()
 
-▸ **searchEx**(`query`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+> **searchEx**(`query`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `string` \| `Record`\<`string`, `string`\> |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **query**: `string` \| `Record`\<`string`, `string`\>
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -621,40 +562,39 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:202
 
-___
+***
 
-### searchFts
+### searchFts()
 
-▸ **searchFts**(`query`, `options?`): \{ `_id`: `string` ; `值`: `any`  }[]
+> **searchFts**(`query`, `options`?): `object`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `string` \| `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) & [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md) |
+• **query**: `string` \| `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md) & [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
 
 #### Returns
 
-\{ `_id`: `string` ; `值`: `any`  }[]
+`object`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:206
 
-___
+***
 
-### set
+### set()
 
-▸ **set**(`docId`, `obj?`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **set**(`docId`, `obj`?, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `obj?` | [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **obj?**: [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -664,20 +604,21 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:171
 
-___
+***
 
-### setExtend
+### setExtend()
 
-▸ **setExtend**(`docId`, `key`, `value`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **setExtend**(`docId`, `key`, `value`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `key` | `string` |
-| `value` | `any` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **key**: `string`
+
+• **value**: `any`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -687,19 +628,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:173
 
-___
+***
 
-### setExtends
+### setExtends()
 
-▸ **setExtends**(`docId`, `aDoc`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **setExtends**(`docId`, `aDoc`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `aDoc` | `any` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **aDoc**: `any`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -709,17 +650,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:174
 
-___
+***
 
-### tableInfo
+### tableInfo()
 
-▸ **tableInfo**(`options?`): `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
+> **tableInfo**(`options`?): `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 

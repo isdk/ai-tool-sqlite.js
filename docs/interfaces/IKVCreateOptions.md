@@ -1,62 +1,56 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVCreateOptions
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateOptions
 
 # Interface: IKVCreateOptions
 
-## Table of contents
-
-### Properties
-
-- [fields](IKVCreateOptions.md#fields)
-- [fts](IKVCreateOptions.md#fts)
-- [indexes](IKVCreateOptions.md#indexes)
-- [name](IKVCreateOptions.md#name)
-- [usingJsonb](IKVCreateOptions.md#usingjsonb)
-
 ## Properties
 
-### fields
+### fields?
 
-• `Optional` **fields**: [`IKVFieldOptions`](IKVFieldOptions.md)
+> `optional` **fields**: [`IKVFieldOptions`](IKVFieldOptions.md)
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:96
 
-___
+***
 
-### fts
+### fts?
 
-• `Optional` **fts**: ``true`` \| [`IKVCreateFtsOptions`](IKVCreateFtsOptions.md)
+> `optional` **fts**: `true` \| [`IKVCreateFtsOptions`](IKVCreateFtsOptions.md)
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:98
 
-___
+***
 
-### indexes
+### indexes?
 
-• `Optional` **indexes**: [`IKVIndexOptions`](IKVIndexOptions.md) \| [`IKVIndexOptions`](IKVIndexOptions.md)[]
+> `optional` **indexes**: [`IKVIndexOptions`](IKVIndexOptions.md) \| [`IKVIndexOptions`](IKVIndexOptions.md)[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:99
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:95
 
-___
+***
 
-### usingJsonb
+### usingJsonb?
 
-• `Optional` **usingJsonb**: `boolean`
+> `optional` **usingJsonb**: `boolean`
 
 #### Defined in
 

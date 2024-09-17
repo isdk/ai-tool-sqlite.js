@@ -1,22 +1,20 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVObjItem
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVObjItem
 
 # Interface: IKVObjItem
 
 ## Indexable
 
-▪ [name: `string`]: `any`
-
-## Table of contents
-
-### Properties
-
-- [\_id](IKVObjItem.md#_id)
+ \[`name`: `string`\]: `any`
 
 ## Properties
 
 ### \_id
 
-• **\_id**: [`IKVDocumentId`](../modules.md#ikvdocumentid)
+> **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
 #### Defined in
 

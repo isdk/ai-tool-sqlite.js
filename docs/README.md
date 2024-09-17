@@ -1,4 +1,6 @@
-@isdk/ai-tool-sqlite / [Exports](modules.md)
+**@isdk/ai-tool-sqlite** • [**Docs**](globals.md)
+
+***
 
 # ai-tool-sqlite
 

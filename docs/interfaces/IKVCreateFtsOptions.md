@@ -1,24 +1,18 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / IKVCreateFtsOptions
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateFtsOptions
 
 # Interface: IKVCreateFtsOptions
 
 Represents options for creating an FTS (Full-Text Search) table in SQLite with additional support for multiple languages and plugins.
 
-## Table of contents
-
-### Properties
-
-- [exclude](IKVCreateFtsOptions.md#exclude)
-- [fields](IKVCreateFtsOptions.md#fields)
-- [language](IKVCreateFtsOptions.md#language)
-- [prefix](IKVCreateFtsOptions.md#prefix)
-- [unIndexed](IKVCreateFtsOptions.md#unindexed)
-
 ## Properties
 
-### exclude
+### exclude?
 
-• `Optional` **exclude**: `string`[]
+> `optional` **exclude**: `string`[]
 
 Lists fields to be excluded from full-text search.
 
@@ -26,21 +20,21 @@ Lists fields to be excluded from full-text search.
 
 packages/kvsqlite/dist/index.d.ts:67
 
-___
+***
 
-### fields
+### fields?
 
-• `Optional` **fields**: `string`[]
+> `optional` **fields**: `string`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:72
 
-___
+***
 
-### language
+### language?
 
-• `Optional` **language**: `string` \| [`IKVCreateFtsLanguageOptions`](IKVCreateFtsLanguageOptions.md)
+> `optional` **language**: `string` \| [`IKVCreateFtsLanguageOptions`](IKVCreateFtsLanguageOptions.md)
 
 Configures the language for full-text search.
 
@@ -48,11 +42,11 @@ Configures the language for full-text search.
 
 packages/kvsqlite/dist/index.d.ts:76
 
-___
+***
 
-### prefix
+### prefix?
 
-• `Optional` **prefix**: `string`
+> `optional` **prefix**: `string`
 
 Configures prefix matching behavior.
 
@@ -60,11 +54,11 @@ Configures prefix matching behavior.
 
 packages/kvsqlite/dist/index.d.ts:71
 
-___
+***
 
-### unIndexed
+### unIndexed?
 
-• `Optional` **unIndexed**: `string`[]
+> `optional` **unIndexed**: `string`[]
 
 Specifies fields that should not be indexed in the FTS table.
 

@@ -1,177 +1,161 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / KVSqliteResFuncParams
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / KVSqliteResFuncParams
 
 # Interface: KVSqliteResFuncParams
 
-## Hierarchy
+## Extends
 
 - `ResServerFuncParams`
 
-  ↳ **`KVSqliteResFuncParams`**
-
-## Table of contents
-
-### Properties
-
-- [\_id](KVSqliteResFuncParams.md#_id)
-- [\_req](KVSqliteResFuncParams.md#_req)
-- [\_res](KVSqliteResFuncParams.md#_res)
-- [act](KVSqliteResFuncParams.md#act)
-- [collection](KVSqliteResFuncParams.md#collection)
-- [filter](KVSqliteResFuncParams.md#filter)
-- [id](KVSqliteResFuncParams.md#id)
-- [options](KVSqliteResFuncParams.md#options)
-- [overwrite](KVSqliteResFuncParams.md#overwrite)
-- [page](KVSqliteResFuncParams.md#page)
-- [query](KVSqliteResFuncParams.md#query)
-- [size](KVSqliteResFuncParams.md#size)
-- [val](KVSqliteResFuncParams.md#val)
-
 ## Properties
 
-### \_id
+### \_id?
 
-• `Optional` **\_id**: `string`
+> `optional` **\_id**: `string`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:25](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L25)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:25](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L25)
 
-___
+***
 
-### \_req
+### \_req?
 
-• `Optional` **\_req**: `IncomingMessage`
+> `optional` **\_req**: `IncomingMessage`
 
 #### Inherited from
 
-ResServerFuncParams.\_req
+`ResServerFuncParams._req`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:271
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:271
 
-___
+***
 
-### \_res
+### \_res?
 
-• `Optional` **\_res**: `ServerResponse`\<`IncomingMessage`\>
+> `optional` **\_res**: `ServerResponse`\<`IncomingMessage`\>
 
 #### Inherited from
 
-ResServerFuncParams.\_res
+`ResServerFuncParams._res`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:272
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:272
 
-___
+***
 
-### act
+### act?
 
-• `Optional` **act**: `string`
+> `optional` **act**: `string`
 
 #### Inherited from
 
-ResServerFuncParams.act
+`ResServerFuncParams.act`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:401
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:401
 
-___
+***
 
-### collection
+### collection?
 
-• `Optional` **collection**: `string`
-
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L32)
-
-___
-
-### filter
-
-• `Optional` **filter**: `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[]
+> `optional` **collection**: `string`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:28](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L28)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L32)
 
-___
+***
 
-### id
+### filter?
 
-• `Optional` **id**: `string` \| `number`
+> `optional` **filter**: `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[]
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:28](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L28)
+
+***
+
+### id?
+
+> `optional` **id**: `string` \| `number`
 
 #### Inherited from
 
-ResServerFuncParams.id
+`ResServerFuncParams.id`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:419
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:419
 
-___
+***
 
-### options
+### options?
 
-• `Optional` **options**: `any`
-
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L33)
-
-___
-
-### overwrite
-
-• `Optional` **overwrite**: `boolean`
+> `optional` **options**: `any`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L31)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L33)
 
-___
+***
 
-### page
+### overwrite?
 
-• `Optional` **page**: `number`
-
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L30)
-
-___
-
-### query
-
-• `Optional` **query**: `string`
+> `optional` **overwrite**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L27)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L31)
 
-___
+***
 
-### size
+### page?
 
-• `Optional` **size**: `number`
+> `optional` **page**: `number`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L29)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L30)
 
-___
+***
 
-### val
+### query?
 
-• `Optional` **val**: `any`
+> `optional` **query**: `string`
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L27)
+
+***
+
+### size?
+
+> `optional` **size**: `number`
+
+#### Defined in
+
+[packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L29)
+
+***
+
+### val?
+
+> `optional` **val**: `any`
 
 #### Overrides
 
-ResServerFuncParams.val
+`ResServerFuncParams.val`
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:26](https://github.com/isdk/ai-tool-sqlite.js/blob/7d1b3d5fe34c6739df2d032e93295c040045959b/src/sqlite-res.ts#L26)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:26](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-res.ts#L26)

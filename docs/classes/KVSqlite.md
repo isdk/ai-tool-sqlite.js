@@ -1,86 +1,26 @@
-[@isdk/ai-tool-sqlite](../README.md) / [Exports](../modules.md) / KVSqlite
+[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-sqlite](../globals.md) / KVSqlite
 
 # Class: KVSqlite
 
-## Hierarchy
+## Extends
 
 - `Database`
 
-  ↳ **`KVSqlite`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](KVSqlite.md#constructor)
-
-### Properties
-
-- [collections](KVSqlite.md#collections)
-- [ftsLoaded](KVSqlite.md#ftsloaded)
-- [id](KVSqlite.md#id)
-- [inTransaction](KVSqlite.md#intransaction)
-- [memory](KVSqlite.md#memory)
-- [name](KVSqlite.md#name)
-- [open](KVSqlite.md#open)
-- [preIsExists](KVSqlite.md#preisexists)
-- [readonly](KVSqlite.md#readonly)
-- [SqliteError](KVSqlite.md#sqliteerror)
-
-### Methods
-
-- [aggregate](KVSqlite.md#aggregate)
-- [backup](KVSqlite.md#backup)
-- [bulkDocs](KVSqlite.md#bulkdocs)
-- [close](KVSqlite.md#close)
-- [count](KVSqlite.md#count)
-- [create](KVSqlite.md#create)
-- [createIndex](KVSqlite.md#createindex)
-- [createJsonIndex](KVSqlite.md#createjsonindex)
-- [defaultSafeIntegers](KVSqlite.md#defaultsafeintegers)
-- [del](KVSqlite.md#del)
-- [drop](KVSqlite.md#drop)
-- [enableFts](KVSqlite.md#enablefts)
-- [exec](KVSqlite.md#exec)
-- [function](KVSqlite.md#function)
-- [get](KVSqlite.md#get)
-- [getCollection](KVSqlite.md#getcollection)
-- [getExtend](KVSqlite.md#getextend)
-- [getExtends](KVSqlite.md#getextends)
-- [isCollectionExists](KVSqlite.md#iscollectionexists)
-- [isExists](KVSqlite.md#isexists)
-- [isTypeExists](KVSqlite.md#istypeexists)
-- [list](KVSqlite.md#list)
-- [loadExtension](KVSqlite.md#loadextension)
-- [loadFtsLanguage](KVSqlite.md#loadftslanguage)
-- [pragma](KVSqlite.md#pragma)
-- [prepare](KVSqlite.md#prepare)
-- [search](KVSqlite.md#search)
-- [searchEx](KVSqlite.md#searchex)
-- [searchFts](KVSqlite.md#searchfts)
-- [serialize](KVSqlite.md#serialize)
-- [set](KVSqlite.md#set)
-- [setExtend](KVSqlite.md#setextend)
-- [setExtends](KVSqlite.md#setextends)
-- [table](KVSqlite.md#table)
-- [tableInfo](KVSqlite.md#tableinfo)
-- [transaction](KVSqlite.md#transaction)
-- [tryUpgradeVer](KVSqlite.md#tryupgradever)
-- [unsafeMode](KVSqlite.md#unsafemode)
-- [usingJsonb](KVSqlite.md#usingjsonb)
-
 ## Constructors
 
-### constructor
+### new KVSqlite()
 
-• **new KVSqlite**(`filename?`, `options?`): [`KVSqlite`](KVSqlite.md)
+> **new KVSqlite**(`filename`?, `options`?): [`KVSqlite`](KVSqlite.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `filename?` | `string` \| `Buffer` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) & [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md) |
+• **filename?**: `string` \| `Buffer`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md) & [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
@@ -88,7 +28,7 @@
 
 #### Overrides
 
-Database.constructor
+`Database.constructor`
 
 #### Defined in
 
@@ -98,31 +38,31 @@ packages/kvsqlite/dist/index.d.ts:122
 
 ### collections
 
-• **collections**: [`IKVCollections`](../interfaces/IKVCollections.md)
+> **collections**: [`IKVCollections`](../interfaces/IKVCollections.md)
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:121
 
-___
+***
 
 ### ftsLoaded
 
-• **ftsLoaded**: `Object`
+> **ftsLoaded**: `object`
 
-#### Index signature
+#### Index Signature
 
-▪ [lang: `string`]: `boolean`
+ \[`lang`: `string`\]: `boolean`
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:118
 
-___
+***
 
 ### id
 
-• **id**: `undefined` \| `string`
+> **id**: `undefined` \| `string`
 
 The unique id of the database.
 
@@ -130,118 +70,115 @@ The unique id of the database.
 
 packages/kvsqlite/dist/index.d.ts:116
 
-___
+***
 
 ### inTransaction
 
-• **inTransaction**: `boolean`
+> **inTransaction**: `boolean`
 
 #### Inherited from
 
-Database.inTransaction
+`Database.inTransaction`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:57
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:57
 
-___
+***
 
 ### memory
 
-• **memory**: `boolean`
+> **memory**: `boolean`
 
 #### Inherited from
 
-Database.memory
+`Database.memory`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:53
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:53
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Inherited from
 
-Database.name
+`Database.name`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:55
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:55
 
-___
+***
 
 ### open
 
-• **open**: `boolean`
+> **open**: `boolean`
 
 #### Inherited from
 
-Database.open
+`Database.open`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:56
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:56
 
-___
+***
 
 ### preIsExists
 
-• **preIsExists**: `Statement`\<`unknown`[], `unknown`\>
+> **preIsExists**: `Statement`\<`unknown`[], `unknown`\>
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:117
 
-___
+***
 
 ### readonly
 
-• **readonly**: `boolean`
+> **readonly**: `boolean`
 
 #### Inherited from
 
-Database.readonly
+`Database.readonly`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:54
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:54
 
-___
+***
 
 ### SqliteError
 
-▪ `Static` **SqliteError**: typeof `SqliteError`
+> `static` **SqliteError**: *typeof* `SqliteError`
 
 #### Inherited from
 
-Database.SqliteError
+`Database.SqliteError`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:91
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:91
 
 ## Methods
 
-### aggregate
+### aggregate()
 
-▸ **aggregate**\<`T`\>(`name`, `options`): `this`
+> **aggregate**\<`T`\>(`name`, `options`): `this`
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `RegistrationOptions` & \{ `inverse?`: (`total`: `T`, `dropped`: `T`) => `T` ; `result?`: (`total`: `T`) => `unknown` ; `start?`: `T` \| () => `T` ; `step`: (`total`: `T`, `next`: `ElementOf`\<`T`\>) => `void` \| `T`  } |
+• **name**: `string`
+
+• **options**: `RegistrationOptions` & `object`
 
 #### Returns
 
@@ -249,24 +186,23 @@ node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlit
 
 #### Inherited from
 
-Database.aggregate
+`Database.aggregate`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:67
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:67
 
-___
+***
 
-### backup
+### backup()
 
-▸ **backup**(`destinationFile`, `options?`): `Promise`\<`BackupMetadata`\>
+> **backup**(`destinationFile`, `options`?): `Promise`\<`BackupMetadata`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `destinationFile` | `string` |
-| `options?` | `BackupOptions` |
+• **destinationFile**: `string`
+
+• **options?**: `BackupOptions`
 
 #### Returns
 
@@ -274,24 +210,23 @@ ___
 
 #### Inherited from
 
-Database.backup
+`Database.backup`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:80
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:80
 
-___
+***
 
-### bulkDocs
+### bulkDocs()
 
-▸ **bulkDocs**(`objs`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **bulkDocs**(`objs`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `objs` | [`IKVObjItem`](../interfaces/IKVObjItem.md)[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **objs**: [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -301,11 +236,11 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:131
 
-___
+***
 
-### close
+### close()
 
-▸ **close**(): `this`
+> **close**(): `this`
 
 #### Returns
 
@@ -313,24 +248,23 @@ ___
 
 #### Inherited from
 
-Database.close
+`Database.close`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:78
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:78
 
-___
+***
 
-### count
+### count()
 
-▸ **count**(`query?`, `options?`): `number`
+> **count**(`query`?, `options`?): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query?` | `string` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **query?**: `string`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -340,18 +274,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:137
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`name`, `options?`): `undefined` \| [`KVSqliteCollection`](KVSqliteCollection.md)
+> **create**(`name`, `options`?): `undefined` \| [`KVSqliteCollection`](KVSqliteCollection.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options?` | [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md) |
+• **name**: `string`
+
+• **options?**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
@@ -361,19 +294,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:125
 
-___
+***
 
-### createIndex
+### createIndex()
 
-▸ **createIndex**(`indexName`, `fields`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **createIndex**(`indexName`, `fields`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `indexName` | `string` |
-| `fields` | `string` \| `string`[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **indexName**: `string`
+
+• **fields**: `string` \| `string`[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -383,19 +316,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:140
 
-___
+***
 
-### createJsonIndex
+### createJsonIndex()
 
-▸ **createJsonIndex**(`indexName`, `fields`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **createJsonIndex**(`indexName`, `fields`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `indexName` | `string` |
-| `fields` | `string` \| `string`[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **indexName**: `string`
+
+• **fields**: `string` \| `string`[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -405,17 +338,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:139
 
-___
+***
 
-### defaultSafeIntegers
+### defaultSafeIntegers()
 
-▸ **defaultSafeIntegers**(`toggleState?`): `this`
+> **defaultSafeIntegers**(`toggleState`?): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `toggleState?` | `boolean` |
+• **toggleState?**: `boolean`
 
 #### Returns
 
@@ -423,24 +354,23 @@ ___
 
 #### Inherited from
 
-Database.defaultSafeIntegers
+`Database.defaultSafeIntegers`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:79
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:79
 
-___
+***
 
-### del
+### del()
 
-▸ **del**(`_id?`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **del**(`_id`?, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id?` | [`IKVDocumentId`](../modules.md#ikvdocumentid) \| [`IKVDocumentId`](../modules.md#ikvdocumentid)[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **\_id?**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md) \| [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -450,17 +380,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:135
 
-___
+***
 
-### drop
+### drop()
 
-▸ **drop**(`name`): `void`
+> **drop**(`name`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -470,18 +398,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:127
 
-___
+***
 
-### enableFts
+### enableFts()
 
-▸ **enableFts**(`collection?`, `options?`): `void`
+> **enableFts**(`collection`?, `options`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `collection?` | `string` |
-| `options?` | [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md) |
+• **collection?**: `string`
+
+• **options?**: [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
 
 #### Returns
 
@@ -491,17 +418,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:147
 
-___
+***
 
-### exec
+### exec()
 
-▸ **exec**(`source`): `this`
+> **exec**(`source`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `source` | `string` |
+• **source**: `string`
 
 #### Returns
 
@@ -509,71 +434,73 @@ ___
 
 #### Inherited from
 
-Database.exec
+`Database.exec`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:63
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:63
 
-___
+***
 
-### function
+### function()
 
-▸ **function**(`name`, `cb`): `this`
+#### function(name, cb)
 
-#### Parameters
+> **function**(`name`, `cb`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `cb` | (...`params`: `unknown`[]) => `unknown` |
+##### Parameters
 
-#### Returns
+• **name**: `string`
+
+• **cb**
+
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-Database.function
+`Database.function`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:65
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:65
 
-▸ **function**(`name`, `options`, `cb`): `this`
+#### function(name, options, cb)
 
-#### Parameters
+> **function**(`name`, `options`, `cb`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `RegistrationOptions` |
-| `cb` | (...`params`: `unknown`[]) => `unknown` |
+##### Parameters
 
-#### Returns
+• **name**: `string`
+
+• **options**: `RegistrationOptions`
+
+• **cb**
+
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-Database.function
+`Database.function`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:66
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:66
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`_id`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)
+> **get**(`_id`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -583,17 +510,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:132
 
-___
+***
 
-### getCollection
+### getCollection()
 
-▸ **getCollection**(`name`): [`KVSqliteCollection`](KVSqliteCollection.md)
+> **getCollection**(`name`): [`KVSqliteCollection`](KVSqliteCollection.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -603,19 +528,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:126
 
-___
+***
 
-### getExtend
+### getExtend()
 
-▸ **getExtend**(`docId`, `aPropName?`, `options?`): `any`
+> **getExtend**(`docId`, `aPropName`?, `options`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `aPropName?` | `string` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **aPropName?**: `string`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -625,19 +550,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:133
 
-___
+***
 
-### getExtends
+### getExtends()
 
-▸ **getExtends**(`docId`, `aPropName?`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)
+> **getExtends**(`docId`, `aPropName`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `aPropName?` | `string` \| `string`[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **aPropName?**: `string` \| `string`[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -647,17 +572,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:134
 
-___
+***
 
-### isCollectionExists
+### isCollectionExists()
 
-▸ **isCollectionExists**(`collection`): `boolean`
+> **isCollectionExists**(`collection`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `collection` | `string` |
+• **collection**: `string`
 
 #### Returns
 
@@ -667,18 +590,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:144
 
-___
+***
 
-### isExists
+### isExists()
 
-▸ **isExists**(`_id`, `options?`): `boolean`
+> **isExists**(`_id`, `options`?): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_id` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -688,18 +610,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:136
 
-___
+***
 
-### isTypeExists
+### isTypeExists()
 
-▸ **isTypeExists**(`type`, `name`): `boolean`
+> **isTypeExists**(`type`, `name`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` |
-| `name` | `string` |
+• **type**: `string`
+
+• **name**: `string`
 
 #### Returns
 
@@ -709,18 +630,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:143
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`query?`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+> **list**(`query`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query?` | `string` \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **query?**: `string` \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -730,17 +650,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:138
 
-___
+***
 
-### loadExtension
+### loadExtension()
 
-▸ **loadExtension**(`path`): `this`
+> **loadExtension**(`path`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `path` | `string` |
+• **path**: `string`
 
 #### Returns
 
@@ -748,23 +666,21 @@ ___
 
 #### Inherited from
 
-Database.loadExtension
+`Database.loadExtension`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:77
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:77
 
-___
+***
 
-### loadFtsLanguage
+### loadFtsLanguage()
 
-▸ **loadFtsLanguage**(`options?`): `void`
+> **loadFtsLanguage**(`options`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md) |
+• **options?**: [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
 
 #### Returns
 
@@ -774,18 +690,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:145
 
-___
+***
 
-### pragma
+### pragma()
 
-▸ **pragma**(`source`, `options?`): `unknown`
+> **pragma**(`source`, `options`?): `unknown`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `source` | `string` |
-| `options?` | `PragmaOptions` |
+• **source**: `string`
+
+• **options?**: `PragmaOptions`
 
 #### Returns
 
@@ -793,55 +708,51 @@ ___
 
 #### Inherited from
 
-Database.pragma
+`Database.pragma`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:64
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:64
 
-___
+***
 
-### prepare
+### prepare()
 
-▸ **prepare**\<`BindParameters`, `Result`\>(`source`): `BindParameters` extends `unknown`[] ? `Statement`\<`BindParameters`\<`BindParameters`\>, `Result`\> : `Statement`\<[`BindParameters`], `Result`\>
+> **prepare**\<`BindParameters`, `Result`\>(`source`): `BindParameters` *extends* `unknown`[] ? `Statement`\<`BindParameters`\<`BindParameters`\>, `Result`\> : `Statement`\<[`BindParameters`], `Result`\>
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `BindParameters` | extends {} \| `unknown`[] = `unknown`[] |
-| `Result` | `unknown` |
+• **BindParameters** *extends* `object` \| `unknown`[] = `unknown`[]
+
+• **Result** = `unknown`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `source` | `string` |
+• **source**: `string`
 
 #### Returns
 
-`BindParameters` extends `unknown`[] ? `Statement`\<`BindParameters`\<`BindParameters`\>, `Result`\> : `Statement`\<[`BindParameters`], `Result`\>
+`BindParameters` *extends* `unknown`[] ? `Statement`\<`BindParameters`\<`BindParameters`\>, `Result`\> : `Statement`\<[`BindParameters`], `Result`\>
 
 #### Inherited from
 
-Database.prepare
+`Database.prepare`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:59
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:59
 
-___
+***
 
-### search
+### search()
 
-▸ **search**(`filter`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+> **search**(`filter`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `filter` | `Record`\<`string`, `any`\> |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **filter**: `Record`\<`string`, `any`\>
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -851,18 +762,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:142
 
-___
+***
 
-### searchEx
+### searchEx()
 
-▸ **searchEx**(`query`, `options?`): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+> **searchEx**(`query`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `string` \| `Record`\<`string`, `string`\> |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **query**: `string` \| `Record`\<`string`, `string`\>
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -872,38 +782,35 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:141
 
-___
+***
 
-### searchFts
+### searchFts()
 
-▸ **searchFts**(`query`, `options?`): \{ `_id`: `string` ; `值`: `any`  }[]
+> **searchFts**(`query`, `options`?): `object`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[] |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **query**: `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[]
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
-\{ `_id`: `string` ; `值`: `any`  }[]
+`object`[]
 
 #### Defined in
 
 packages/kvsqlite/dist/index.d.ts:148
 
-___
+***
 
-### serialize
+### serialize()
 
-▸ **serialize**(`options?`): `Buffer`
+> **serialize**(`options`?): `Buffer`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `SerializeOptions` |
+• **options?**: `SerializeOptions`
 
 #### Returns
 
@@ -911,25 +818,25 @@ ___
 
 #### Inherited from
 
-Database.serialize
+`Database.serialize`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:83
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:83
 
-___
+***
 
-### set
+### set()
 
-▸ **set**(`docId`, `obj?`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **set**(`docId`, `obj`?, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `obj?` | [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **obj?**: [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -939,20 +846,21 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:128
 
-___
+***
 
-### setExtend
+### setExtend()
 
-▸ **setExtend**(`docId`, `key`, `value`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **setExtend**(`docId`, `key`, `value`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `key` | `string` |
-| `value` | `any` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **key**: `string`
+
+• **value**: `any`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -962,19 +870,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:129
 
-___
+***
 
-### setExtends
+### setExtends()
 
-▸ **setExtends**(`docId`, `aDoc`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **setExtends**(`docId`, `aDoc`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `docId` | [`IKVDocumentId`](../modules.md#ikvdocumentid) |
-| `aDoc` | `any` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+• **aDoc**: `any`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -984,18 +892,17 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:130
 
-___
+***
 
-### table
+### table()
 
-▸ **table**(`name`, `options`): `this`
+> **table**(`name`, `options`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `VirtualTableOptions` |
+• **name**: `string`
+
+• **options**: `VirtualTableOptions`
 
 #### Returns
 
@@ -1003,24 +910,23 @@ ___
 
 #### Inherited from
 
-Database.table
+`Database.table`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:81
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:81
 
-___
+***
 
-### tableInfo
+### tableInfo()
 
-▸ **tableInfo**(`collection?`, `options?`): `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
+> **tableInfo**(`collection`?, `options`?): `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `collection?` | `string` |
-| `options?` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md) |
+• **collection?**: `string`
+
+• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
@@ -1030,23 +936,19 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:146
 
-___
+***
 
-### transaction
+### transaction()
 
-▸ **transaction**\<`F`\>(`fn`): `Transaction`\<`F`\>
+> **transaction**\<`F`\>(`fn`): `Transaction`\<`F`\>
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `F` | extends `VariableArgFunction` |
+• **F** *extends* `VariableArgFunction`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fn` | `F` |
+• **fn**: `F`
 
 #### Returns
 
@@ -1054,17 +956,17 @@ ___
 
 #### Inherited from
 
-Database.transaction
+`Database.transaction`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:62
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:62
 
-___
+***
 
-### tryUpgradeVer
+### tryUpgradeVer()
 
-▸ **tryUpgradeVer**(): `void`
+> **tryUpgradeVer**(): `void`
 
 #### Returns
 
@@ -1074,17 +976,15 @@ ___
 
 packages/kvsqlite/dist/index.d.ts:123
 
-___
+***
 
-### unsafeMode
+### unsafeMode()
 
-▸ **unsafeMode**(`unsafe?`): `this`
+> **unsafeMode**(`unsafe`?): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `unsafe?` | `boolean` |
+• **unsafe?**: `boolean`
 
 #### Returns
 
@@ -1092,23 +992,21 @@ ___
 
 #### Inherited from
 
-Database.unsafeMode
+`Database.unsafeMode`
 
 #### Defined in
 
-node_modules/.pnpm/@types+better-sqlite3@7.6.10/node_modules/@types/better-sqlite3/index.d.ts:82
+node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:82
 
-___
+***
 
-### usingJsonb
+### usingJsonb()
 
-▸ **usingJsonb**(`collection?`): `undefined` \| `boolean`
+> **usingJsonb**(`collection`?): `undefined` \| `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `collection?` | `string` |
+• **collection?**: `string`
 
 #### Returns
 

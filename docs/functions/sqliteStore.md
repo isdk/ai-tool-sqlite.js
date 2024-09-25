@@ -31,4 +31,4 @@ set the value if key is provided and value is provided
 
 ## Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/09301d6b9e8d9fb5724f7acd4a792efbaf83cc60/src/sqlite-store.ts#L29)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-store.ts#L29)

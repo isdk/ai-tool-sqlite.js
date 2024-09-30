@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-store.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-store.ts#L72)
+[packages/ai-tool-sqlite/src/sqlite-store.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-store.ts#L72)

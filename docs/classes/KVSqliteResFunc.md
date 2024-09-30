@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L51)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L51)
 
 ## Properties
 
@@ -94,7 +94,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L48)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L48)
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L46)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L46)
 
 ***
 
@@ -144,7 +144,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:162
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L47)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L47)
 
 ***
 
@@ -154,7 +154,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:162
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L49)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L49)
 
 ***
 
@@ -342,7 +342,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L213)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L213)
 
 ***
 
@@ -360,7 +360,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L219)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L219)
 
 ***
 
@@ -378,7 +378,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L230)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L230)
 
 ***
 
@@ -396,7 +396,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L203)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L203)
 
 ***
 
@@ -414,7 +414,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L193)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L193)
 
 ***
 
@@ -580,7 +580,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L107)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L107)
 
 ***
 
@@ -686,7 +686,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L176)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L176)
 
 ***
 
@@ -748,7 +748,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:415
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L121)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L121)
 
 ***
 
@@ -766,7 +766,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:415
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L83)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L83)
 
 ***
 
@@ -898,7 +898,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L66)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L66)
 
 ***
 
@@ -918,7 +918,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L75)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L75)
 
 ***
 
@@ -936,7 +936,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L42)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L42)
 
 ***
 
@@ -1058,7 +1058,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:96
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L114)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L114)
 
 ***
 
@@ -1120,7 +1120,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L152)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L152)
 
 ***
 
@@ -1160,7 +1160,7 @@ node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L134)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L134)
 
 ***
 
@@ -1428,7 +1428,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:82
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/e3c1ff8a73c1e23a76a3ce2a388503307056f314/src/sqlite-res.ts#L94)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L94)
 
 ***
 

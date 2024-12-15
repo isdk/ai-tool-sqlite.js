@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L37)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/2074f3184b560899d73c24ac00df4826aa912675/src/sqlite-res.ts#L37)
 
 ***
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:46
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:46
 
 ***
 
@@ -42,7 +42,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:46
 
 #### Defined in
 
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/9fe2c10603e7d4edf9338798a309c4c793b97975/src/sqlite-res.ts#L38)
+[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/2074f3184b560899d73c24ac00df4826aa912675/src/sqlite-res.ts#L38)
 
 ***
 
@@ -56,7 +56,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:46
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:42
 
 ***
 
@@ -70,7 +70,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:36
 
 ***
 
@@ -84,7 +84,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:37
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:37
 
 ***
 
@@ -98,7 +98,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:37
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:38
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:38
 
 ***
 
@@ -112,7 +112,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:38
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:39
 
 ***
 
@@ -136,7 +136,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:41
 
 ***
 
@@ -150,7 +150,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:43
 
 ***
 
@@ -164,4 +164,4 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
 #### Defined in
 
-packages/ai-tool/dist/index-DUEs7T8M.d.ts:40
+packages/ai-tool/dist/index-BC3GQn6-.d.ts:40

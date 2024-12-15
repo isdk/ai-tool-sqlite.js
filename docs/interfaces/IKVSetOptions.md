@@ -28,7 +28,7 @@ packages/kvsqlite/dist/index.d.ts:14
 
 ### collections?
 
-> `optional` **collections**: `string`[]
+> `optional` **collections**: (`string` \| [`IKVCreateOptions`](IKVCreateOptions.md))[]
 
 #### Defined in
 

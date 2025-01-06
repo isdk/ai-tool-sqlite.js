@@ -7,7 +7,7 @@ const conf = createSqliteStore('conf')
 describe('sqliteStore function', async () => {
   const store = await conf.run() as KVSqlite
   const key = 'theKey'
-  const value = { value: 'the value' }
+  const value = { v: 'the value' }
   const doc = { _id: key, ...value }
 
   beforeEach(() => {

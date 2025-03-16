@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,6 +6,8 @@
 
 # Interface: IKVCollections
 
+Defined in: packages/kvsqlite/dist/index.d.ts:146
+
 ## Indexable
 
- \[`name`: `string`\]: [`KVSqliteCollection`](../classes/KVSqliteCollection.md)
+\[`name`: `string`\]: [`KVSqliteCollection`](../classes/KVSqliteCollection.md)

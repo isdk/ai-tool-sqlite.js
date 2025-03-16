@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: SqliteRunResult
 
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:15](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-res.ts#L15)
+
 ## Properties
 
 ### changes
 
 > **changes**: `number`
 
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:16](https://github.com/isdk/ai-tool-sqlite.js/blob/b95338955c0b34d8ea5fcbcfae9ef5e8811a2248/src/sqlite-res.ts#L16)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:16](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-res.ts#L16)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **lastInsertRowid**: `number` \| `bigint`
 
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:17](https://github.com/isdk/ai-tool-sqlite.js/blob/b95338955c0b34d8ea5fcbcfae9ef5e8811a2248/src/sqlite-res.ts#L17)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:17](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-res.ts#L17)

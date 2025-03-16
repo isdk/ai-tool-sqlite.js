@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,6 +6,8 @@
 
 # Interface: IKVFieldOptions
 
+Defined in: packages/kvsqlite/dist/index.d.ts:106
+
 ## Indexable
 
- \[`name`: `string`\]: [`IKVFieldOption`](IKVFieldOption.md)
+\[`name`: `string`\]: [`IKVFieldOption`](IKVFieldOption.md)

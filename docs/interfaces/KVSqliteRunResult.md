@@ -1,10 +1,12 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
 [@isdk/ai-tool-sqlite](../globals.md) / KVSqliteRunResult
 
 # Interface: KVSqliteRunResult
+
+Defined in: packages/kvsqlite/dist/index.d.ts:8
 
 ## Extends
 
@@ -16,13 +18,11 @@
 
 > **changes**: `number`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:105
+
 #### Inherited from
 
 `Database.RunResult.changes`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:104
 
 ***
 
@@ -30,10 +30,8 @@ node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sql
 
 > **lastInsertRowid**: `number` \| `bigint`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:106
+
 #### Inherited from
 
 `Database.RunResult.lastInsertRowid`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:105

@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: IKVIndexOptions
 
+Defined in: packages/kvsqlite/dist/index.d.ts:110
+
 ## Properties
 
 ### fields
 
 > **fields**: `string`[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:90
+Defined in: packages/kvsqlite/dist/index.d.ts:112
 
 ***
 
@@ -22,9 +22,7 @@ packages/kvsqlite/dist/index.d.ts:90
 
 > **name**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:89
+Defined in: packages/kvsqlite/dist/index.d.ts:111
 
 ***
 
@@ -32,9 +30,7 @@ packages/kvsqlite/dist/index.d.ts:89
 
 > `optional` **partial**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:92
+Defined in: packages/kvsqlite/dist/index.d.ts:114
 
 ***
 
@@ -42,6 +38,4 @@ packages/kvsqlite/dist/index.d.ts:92
 
 > `optional` **unique**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:91
+Defined in: packages/kvsqlite/dist/index.d.ts:113

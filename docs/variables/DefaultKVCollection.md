@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **DefaultKVCollection**: `"kv"` = `"kv"`
 
-## Defined in
-
-packages/kvsqlite/dist/index.d.ts:101
+Defined in: packages/kvsqlite/dist/index.d.ts:137

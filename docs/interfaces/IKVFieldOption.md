@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,15 +6,51 @@
 
 # Interface: IKVFieldOption
 
+Defined in: packages/kvsqlite/dist/index.d.ts:90
+
 ## Properties
+
+### constraint?
+
+> `optional` **constraint**: `string`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:97
+
+***
 
 ### default?
 
 > `optional` **default**: `any`
 
-#### Defined in
+Defined in: packages/kvsqlite/dist/index.d.ts:95
 
-packages/kvsqlite/dist/index.d.ts:83
+***
+
+### foreignKey?
+
+> `optional` **foreignKey**: `object`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:98
+
+#### isJson?
+
+> `optional` **isJson**: `boolean`
+
+#### onDelete?
+
+> `optional` **onDelete**: `"CASCADE"` \| `"SET NULL"` \| `"SET DEFAULT"` \| `"NO ACTION"`
+
+#### onUpdate?
+
+> `optional` **onUpdate**: `"CASCADE"` \| `"SET NULL"` \| `"SET DEFAULT"` \| `"NO ACTION"`
+
+#### reference
+
+> **reference**: `string`
+
+#### referenceField?
+
+> `optional` **referenceField**: `string`
 
 ***
 
@@ -22,9 +58,7 @@ packages/kvsqlite/dist/index.d.ts:83
 
 > `optional` **name**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:79
+Defined in: packages/kvsqlite/dist/index.d.ts:91
 
 ***
 
@@ -32,9 +66,7 @@ packages/kvsqlite/dist/index.d.ts:79
 
 > `optional` **notNull**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:81
+Defined in: packages/kvsqlite/dist/index.d.ts:93
 
 ***
 
@@ -42,9 +74,7 @@ packages/kvsqlite/dist/index.d.ts:81
 
 > `optional` **primary**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:82
+Defined in: packages/kvsqlite/dist/index.d.ts:94
 
 ***
 
@@ -52,6 +82,12 @@ packages/kvsqlite/dist/index.d.ts:82
 
 > `optional` **type**: `string`
 
-#### Defined in
+Defined in: packages/kvsqlite/dist/index.d.ts:92
 
-packages/kvsqlite/dist/index.d.ts:80
+***
+
+### unique?
+
+> `optional` **unique**: `boolean`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:96

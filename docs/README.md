@@ -1,4 +1,4 @@
-**@isdk/ai-tool-sqlite** • [**Docs**](globals.md)
+**@isdk/ai-tool-sqlite**
 
 ***
 

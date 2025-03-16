@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Variable: KV\_FIELD\_SYMBOL\_MAP
 
-> `const` **KV\_FIELD\_SYMBOL\_MAP**: `any`
+> `const` **KV\_FIELD\_SYMBOL\_MAP**: `Record`\<`string`, `string`\>
 
-## Defined in
-
-packages/kvsqlite/dist/index.d.ts:106
+Defined in: packages/kvsqlite/dist/index.d.ts:143

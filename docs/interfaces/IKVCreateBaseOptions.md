@@ -2,15 +2,20 @@
 
 ***
 
-[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateOptions
+[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateBaseOptions
 
-# Interface: IKVCreateOptions
+# Interface: IKVCreateBaseOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:131
+Defined in: packages/kvsqlite/dist/index.d.ts:123
 
 ## Extends
 
-- [`IKVCreateBaseOptions`](IKVCreateBaseOptions.md)
+- [`IKVSerdeOptions`](IKVSerdeOptions.md)
+
+## Extended by
+
+- [`IKVCreateExOptions`](IKVCreateExOptions.md)
+- [`IKVCreateOptions`](IKVCreateOptions.md)
 
 ## Indexable
 
@@ -36,15 +41,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:16
 
 #### Inherited from
 
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`deserialize`](IKVCreateBaseOptions.md#deserialize)
-
-***
-
-### fields?
-
-> `optional` **fields**: [`IKVFieldOptions`](IKVFieldOptions.md)
-
-Defined in: packages/kvsqlite/dist/index.d.ts:132
+[`IKVSerdeOptions`](IKVSerdeOptions.md).[`deserialize`](IKVSerdeOptions.md#deserialize)
 
 ***
 
@@ -54,10 +51,6 @@ Defined in: packages/kvsqlite/dist/index.d.ts:132
 
 Defined in: packages/kvsqlite/dist/index.d.ts:126
 
-#### Inherited from
-
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`fts`](IKVCreateBaseOptions.md#fts)
-
 ***
 
 ### indexes?
@@ -66,10 +59,6 @@ Defined in: packages/kvsqlite/dist/index.d.ts:126
 
 Defined in: packages/kvsqlite/dist/index.d.ts:127
 
-#### Inherited from
-
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`indexes`](IKVCreateBaseOptions.md#indexes)
-
 ***
 
 ### name?
@@ -77,10 +66,6 @@ Defined in: packages/kvsqlite/dist/index.d.ts:127
 > `optional` **name**: `string`
 
 Defined in: packages/kvsqlite/dist/index.d.ts:124
-
-#### Inherited from
-
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`name`](IKVCreateBaseOptions.md#name)
 
 ***
 
@@ -102,7 +87,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:15
 
 #### Inherited from
 
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`serialize`](IKVCreateBaseOptions.md#serialize)
+[`IKVSerdeOptions`](IKVSerdeOptions.md).[`serialize`](IKVSerdeOptions.md#serialize)
 
 ***
 
@@ -112,10 +97,6 @@ Defined in: packages/kvsqlite/dist/index.d.ts:15
 
 Defined in: packages/kvsqlite/dist/index.d.ts:128
 
-#### Inherited from
-
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`triggers`](IKVCreateBaseOptions.md#triggers)
-
 ***
 
 ### usingJsonb?
@@ -123,7 +104,3 @@ Defined in: packages/kvsqlite/dist/index.d.ts:128
 > `optional` **usingJsonb**: `boolean`
 
 Defined in: packages/kvsqlite/dist/index.d.ts:125
-
-#### Inherited from
-
-[`IKVCreateBaseOptions`](IKVCreateBaseOptions.md).[`usingJsonb`](IKVCreateBaseOptions.md#usingjsonb)

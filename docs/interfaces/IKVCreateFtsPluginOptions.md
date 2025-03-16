@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Interface: IKVCreateFtsPluginOptions
 
+Defined in: packages/kvsqlite/dist/index.d.ts:39
+
 ## Indexable
 
- \[`name`: `string`\]: `any`
+\[`name`: `string`\]: `any`
 
 ## Properties
 
@@ -16,19 +18,21 @@
 
 > `optional` **load**: (`db`, `options`) => `void`
 
+Defined in: packages/kvsqlite/dist/index.d.ts:44
+
 #### Parameters
 
-• **db**: [`KVSqlite`](../classes/KVSqlite.md)
+##### db
 
-• **options**: [`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md)
+[`KVSqlite`](../classes/KVSqlite.md)
+
+##### options
+
+[`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:36
 
 ***
 
@@ -36,8 +40,6 @@ packages/kvsqlite/dist/index.d.ts:36
 
 > **path**: `string`
 
+Defined in: packages/kvsqlite/dist/index.d.ts:43
+
 The path to the plugin specific to this language.
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:35

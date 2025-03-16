@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,27 +6,44 @@
 
 # Class: KVSqliteCollection
 
+Defined in: packages/kvsqlite/dist/index.d.ts:422
+
 ## Constructors
 
 ### new KVSqliteCollection()
 
 > **new KVSqliteCollection**(`name`, `db`, `options`?): [`KVSqliteCollection`](KVSqliteCollection.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:449
+
+Constructs a new instance of KVSqliteCollection.
+
+This constructor initializes a new collection in the database with the specified name and options.
+It handles the creation of the table if it does not already exist, sets up fields, and prepares SQL statements for various operations.
+
 #### Parameters
 
-• **name**: `string`
+##### name
 
-• **db**: [`KVSqlite`](KVSqlite.md)
+`string`
 
-• **options?**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+The name of the collection.
+
+##### db
+
+[`KVSqlite`](KVSqlite.md)
+
+The KVSqlite database instance.
+
+##### options?
+
+[`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+
+Optional settings for the collection, including fields, FTS configuration, and JSONB usage.
 
 #### Returns
 
 [`KVSqliteCollection`](KVSqliteCollection.md)
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:169
 
 ## Properties
 
@@ -34,9 +51,7 @@ packages/kvsqlite/dist/index.d.ts:169
 
 > `protected` **db**: [`KVSqlite`](KVSqlite.md)
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:155
+Defined in: packages/kvsqlite/dist/index.d.ts:424
 
 ***
 
@@ -44,9 +59,7 @@ packages/kvsqlite/dist/index.d.ts:155
 
 > **jsonb**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:168
+Defined in: packages/kvsqlite/dist/index.d.ts:437
 
 ***
 
@@ -54,129 +67,103 @@ packages/kvsqlite/dist/index.d.ts:168
 
 > **name**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:154
+Defined in: packages/kvsqlite/dist/index.d.ts:423
 
 ***
 
 ### preAdd
 
-> **preAdd**: `Statement`\<`unknown`[], `unknown`\>
+> **preAdd**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:156
+Defined in: packages/kvsqlite/dist/index.d.ts:425
 
 ***
 
 ### preAll
 
-> **preAll**: `Statement`\<`unknown`[], `unknown`\>
+> **preAll**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:166
+Defined in: packages/kvsqlite/dist/index.d.ts:435
 
 ***
 
 ### preAllLimit
 
-> **preAllLimit**: `Statement`\<`unknown`[], `unknown`\>
+> **preAllLimit**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:167
+Defined in: packages/kvsqlite/dist/index.d.ts:436
 
 ***
 
 ### preCount
 
-> **preCount**: `Statement`\<`unknown`[], `unknown`\>
+> **preCount**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:162
+Defined in: packages/kvsqlite/dist/index.d.ts:431
 
 ***
 
 ### preCountW
 
-> **preCountW**: `Statement`\<`unknown`[], `unknown`\>
+> **preCountW**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:163
+Defined in: packages/kvsqlite/dist/index.d.ts:432
 
 ***
 
 ### preDel
 
-> **preDel**: `Statement`\<`unknown`[], `unknown`\>
+> **preDel**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:160
+Defined in: packages/kvsqlite/dist/index.d.ts:429
 
 ***
 
 ### preDelAll
 
-> **preDelAll**: `Statement`\<`unknown`[], `unknown`\>
+> **preDelAll**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:161
+Defined in: packages/kvsqlite/dist/index.d.ts:430
 
 ***
 
 ### preExists
 
-> **preExists**: `Statement`\<`unknown`[], `unknown`\>
+> **preExists**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:158
+Defined in: packages/kvsqlite/dist/index.d.ts:427
 
 ***
 
 ### preGet
 
-> **preGet**: `Statement`\<`unknown`[], `unknown`\>
+> **preGet**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:159
+Defined in: packages/kvsqlite/dist/index.d.ts:428
 
 ***
 
 ### preSearchKey
 
-> **preSearchKey**: `Statement`\<`unknown`[], `unknown`\>
+> **preSearchKey**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:164
+Defined in: packages/kvsqlite/dist/index.d.ts:433
 
 ***
 
 ### preSearchKeyAll
 
-> **preSearchKeyAll**: `Statement`\<`unknown`[], `unknown`\>
+> **preSearchKeyAll**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:165
+Defined in: packages/kvsqlite/dist/index.d.ts:434
 
 ***
 
 ### preUpdate
 
-> **preUpdate**: `Statement`\<`unknown`[], `unknown`\>
+> **preUpdate**: `Statement`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:157
+Defined in: packages/kvsqlite/dist/index.d.ts:426
 
 ## Methods
 
@@ -184,19 +171,21 @@ packages/kvsqlite/dist/index.d.ts:157
 
 > **\_set**(`obj`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:450
+
 #### Parameters
 
-• **obj**: [`IKVObjItem`](../interfaces/IKVObjItem.md)
+##### obj
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+[`IKVObjItem`](../interfaces/IKVObjItem.md)
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:170
 
 ***
 
@@ -204,23 +193,61 @@ packages/kvsqlite/dist/index.d.ts:170
 
 > **\_setExtend**(`docId`, `key`, `value`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:463
+
 #### Parameters
 
-• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### docId
 
-• **key**: `string`
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-• **value**: `any`
+##### key
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+`string`
+
+##### value
+
+`any`
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-#### Defined in
+***
 
-packages/kvsqlite/dist/index.d.ts:172
+### buildWhereClause()
+
+> **buildWhereClause**(`filter`, `options`?): `string`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:647
+
+Builds a SQL WHERE clause from the provided filter conditions.
+
+This function converts a record of filter conditions into a SQL WHERE clause string.
+
+#### Parameters
+
+##### filter
+
+`Record`\<`string`, `any`\>
+
+A record of key-value pairs representing the filter conditions.
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings including field information mappings.
+
+#### Returns
+
+`string`
+
+A string representing the SQL WHERE clause.
 
 ***
 
@@ -228,19 +255,32 @@ packages/kvsqlite/dist/index.d.ts:172
 
 > **bulkDocs**(`objs`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:499
+
+Inserts or updates multiple documents in a transaction.
+
+This function performs a bulk operation to insert or update multiple documents in the table.
+It executes the operations within a transaction to ensure atomicity.
+
 #### Parameters
 
-• **objs**: [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+##### objs
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+[`IKVObjItem`](../interfaces/IKVObjItem.md)[]
+
+An array of objects representing the documents to insert or update.
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings for the operation.
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:175
+An array of results from the insert or update operations.
 
 ***
 
@@ -248,17 +288,26 @@ packages/kvsqlite/dist/index.d.ts:175
 
 > **count**(`query`?): `number`
 
+Defined in: packages/kvsqlite/dist/index.d.ts:596
+
+Counts the number of records in the collection based on the provided query.
+
+This function returns the count of records that match the specified query.
+If the query is an object, it constructs a SQL WHERE clause from the query object.
+
 #### Parameters
 
-• **query?**: `string`
+##### query?
+
+An optional string or object representing the query conditions.
+
+`string` | `Record`\<`string`, `any`\>
 
 #### Returns
 
 `number`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:196
+The number of records matching the query.
 
 ***
 
@@ -266,19 +315,21 @@ packages/kvsqlite/dist/index.d.ts:196
 
 > **createIndex**(`index`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:613
+
 #### Parameters
 
-• **index**: [`IKVIndexOptions`](../interfaces/IKVIndexOptions.md)
+##### index
 
-• **options?**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+[`IKVIndexOptions`](../interfaces/IKVIndexOptions.md)
+
+##### options?
+
+[`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:200
 
 ***
 
@@ -286,17 +337,17 @@ packages/kvsqlite/dist/index.d.ts:200
 
 > **createIndexes**(`options`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:614
+
 #### Parameters
 
-• **options**: [`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+##### options
+
+[`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:201
 
 ***
 
@@ -304,19 +355,61 @@ packages/kvsqlite/dist/index.d.ts:201
 
 > **createJsonIndex**(`indexName`, `fields`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:611
+
 #### Parameters
 
-• **indexName**: `string`
+##### indexName
 
-• **fields**: `string` \| `string`[]
+`string`
+
+##### fields
+
+`string` | `string`[]
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-#### Defined in
+***
 
-packages/kvsqlite/dist/index.d.ts:198
+### createSchema()
+
+> **createSchema**(`options`): `void`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:609
+
+#### Parameters
+
+##### options
+
+[`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+
+#### Returns
+
+`void`
+
+***
+
+### createTable()
+
+> **createTable**(`name`, `options`): `void`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:610
+
+#### Parameters
+
+##### name
+
+`string`
+
+##### options
+
+[`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+
+#### Returns
+
+`void`
 
 ***
 
@@ -324,19 +417,43 @@ packages/kvsqlite/dist/index.d.ts:198
 
 > **createTableIndex**(`indexName`, `fields`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:612
+
 #### Parameters
 
-• **indexName**: `string`
+##### indexName
 
-• **fields**: `string` \| `string`[]
+`string`
+
+##### fields
+
+`string` | `string`[]
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-#### Defined in
+***
 
-packages/kvsqlite/dist/index.d.ts:199
+### createTrigger()
+
+> **createTrigger**(`trigger`, `options`?): `RunResult`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:615
+
+#### Parameters
+
+##### trigger
+
+[`IKVTriggerOptions`](../interfaces/IKVTriggerOptions.md)
+
+##### options?
+
+[`IKVCreateOptions`](../interfaces/IKVCreateOptions.md)
+
+#### Returns
+
+`RunResult`
 
 ***
 
@@ -344,17 +461,61 @@ packages/kvsqlite/dist/index.d.ts:199
 
 > **del**(`_id`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:577
+
+Deletes records from the collection based on the provided ID, array of IDs, or filter conditions.
+
+This function deletes records from the collection using the provided ID, array of IDs, or filter conditions.
+It supports deleting multiple records within a transaction if an array of IDs is provided.
+If a filter object is provided, it constructs a SQL WHERE clause from the filter and deletes matching records.
+If no ID or filter is provided, it deletes all records in the collection.
+
 #### Parameters
 
-• **\_id?**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md) \| [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)[]
+##### \_id?
+
+An optional ID, array of IDs, or filter object representing the records to delete.
+
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md) | [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)[] | `Record`\<`string`, `any`\>
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-#### Defined in
+The result of the delete operation(s).
 
-packages/kvsqlite/dist/index.d.ts:194
+***
+
+### delExtend()
+
+> **delExtend**(`docId`, `aPropName`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+
+Defined in: packages/kvsqlite/dist/index.d.ts:552
+
+Deletes an extended property for a document based on the specified property name.
+
+This function deletes a specific property for a document using the provided document ID and property name.
+If no property name is provided, it deletes the entire document.
+
+#### Parameters
+
+##### docId
+
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+The ID of the document.
+
+##### aPropName?
+
+`string`
+
+An optional string representing the property name to delete.
+
+#### Returns
+
+[`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+
+The result of the delete operation.
 
 ***
 
@@ -362,13 +523,15 @@ packages/kvsqlite/dist/index.d.ts:194
 
 > **drop**(): `void`
 
+Defined in: packages/kvsqlite/dist/index.d.ts:678
+
+Drops the current table from the database.
+
+This function removes the table associated with the current instance from the database.
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:210
 
 ***
 
@@ -376,17 +539,17 @@ packages/kvsqlite/dist/index.d.ts:210
 
 > **enableFts**(`options`?): `void`
 
+Defined in: packages/kvsqlite/dist/index.d.ts:658
+
 #### Parameters
 
-• **options?**: [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
+##### options?
+
+[`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:205
 
 ***
 
@@ -394,17 +557,26 @@ packages/kvsqlite/dist/index.d.ts:205
 
 > **get**(`_id`): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:509
+
+Retrieves a document by its ID and ensures it includes the document ID.
+
+This function fetches a document from the table using the provided document ID.
+It ensures that the returned object includes the document ID as a property.
+
 #### Parameters
 
-• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### \_id
+
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+The ID of the document to retrieve.
 
 #### Returns
 
 [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:176
+The retrieved document as an object with the document ID included.
 
 ***
 
@@ -412,17 +584,26 @@ packages/kvsqlite/dist/index.d.ts:176
 
 > **getEx**(`_id`): `string` \| `number` \| `boolean` \| [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:519
+
+Retrieves a document by its ID and processes the result.
+
+This function fetches a document from the table using the provided document ID.
+It processes the result by parsing SQL fields, handling JSON values, and mapping fields as necessary.
+
 #### Parameters
 
-• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### \_id
+
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+The ID of the document to retrieve.
 
 #### Returns
 
 `string` \| `number` \| `boolean` \| [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:177
+The retrieved document as an object, string, boolean, or number.
 
 ***
 
@@ -430,27 +611,32 @@ packages/kvsqlite/dist/index.d.ts:177
 
 > **getExtend**(`docId`, `aPropName`?): `any`
 
-get the value of the document's property
+Defined in: packages/kvsqlite/dist/index.d.ts:530
+
+Retrieves the value of an extended property for a document based on the specified property name.
+
+This function fetches the value of a specific property for a document using the provided document ID and property name.
+If no property name is provided, it retrieves the entire document.
 
 #### Parameters
 
-• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### docId
 
-the document id
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-• **aPropName?**: `string`
+The ID of the document.
 
-the property name of the document id
+##### aPropName?
+
+`string`
+
+An optional string representing the property name to retrieve.
 
 #### Returns
 
 `any`
 
-the property value object
-
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:184
+The value of the specified property or the entire document if no property name is provided.
 
 ***
 
@@ -458,31 +644,50 @@ packages/kvsqlite/dist/index.d.ts:184
 
 > **getExtends**(`docId`, `aPropName`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
-get extends of the document
+Defined in: packages/kvsqlite/dist/index.d.ts:565
+
+Retrieves extended properties for a document based on the specified property names or patterns.
+
+This function fetches properties for a document using the provided document ID and property names or patterns.
+It supports retrieving single or multiple properties and can return either a single value or an object containing all properties.
 
 #### Parameters
 
-• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### docId
 
-the document id
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-• **aPropName?**: `string` \| `string`[]
+The ID of the document.
 
-the property name(s) of the document id
+##### aPropName?
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+An optional string or array of strings representing the property names or patterns.
 
-optional options
+`string` | `string`[]
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings including whether to return a single value.
 
 #### Returns
 
 [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
-all extends property key-value object
+The retrieved extends properties as an object or a single value if `singleValue` is true.
 
-#### Defined in
+***
 
-packages/kvsqlite/dist/index.d.ts:193
+### getSchema()
+
+> **getSchema**(): `any`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:608
+
+#### Returns
+
+`any`
 
 ***
 
@@ -490,17 +695,58 @@ packages/kvsqlite/dist/index.d.ts:193
 
 > **isExists**(`_id`): `boolean`
 
+Defined in: packages/kvsqlite/dist/index.d.ts:586
+
+Checks if a record with the specified ID exists in the table.
+
+This function returns a boolean indicating whether a record with the given ID exists.
+
 #### Parameters
 
-• **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### \_id
+
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+The ID of the record to check.
 
 #### Returns
 
 `boolean`
 
-#### Defined in
+A boolean indicating whether the record exists.
 
-packages/kvsqlite/dist/index.d.ts:195
+***
+
+### isExistsExtend()
+
+> **isExistsExtend**(`docId`, `aPropName`?): `boolean`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:541
+
+Checks if an extended property exists for a document based on the specified property name.
+
+This function checks if a specific property exists for a document using the provided document ID and property name.
+If no property name is provided, it checks for the existence of the entire document.
+
+#### Parameters
+
+##### docId
+
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+The ID of the document.
+
+##### aPropName?
+
+`string`
+
+An optional string representing the property name to check.
+
+#### Returns
+
+`boolean`
+
+A boolean indicating whether the property exists.
 
 ***
 
@@ -508,19 +754,32 @@ packages/kvsqlite/dist/index.d.ts:195
 
 > **list**(`query`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:607
+
+Lists records from the table based on the provided query and options.
+
+This function retrieves records from the table, applying optional filters, sorting, pagination,
+and field selection. It supports both string queries and object-based query options.
+
 #### Parameters
 
-• **query?**: `string` \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+##### query?
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+A string or object representing the query conditions.
+
+`string` | [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings including size, page, sort order, and field names.
 
 #### Returns
 
 [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:197
+An array of objects representing the listed records.
 
 ***
 
@@ -528,19 +787,32 @@ packages/kvsqlite/dist/index.d.ts:197
 
 > **search**(`filter`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:637
+
+Searches for records based on the provided filter conditions.
+
+This function constructs a SQL WHERE clause using the provided filter and options,
+and then performs the search using the constructed WHERE clause.
+
 #### Parameters
 
-• **filter**: `Record`\<`string`, `any`\>
+##### filter
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+`Record`\<`string`, `any`\>
+
+A record of key-value pairs representing the filter conditions.
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings including field information mappings.
 
 #### Returns
 
 [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:203
+The result of the search operation.
 
 ***
 
@@ -548,19 +820,32 @@ packages/kvsqlite/dist/index.d.ts:203
 
 > **searchEx**(`query`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:626
+
+Executes an advanced search query on the database.
+
+This function constructs and executes a SQL query based on the provided query string or object,
+options for sorting, pagination, and field selection.
+
 #### Parameters
 
-• **query**: `string` \| `Record`\<`string`, `string`\>
+##### query
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+A string or record of key-value pairs representing the search query.
+
+`string` | `Record`\<`string`, `string`\>
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings including field information mappings, sorting, pagination, and field names.
 
 #### Returns
 
 [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:202
+An array of objects representing the search results.
 
 ***
 
@@ -568,19 +853,32 @@ packages/kvsqlite/dist/index.d.ts:202
 
 > **searchFts**(`query`, `options`?): `object`[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:669
+
+Searches the full-text search (FTS) index for records matching the provided query.
+
+This function constructs and executes a SQL query to search the FTS index of the specified collection.
+It supports different query styles and options for field selection and deserialization.
+
 #### Parameters
 
-• **query**: `string` \| `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[]
+##### query
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md) & [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
+A string, object, or array of objects representing the search query.
+
+`string` | `Record`\<`string`, `any`\> | `Record`\<`string`, `any`\>[]
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md) & [`IKVCreateFtsOptions`](../interfaces/IKVCreateFtsOptions.md)
+
+Optional settings including collection name, field names, FTS query style, and deserialization options.
 
 #### Returns
 
 `object`[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:206
+An array of objects representing the search results.
 
 ***
 
@@ -588,21 +886,38 @@ packages/kvsqlite/dist/index.d.ts:206
 
 > **set**(`docId`, `obj`?, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:462
+
+Sets or updates a document in the table.
+
+This function inserts or updates a document in the table using the provided document ID and object.
+It supports different parameter configurations and executes the operation within a transaction to ensure atomicity.
+
 #### Parameters
 
-• **docId**: [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### docId
 
-• **obj?**: [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+The ID of the document or an object representing the document.
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+[`IKVObjItem`](../interfaces/IKVObjItem.md) | [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+
+##### obj?
+
+An optional object representing the document or options.
+
+[`IKVObjItem`](../interfaces/IKVObjItem.md) | [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings for the operation.
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:171
+The result of the set operation.
 
 ***
 
@@ -610,23 +925,44 @@ packages/kvsqlite/dist/index.d.ts:171
 
 > **setExtend**(`docId`, `key`, `value`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
+Defined in: packages/kvsqlite/dist/index.d.ts:476
+
+Sets an extended property for a document in a transaction.
+
+This function updates or inserts a specific property for a document using the provided document ID, key, and value.
+It executes the operation within a transaction to ensure atomicity.
+
 #### Parameters
 
-• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### docId
 
-• **key**: `string`
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-• **value**: `any`
+The ID of the document.
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+##### key
+
+`string`
+
+The key of the property to set.
+
+##### value
+
+`any`
+
+The value of the property to set.
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings for the operation.
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:173
+The result of the set operation.
 
 ***
 
@@ -634,21 +970,38 @@ packages/kvsqlite/dist/index.d.ts:173
 
 > **setExtends**(`docId`, `aDoc`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
+Defined in: packages/kvsqlite/dist/index.d.ts:488
+
+Sets multiple extended properties for a document in a transaction.
+
+This function updates or inserts multiple properties for a document using the provided document ID and an object of properties.
+It executes the operations within a transaction to ensure atomicity.
+
 #### Parameters
 
-• **docId**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
+##### docId
 
-• **aDoc**: `any`
+[`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+The ID of the document.
+
+##### aDoc
+
+`any`
+
+An object containing the properties to set.
+
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings for the operation.
 
 #### Returns
 
 [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:174
+An array of results from the set operations.
 
 ***
 
@@ -656,14 +1009,23 @@ packages/kvsqlite/dist/index.d.ts:174
 
 > **tableInfo**(`options`?): `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
 
+Defined in: packages/kvsqlite/dist/index.d.ts:657
+
+Retrieves information about the table structure.
+
+This function queries the database to get detailed information about the specified table,
+including field names, types, constraints, and default values.
+
 #### Parameters
 
-• **options?**: [`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+##### options?
+
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+
+Optional settings including the collection name and whether to map field names.
 
 #### Returns
 
 `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:204
+An object containing detailed information about the table fields.

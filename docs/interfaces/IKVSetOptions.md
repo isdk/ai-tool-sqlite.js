@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Interface: IKVSetOptions
 
+Defined in: packages/kvsqlite/dist/index.d.ts:18
+
 ## Extends
 
-- `Options`
+- `Options`.[`IKVSerdeOptions`](IKVSerdeOptions.md)
 
 ## Indexable
 
- \[`name`: `string`\]: `any`
+\[`name`: `string`\]: `any`
 
 ## Properties
 
@@ -20,19 +22,37 @@
 
 > `optional` **collection**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:14
+Defined in: packages/kvsqlite/dist/index.d.ts:21
 
 ***
 
 ### collections?
 
-> `optional` **collections**: (`string` \| [`IKVCreateOptions`](IKVCreateOptions.md))[]
+> `optional` **collections**: (`string` \| [`IKVCreateOptions`](IKVCreateOptions.md) \| [`IKVCreateExOptions`](IKVCreateExOptions.md))[]
 
-#### Defined in
+Defined in: packages/kvsqlite/dist/index.d.ts:22
 
-packages/kvsqlite/dist/index.d.ts:15
+***
+
+### deserialize()?
+
+> `optional` **deserialize**: (`val`) => `any`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:16
+
+#### Parameters
+
+##### val
+
+`string`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[`IKVSerdeOptions`](IKVSerdeOptions.md).[`deserialize`](IKVSerdeOptions.md#deserialize)
 
 ***
 
@@ -40,9 +60,15 @@ packages/kvsqlite/dist/index.d.ts:15
 
 > `optional` **dictPath**: `string`
 
-#### Defined in
+Defined in: packages/kvsqlite/dist/index.d.ts:27
 
-packages/kvsqlite/dist/index.d.ts:20
+***
+
+### fieldInfos?
+
+> `optional` **fieldInfos**: `Required`\<[`IKVFieldOptions`](IKVFieldOptions.md)\>
+
+Defined in: packages/kvsqlite/dist/index.d.ts:36
 
 ***
 
@@ -50,9 +76,7 @@ packages/kvsqlite/dist/index.d.ts:20
 
 > `optional` **fieldNames**: `string`[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:22
+Defined in: packages/kvsqlite/dist/index.d.ts:29
 
 ***
 
@@ -60,23 +84,19 @@ packages/kvsqlite/dist/index.d.ts:22
 
 > `optional` **fileMustExist**: `boolean`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:111
+
 #### Inherited from
 
 `Database.Options.fileMustExist`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:110
 
 ***
 
 ### ftsQueryStyle?
 
-> `optional` **ftsQueryStyle**: `string` \| `false`
+> `optional` **ftsQueryStyle**: `string` \| `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:19
+Defined in: packages/kvsqlite/dist/index.d.ts:26
 
 ***
 
@@ -84,9 +104,7 @@ packages/kvsqlite/dist/index.d.ts:19
 
 > `optional` **id**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:12
+Defined in: packages/kvsqlite/dist/index.d.ts:19
 
 ***
 
@@ -94,9 +112,7 @@ packages/kvsqlite/dist/index.d.ts:12
 
 > `optional` **ignoreExists**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:18
+Defined in: packages/kvsqlite/dist/index.d.ts:25
 
 ***
 
@@ -104,9 +120,7 @@ packages/kvsqlite/dist/index.d.ts:18
 
 > `optional` **location**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:13
+Defined in: packages/kvsqlite/dist/index.d.ts:20
 
 ***
 
@@ -114,9 +128,7 @@ packages/kvsqlite/dist/index.d.ts:13
 
 > `optional` **mapped**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:28
+Defined in: packages/kvsqlite/dist/index.d.ts:35
 
 ***
 
@@ -124,13 +136,11 @@ packages/kvsqlite/dist/index.d.ts:28
 
 > `optional` **nativeBinding**: `string`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:114
+
 #### Inherited from
 
 `Database.Options.nativeBinding`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:113
 
 ***
 
@@ -138,9 +148,7 @@ node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sql
 
 > `optional` **order**: `"ASC"` \| `"DESC"`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:24
+Defined in: packages/kvsqlite/dist/index.d.ts:31
 
 ***
 
@@ -148,9 +156,7 @@ packages/kvsqlite/dist/index.d.ts:24
 
 > `optional` **overwrite**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:16
+Defined in: packages/kvsqlite/dist/index.d.ts:23
 
 ***
 
@@ -158,9 +164,7 @@ packages/kvsqlite/dist/index.d.ts:16
 
 > `optional` **page**: `number`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:26
+Defined in: packages/kvsqlite/dist/index.d.ts:33
 
 ***
 
@@ -168,9 +172,7 @@ packages/kvsqlite/dist/index.d.ts:26
 
 > `optional` **query**: `string`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:27
+Defined in: packages/kvsqlite/dist/index.d.ts:34
 
 ***
 
@@ -178,13 +180,33 @@ packages/kvsqlite/dist/index.d.ts:27
 
 > `optional` **readonly**: `boolean`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:110
+
 #### Inherited from
 
 `Database.Options.readonly`
 
-#### Defined in
+***
 
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:109
+### serialize()?
+
+> `optional` **serialize**: (`val`) => `string`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:15
+
+#### Parameters
+
+##### val
+
+`any`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`IKVSerdeOptions`](IKVSerdeOptions.md).[`serialize`](IKVSerdeOptions.md#serialize)
 
 ***
 
@@ -192,9 +214,7 @@ node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sql
 
 > `optional` **singleValue**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:17
+Defined in: packages/kvsqlite/dist/index.d.ts:24
 
 ***
 
@@ -202,9 +222,7 @@ packages/kvsqlite/dist/index.d.ts:17
 
 > `optional` **size**: `number`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:25
+Defined in: packages/kvsqlite/dist/index.d.ts:32
 
 ***
 
@@ -212,9 +230,7 @@ packages/kvsqlite/dist/index.d.ts:25
 
 > `optional` **sort**: `string` \| `string`[]
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:23
+Defined in: packages/kvsqlite/dist/index.d.ts:30
 
 ***
 
@@ -222,13 +238,11 @@ packages/kvsqlite/dist/index.d.ts:23
 
 > `optional` **timeout**: `number`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:112
+
 #### Inherited from
 
 `Database.Options.timeout`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:111
 
 ***
 
@@ -236,9 +250,7 @@ node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sql
 
 > `optional` **usingJsonb**: `boolean`
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:21
+Defined in: packages/kvsqlite/dist/index.d.ts:28
 
 ***
 
@@ -246,11 +258,17 @@ packages/kvsqlite/dist/index.d.ts:21
 
 > `optional` **verbose**: (`message`?, ...`additionalArgs`) => `void`
 
+Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:113
+
 #### Parameters
 
-• **message?**: `unknown`
+##### message?
 
-• ...**additionalArgs?**: `unknown`[]
+`unknown`
+
+##### additionalArgs?
+
+...`unknown`[]
 
 #### Returns
 
@@ -259,7 +277,3 @@ packages/kvsqlite/dist/index.d.ts:21
 #### Inherited from
 
 `Database.Options.verbose`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+better-sqlite3@7.6.11/node\_modules/@types/better-sqlite3/index.d.ts:112

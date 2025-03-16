@@ -2,11 +2,11 @@
 
 ***
 
-[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateOptions
+[@isdk/ai-tool-sqlite](../globals.md) / IKVCreateExOptions
 
-# Interface: IKVCreateOptions
+# Interface: IKVCreateExOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:131
+Defined in: packages/kvsqlite/dist/index.d.ts:134
 
 ## Extends
 
@@ -42,9 +42,9 @@ Defined in: packages/kvsqlite/dist/index.d.ts:16
 
 ### fields?
 
-> `optional` **fields**: [`IKVFieldOptions`](IKVFieldOptions.md)
+> `optional` **fields**: [`IKVFieldOptionEx`](../type-aliases/IKVFieldOptionEx.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:132
+Defined in: packages/kvsqlite/dist/index.d.ts:135
 
 ***
 

@@ -1,10 +1,12 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
 [@isdk/ai-tool-sqlite](../globals.md) / KVSqliteResFuncItem
 
 # Interface: KVSqliteResFuncItem
+
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-res.ts#L36)
 
 ## Extends
 
@@ -16,9 +18,7 @@
 
 > **dbPath**: `undefined` \| `string`
 
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/b95338955c0b34d8ea5fcbcfae9ef5e8811a2248/src/sqlite-res.ts#L37)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-res.ts#L37)
 
 ***
 
@@ -26,13 +26,11 @@
 
 > `optional` **func**: `TFunc`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:35
+
 #### Inherited from
 
 `FuncItem.func`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:46
 
 ***
 
@@ -40,9 +38,7 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:46
 
 > **initDir**: `undefined` \| `string`
 
-#### Defined in
-
-[packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/b95338955c0b34d8ea5fcbcfae9ef5e8811a2248/src/sqlite-res.ts#L38)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-res.ts#L38)
 
 ***
 
@@ -50,13 +46,11 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:46
 
 > `optional` **isApi**: `boolean`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
+
 #### Inherited from
 
 `FuncItem.isApi`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:42
 
 ***
 
@@ -64,13 +58,11 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:42
 
 > `optional` **name**: `string`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:25
+
 #### Inherited from
 
 `FuncItem.name`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:36
 
 ***
 
@@ -78,13 +70,11 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:36
 
 > `optional` **params**: `FuncParams` \| `FuncParam`[]
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:26
+
 #### Inherited from
 
 `FuncItem.params`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:37
 
 ***
 
@@ -92,13 +82,11 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:37
 
 > `optional` **result**: `string`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
+
 #### Inherited from
 
 `FuncItem.result`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:38
 
 ***
 
@@ -106,13 +94,11 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:38
 
 > `optional` **scope**: `any`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
+
 #### Inherited from
 
 `FuncItem.scope`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:39
 
 ***
 
@@ -120,11 +106,17 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:39
 
 > `optional` **setup**: (`this`, `options`?) => `void`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
+
 #### Parameters
 
-• **this**: `ToolFunc`
+##### this
 
-• **options?**: `FuncItem`
+`ToolFunc`
+
+##### options?
+
+`FuncItem`
 
 #### Returns
 
@@ -134,23 +126,17 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:39
 
 `FuncItem.setup`
 
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:41
-
 ***
 
 ### stream?
 
 > `optional` **stream**: `boolean`
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
+
 #### Inherited from
 
 `FuncItem.stream`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:43
 
 ***
 
@@ -158,10 +144,8 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:43
 
 > `optional` **tags**: `string` \| `string`[]
 
+Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:29
+
 #### Inherited from
 
 `FuncItem.tags`
-
-#### Defined in
-
-packages/ai-tool/dist/index-BC3GQn6-.d.ts:40

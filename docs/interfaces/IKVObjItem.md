@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Interface: IKVObjItem
 
+Defined in: packages/kvsqlite/dist/index.d.ts:10
+
 ## Indexable
 
- \[`name`: `string`\]: `any`
+\[`name`: `string`\]: `any`
 
 ## Properties
 
@@ -16,6 +18,4 @@
 
 > **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-#### Defined in
-
-packages/kvsqlite/dist/index.d.ts:8
+Defined in: packages/kvsqlite/dist/index.d.ts:11

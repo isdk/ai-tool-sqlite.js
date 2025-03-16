@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](README.md)
 
 ***
 
@@ -14,6 +14,8 @@
 ## Interfaces
 
 - [IKVCollections](interfaces/IKVCollections.md)
+- [IKVCreateBaseOptions](interfaces/IKVCreateBaseOptions.md)
+- [IKVCreateExOptions](interfaces/IKVCreateExOptions.md)
 - [IKVCreateFtsLanguageOptions](interfaces/IKVCreateFtsLanguageOptions.md)
 - [IKVCreateFtsOptions](interfaces/IKVCreateFtsOptions.md)
 - [IKVCreateFtsPluginOptions](interfaces/IKVCreateFtsPluginOptions.md)
@@ -22,7 +24,9 @@
 - [IKVFieldOptions](interfaces/IKVFieldOptions.md)
 - [IKVIndexOptions](interfaces/IKVIndexOptions.md)
 - [IKVObjItem](interfaces/IKVObjItem.md)
+- [IKVSerdeOptions](interfaces/IKVSerdeOptions.md)
 - [IKVSetOptions](interfaces/IKVSetOptions.md)
+- [IKVTriggerOptions](interfaces/IKVTriggerOptions.md)
 - [KVSqliteResFuncItem](interfaces/KVSqliteResFuncItem.md)
 - [KVSqliteResFuncParams](interfaces/KVSqliteResFuncParams.md)
 - [KVSqliteRunResult](interfaces/KVSqliteRunResult.md)
@@ -31,14 +35,18 @@
 ## Type Aliases
 
 - [IKVDocumentId](type-aliases/IKVDocumentId.md)
+- [IKVFieldOptionEx](type-aliases/IKVFieldOptionEx.md)
 
 ## Variables
 
 - [DefaultKVCollection](variables/DefaultKVCollection.md)
 - [KV\_FIELD\_SYMBOL\_MAP](variables/KV_FIELD_SYMBOL_MAP.md)
 - [KV\_FIELD\_SYMBOL\_MAP\_REVERSE](variables/KV_FIELD_SYMBOL_MAP_REVERSE.md)
+- [KV\_NAME\_FIELD\_NAME](variables/KV_NAME_FIELD_NAME.md)
 - [KV\_NAME\_SYMBOL](variables/KV_NAME_SYMBOL.md)
+- [KV\_TYPE\_FIELD\_NAME](variables/KV_TYPE_FIELD_NAME.md)
 - [KV\_TYPE\_SYMBOL](variables/KV_TYPE_SYMBOL.md)
+- [KV\_VALUE\_FIELD\_NAME](variables/KV_VALUE_FIELD_NAME.md)
 - [KV\_VALUE\_SYMBOL](variables/KV_VALUE_SYMBOL.md)
 - [KVFileCurrentVer](variables/KVFileCurrentVer.md)
 - [sqliteStores](variables/sqliteStores.md)

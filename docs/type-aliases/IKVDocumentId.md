@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > **IKVDocumentId**: `string` \| `number`
 
-## Defined in
-
-packages/kvsqlite/dist/index.d.ts:4
+Defined in: packages/kvsqlite/dist/index.d.ts:7

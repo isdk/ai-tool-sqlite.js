@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **SYS\_KV\_COLLECTION**: `"_sys_kv"` = `"_sys_kv"`
 
-## Defined in
-
-packages/kvsqlite/dist/index.d.ts:102
+Defined in: packages/kvsqlite/dist/index.d.ts:138

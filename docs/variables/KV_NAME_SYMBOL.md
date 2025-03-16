@@ -1,4 +1,4 @@
-[**@isdk/ai-tool-sqlite**](../README.md) • **Docs**
+[**@isdk/ai-tool-sqlite**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **KV\_NAME\_SYMBOL**: `"名"` = `"\u540D"`
 
-## Defined in
-
-packages/kvsqlite/dist/index.d.ts:103
+Defined in: packages/kvsqlite/dist/index.d.ts:3

@@ -8,7 +8,7 @@
 
 > **\_sqliteStore**(`this`, `__namedParameters`): [`KVSqlite`](../classes/KVSqlite.md) \| [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-store.ts#L29)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-store.ts#L29)
 
 return the database directly if no key is provided
 return the value if key is provided and value is undefined

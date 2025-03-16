@@ -6,7 +6,7 @@
 
 # Interface: KVSqliteResFuncParams
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:24](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L24)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:24](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L24)
 
 ## Extends
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:24](https://github.com/is
 
 > `optional` **\_id**: `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:25](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L25)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:25](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L25)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:812
 
 > `optional` **collection**: `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L32)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L32)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:32](https://github.com/is
 
 > `optional` **filter**: `Record`\<`string`, `any`\> \| `Record`\<`string`, `any`\>[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:28](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L28)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:28](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L28)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:830
 
 > `optional` **options**: `any`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L33)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L33)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:33](https://github.com/is
 
 > `optional` **overwrite**: `boolean`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L31)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L31)
 
 ***
 
@@ -110,7 +110,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:31](https://github.com/is
 
 > `optional` **page**: `number`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L30)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L30)
 
 ***
 
@@ -118,7 +118,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:30](https://github.com/is
 
 > `optional` **query**: `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L27)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L27)
 
 ***
 
@@ -126,7 +126,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:27](https://github.com/is
 
 > `optional` **size**: `number`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L29)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L29)
 
 ***
 
@@ -134,7 +134,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:29](https://github.com/is
 
 > `optional` **val**: `any`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:26](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-res.ts#L26)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:26](https://github.com/isdk/ai-tool-sqlite.js/blob/a4b3467483e67b2e8245f2beb5bf1e93f3e0d974/src/sqlite-res.ts#L26)
 
 #### Overrides
 

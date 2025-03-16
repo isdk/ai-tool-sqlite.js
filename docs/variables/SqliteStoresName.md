@@ -8,4 +8,4 @@
 
 > `const` **SqliteStoresName**: `"stores"` = `'stores'`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:90](https://github.com/isdk/ai-tool-sqlite.js/blob/7598220c7cb2578da196c1c3432564b28feb8403/src/sqlite-store.ts#L90)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:90](https://github.com/isdk/ai-tool-sqlite.js/blob/1a6df3add9f4dbf09fb350e1dd51162b470b0f88/src/sqlite-store.ts#L90)

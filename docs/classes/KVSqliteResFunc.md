@@ -6,7 +6,7 @@
 
 # Class: KVSqliteResFunc\<T\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L41)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L41)
 
 ## Extends
 
@@ -26,7 +26,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/is
 
 > **new KVSqliteResFunc**\<`T`\>(`name`, `options`): [`KVSqliteResFunc`](KVSqliteResFunc.md)\<`T`\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L51)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L51)
 
 #### Parameters
 
@@ -56,7 +56,15 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 > **action**: `"list"` \| `"get"` \| `"put"` \| `"post"` \| `"delete"` \| `"patch"` \| `"res"`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:842
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:849
+
+***
+
+### alias?
+
+> `optional` **alias**: `string` \| `string`[]
+
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:33
 
 ***
 
@@ -64,7 +72,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:842
 
 > `optional` **allowExportFunc**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:686
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:693
 
 ***
 
@@ -72,7 +80,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:686
 
 > `optional` **apiRoot**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:149
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:156
 
 ***
 
@@ -90,7 +98,7 @@ The initial value of Object.prototype.constructor is the standard built-in Objec
 
 > **db**: [`KVSqlite`](KVSqlite.md)
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L48)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L48)
 
 ***
 
@@ -98,7 +106,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/is
 
 > **dbPath**: `undefined` \| `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L46)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L46)
 
 ***
 
@@ -124,7 +132,7 @@ The default options for export and assign
 
 > `optional` **fetchOptions**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:151
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:158
 
 ***
 
@@ -132,7 +140,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:151
 
 > **initDir**: `undefined` \| `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L47)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L47)
 
 ***
 
@@ -140,7 +148,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/is
 
 > **initingData**: `undefined` \| `boolean`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L49)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L49)
 
 ***
 
@@ -148,7 +156,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/is
 
 > `optional` **isApi**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:31
 
 ***
 
@@ -156,7 +164,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
 
 > **methods**: `string`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:815
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:822
 
 ***
 
@@ -164,7 +172,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:815
 
 > `optional` **name**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:25
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:25
 
 ***
 
@@ -182,7 +190,7 @@ the property with the default prefix '$' will not be exported.
 
 > **params**: `FuncParams`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:843
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:850
 
 ***
 
@@ -190,7 +198,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:843
 
 > `optional` **result**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:27
 
 ***
 
@@ -198,7 +206,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
 
 > `optional` **scope**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:28
 
 ***
 
@@ -206,7 +214,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
 
 > `optional` **setup**: (`this`, `options`?) => `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:30
 
 #### Parameters
 
@@ -228,7 +236,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
 
 > `optional` **stream**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:32
 
 ***
 
@@ -236,7 +244,19 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
 
 > `optional` **tags**: `string` \| `string`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:29
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:29
+
+***
+
+### aliases
+
+> `static` **aliases**: `object`
+
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:54
+
+#### Index Signature
+
+\[`name`: `string`\]: `string`
 
 ***
 
@@ -244,7 +264,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:29
 
 > `static` **dataPath**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:53
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:57
 
 ***
 
@@ -252,7 +272,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:53
 
 > `static` **items**: `Funcs`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:52
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:53
 
 ***
 
@@ -260,7 +280,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:52
 
 > `static` **SpecialRpcMethodNames**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:841
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:848
 
 ## Accessors
 
@@ -270,7 +290,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:841
 
 > **get** **SpecialRpcMethodNames**(): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:820
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:827
 
 ##### Returns
 
@@ -284,7 +304,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:820
 
 > **get** `static` **apiRoot**(): `undefined` \| `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:693
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:700
 
 ##### Returns
 
@@ -296,7 +316,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:693
 
 > **$count**(`options`?): `number`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L213)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L213)
 
 #### Parameters
 
@@ -314,7 +334,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:213](https://github.com/i
 
 > **$createCollection**(`__namedParameters`): `boolean`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L219)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L219)
 
 #### Parameters
 
@@ -332,7 +352,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:219](https://github.com/i
 
 > **$deleteCollection**(`__namedParameters`): `boolean`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L230)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L230)
 
 #### Parameters
 
@@ -350,7 +370,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:230](https://github.com/i
 
 > **$search**(`options`?): `T`[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L203)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L203)
 
 #### Parameters
 
@@ -368,7 +388,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:203](https://github.com/i
 
 > **$searchEx**(`options`?): `T`[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L193)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L193)
 
 #### Parameters
 
@@ -386,7 +406,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/i
 
 > **arr2ObjParams**(`params`): `any`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:72
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:76
 
 #### Parameters
 
@@ -554,7 +574,7 @@ the dest object
 
 > **cast**(`key`, `value`): `any`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L107)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L107)
 
 #### Parameters
 
@@ -576,7 +596,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/i
 
 > **castParams**(`params`): `RpcMethodsServerFuncParams`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:846
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:853
 
 #### Parameters
 
@@ -666,7 +686,7 @@ the defined attributes of the object
 
 > **delete**(`options`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L176)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L176)
 
 #### Parameters
 
@@ -712,7 +732,7 @@ the dest object.
 
 > **func**(`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:826
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:833
 
 #### Parameters
 
@@ -730,7 +750,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:826
 
 > **get**(`options`): `T`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L121)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L121)
 
 #### Parameters
 
@@ -748,7 +768,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/i
 
 > **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L83)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L83)
 
 #### Parameters
 
@@ -766,7 +786,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/is
 
 > **getFunc**(`name`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:78
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:82
 
 #### Parameters
 
@@ -784,7 +804,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:78
 
 > **getFuncWithPos**(`name`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:83
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:87
 
 #### Parameters
 
@@ -802,7 +822,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:83
 
 > **getMethodFromParams**(`params`): `undefined` \| `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:845
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:852
 
 #### Parameters
 
@@ -836,7 +856,7 @@ the descriptors of properties object
 
 > **hasAsyncFeature**(`feature`): `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:84
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:88
 
 #### Parameters
 
@@ -876,7 +896,7 @@ A property name.
 
 > **initData**(`initDir`?, `collection`?): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L66)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L66)
 
 #### Parameters
 
@@ -898,7 +918,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/is
 
 > **initDataFromDir**(`dir`, `collection`?): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L75)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L75)
 
 #### Parameters
 
@@ -920,7 +940,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/is
 
 > **initDB**(`db`): `void`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L42)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L42)
 
 #### Parameters
 
@@ -960,7 +980,7 @@ this object.
 
 > **initRpcMethods**(`methods`?): `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:821
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:828
 
 #### Parameters
 
@@ -1026,7 +1046,7 @@ The source object
 
 > **isStream**(`params`): `undefined` \| `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:85
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:89
 
 #### Parameters
 
@@ -1044,7 +1064,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:85
 
 > **list**(`options`?): `T`[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L114)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L114)
 
 #### Parameters
 
@@ -1090,7 +1110,7 @@ the dest object.
 
 > **obj2ArrParams**(`params`?): `any`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:73
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:77
 
 #### Parameters
 
@@ -1108,7 +1128,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:73
 
 > **post**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[] \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L152)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L152)
 
 #### Parameters
 
@@ -1148,7 +1168,7 @@ A property name.
 
 > **put**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L134)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L134)
 
 #### Parameters
 
@@ -1166,7 +1186,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/i
 
 > **register**(): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:70
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:74
 
 #### Returns
 
@@ -1178,7 +1198,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:70
 
 > **run**(`params`?): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:75
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:79
 
 #### Parameters
 
@@ -1196,7 +1216,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:75
 
 > **runAs**(`name`, `params`?): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:76
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:80
 
 #### Parameters
 
@@ -1218,7 +1238,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:76
 
 > **runAsSync**(`name`, `params`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:77
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:81
 
 #### Parameters
 
@@ -1240,7 +1260,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:77
 
 > **runSync**(`params`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:74
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:78
 
 #### Parameters
 
@@ -1258,7 +1278,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:74
 
 > **runWithPos**(...`params`): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:81
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:85
 
 #### Parameters
 
@@ -1276,7 +1296,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:81
 
 > **runWithPosAs**(`name`, ...`params`): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:82
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:86
 
 #### Parameters
 
@@ -1298,7 +1318,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:82
 
 > **runWithPosAsSync**(`name`, ...`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:80
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:84
 
 #### Parameters
 
@@ -1320,7 +1340,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:80
 
 > **runWithPosSync**(...`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:79
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:83
 
 #### Parameters
 
@@ -1400,7 +1420,7 @@ Returns a string representation of an object.
 
 > **unregister**(): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:71
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:75
 
 #### Returns
 
@@ -1412,7 +1432,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:71
 
 > **updateDataFromDir**(`dir`, `collection`?): `Promise`\<`undefined` \| `number`\>
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L94)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L94)
 
 #### Parameters
 
@@ -1890,7 +1910,7 @@ An iterable object that contains key-value entries for properties and methods.
 
 > `static` **get**(`name`): `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:54
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:58
 
 #### Parameters
 
@@ -1908,7 +1928,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:54
 
 > `static` **getAllByTag**(`tagName`): `ToolFunc`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:57
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:61
 
 #### Parameters
 
@@ -1926,7 +1946,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:57
 
 > `static` **getByTag**(`tagName`): `undefined` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:56
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:60
 
 #### Parameters
 
@@ -1944,7 +1964,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:56
 
 > `static` **getFunc**(`name`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:61
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:65
 
 #### Parameters
 
@@ -1962,7 +1982,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:61
 
 > `static` **getFuncWithPos**(`name`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:64
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:68
 
 #### Parameters
 
@@ -2116,7 +2136,7 @@ The object that references the prototype.
 
 > `static` **hasAsyncFeature**(`feature`): `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:58
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:62
 
 #### Parameters
 
@@ -2270,7 +2290,7 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **list**(): `Funcs`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:55
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:59
 
 #### Returns
 
@@ -2310,7 +2330,7 @@ Object to make non-extensible.
 
 > `static` **register**(`name`, `options`): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:65
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:69
 
 ##### Parameters
 
@@ -2330,7 +2350,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:65
 
 > `static` **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:66
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:70
 
 ##### Parameters
 
@@ -2350,7 +2370,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:66
 
 > `static` **register**(`name`, `options`?): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:67
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:71
 
 ##### Parameters
 
@@ -2372,7 +2392,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:67
 
 > `static` **run**(`name`, `params`?): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:59
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:63
 
 #### Parameters
 
@@ -2394,7 +2414,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:59
 
 > `static` **runSync**(`name`, `params`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:60
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:64
 
 #### Parameters
 
@@ -2416,7 +2436,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:60
 
 > `static` **runWithPos**(`name`, ...`params`): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:62
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:66
 
 #### Parameters
 
@@ -2438,7 +2458,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:62
 
 > `static` **runWithPosSync**(`name`, ...`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:63
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:67
 
 #### Parameters
 
@@ -2486,7 +2506,7 @@ Object on which to lock the attributes.
 
 > `static` **setApiRoot**(`v`): `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:694
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:701
 
 #### Parameters
 
@@ -2532,7 +2552,7 @@ The value of the new prototype or null.
 
 > `static` **toJSON**(): `object`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:695
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:702
 
 #### Returns
 
@@ -2544,7 +2564,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:695
 
 > `static` **unregister**(`name`): `undefined` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:68
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:72
 
 #### Parameters
 

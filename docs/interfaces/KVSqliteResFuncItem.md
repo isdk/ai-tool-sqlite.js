@@ -6,7 +6,7 @@
 
 # Interface: KVSqliteResFuncItem
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L36)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L36)
 
 ## Extends
 
@@ -14,11 +14,23 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/is
 
 ## Properties
 
+### alias?
+
+> `optional` **alias**: `string` \| `string`[]
+
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:33
+
+#### Inherited from
+
+`FuncItem.alias`
+
+***
+
 ### dbPath
 
 > **dbPath**: `undefined` \| `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L37)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L37)
 
 ***
 
@@ -26,7 +38,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/is
 
 > `optional` **func**: `TFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:35
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:36
 
 #### Inherited from
 
@@ -38,7 +50,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:35
 
 > **initDir**: `undefined` \| `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L38)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/c1f93cc644540f56cbb285ca005c0983e0b3e224/src/sqlite-res.ts#L38)
 
 ***
 
@@ -46,7 +58,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/is
 
 > `optional` **isApi**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:31
 
 #### Inherited from
 
@@ -58,7 +70,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
 
 > `optional` **name**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:25
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:25
 
 #### Inherited from
 
@@ -70,7 +82,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:25
 
 > `optional` **params**: `FuncParams` \| `FuncParam`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:26
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:26
 
 #### Inherited from
 
@@ -82,7 +94,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:26
 
 > `optional` **result**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:27
 
 #### Inherited from
 
@@ -94,7 +106,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
 
 > `optional` **scope**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:28
 
 #### Inherited from
 
@@ -106,7 +118,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
 
 > `optional` **setup**: (`this`, `options`?) => `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:30
 
 #### Parameters
 
@@ -132,7 +144,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
 
 > `optional` **stream**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:32
 
 #### Inherited from
 
@@ -144,7 +156,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
 
 > `optional` **tags**: `string` \| `string`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:29
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:29
 
 #### Inherited from
 

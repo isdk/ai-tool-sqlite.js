@@ -6,7 +6,7 @@
 
 # Interface: KVSqliteResFuncItem
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/isdk/ai-tool-sqlite.js/blob/2612c0f07c82f262b21974517f076857ce8fe2da/src/sqlite-res.ts#L36)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L36)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:36](https://github.com/is
 
 > **dbPath**: `undefined` \| `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/2612c0f07c82f262b21974517f076857ce8fe2da/src/sqlite-res.ts#L37)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:37](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L37)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:35
 
 > **initDir**: `undefined` \| `string`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/2612c0f07c82f262b21974517f076857ce8fe2da/src/sqlite-res.ts#L38)
+Defined in: [packages/ai-tool-sqlite/src/sqlite-res.ts:38](https://github.com/isdk/ai-tool-sqlite.js/blob/845862c47602d22555d85e9da1cf6d3511d18a9b/src/sqlite-res.ts#L38)
 
 ***
 

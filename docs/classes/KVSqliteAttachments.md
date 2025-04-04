@@ -6,7 +6,7 @@
 
 # Class: KVSqliteAttachments
 
-Defined in: packages/kvsqlite/dist/index.d.ts:680
+Defined in: packages/kvsqlite/dist/index.d.ts:715
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:680
 
 > **new KVSqliteAttachments**(`name`, `db`): [`KVSqliteAttachments`](KVSqliteAttachments.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:696
+Defined in: packages/kvsqlite/dist/index.d.ts:731
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:696
 
 > `protected` **db**: [`KVSqlite`](KVSqlite.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:682
+Defined in: packages/kvsqlite/dist/index.d.ts:717
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:682
 
 > **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:681
+Defined in: packages/kvsqlite/dist/index.d.ts:716
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:681
 
 > **preAdd**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:683
+Defined in: packages/kvsqlite/dist/index.d.ts:718
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:683
 
 > **preAll**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:693
+Defined in: packages/kvsqlite/dist/index.d.ts:728
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:693
 
 > **preAllLimit**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:694
+Defined in: packages/kvsqlite/dist/index.d.ts:729
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:694
 
 > **preCalcSize**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:695
+Defined in: packages/kvsqlite/dist/index.d.ts:730
 
 ***
 
@@ -84,7 +84,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:695
 
 > **preCount**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:689
+Defined in: packages/kvsqlite/dist/index.d.ts:724
 
 ***
 
@@ -92,7 +92,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:689
 
 > **preCountW**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:690
+Defined in: packages/kvsqlite/dist/index.d.ts:725
 
 ***
 
@@ -100,7 +100,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:690
 
 > **preDel**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:687
+Defined in: packages/kvsqlite/dist/index.d.ts:722
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:687
 
 > **preDelAll**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:688
+Defined in: packages/kvsqlite/dist/index.d.ts:723
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:688
 
 > **preExists**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:685
+Defined in: packages/kvsqlite/dist/index.d.ts:720
 
 ***
 
@@ -124,7 +124,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:685
 
 > **preGet**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:686
+Defined in: packages/kvsqlite/dist/index.d.ts:721
 
 ***
 
@@ -132,7 +132,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:686
 
 > **preSearchKey**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:691
+Defined in: packages/kvsqlite/dist/index.d.ts:726
 
 ***
 
@@ -140,7 +140,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:691
 
 > **preSearchKeyAll**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:692
+Defined in: packages/kvsqlite/dist/index.d.ts:727
 
 ***
 
@@ -148,7 +148,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:692
 
 > **preUpdate**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:684
+Defined in: packages/kvsqlite/dist/index.d.ts:719
 
 ## Methods
 
@@ -156,7 +156,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:684
 
 > **add**(`docId`, `filename`, `content`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:708
+Defined in: packages/kvsqlite/dist/index.d.ts:743
 
 #### Parameters
 
@@ -192,7 +192,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:708
 
 > **del**(`docId`, `filename`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:716
+Defined in: packages/kvsqlite/dist/index.d.ts:751
 
 #### Parameters
 
@@ -214,7 +214,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:716
 
 > **get**(`docId`, `filename`): `object`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:703
+Defined in: packages/kvsqlite/dist/index.d.ts:738
 
 Get file content
 
@@ -246,7 +246,7 @@ Get file content
 
 > **list**(`docId`, `filename`?): `unknown`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:707
+Defined in: packages/kvsqlite/dist/index.d.ts:742
 
 #### Parameters
 
@@ -268,7 +268,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:707
 
 > **update**(`docId`, `filename`, `content`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:712
+Defined in: packages/kvsqlite/dist/index.d.ts:747
 
 #### Parameters
 

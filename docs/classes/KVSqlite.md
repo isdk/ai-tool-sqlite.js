@@ -233,7 +233,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **buildWhereClause**(`filter`, `options`?): `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:374
+Defined in: packages/kvsqlite/dist/index.d.ts:376
 
 Builds a SQL WHERE clause from the provided filter conditions for a specified collection.
 
@@ -266,7 +266,7 @@ A string representing the SQL WHERE clause.
 
 > **bulkDocs**(`objs`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:269
+Defined in: packages/kvsqlite/dist/index.d.ts:271
 
 Inserts or updates multiple documents in a specified collection.
 
@@ -315,7 +315,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **count**(`query`?, `options`?): `number`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:328
+Defined in: packages/kvsqlite/dist/index.d.ts:330
 
 Counts the number of records in a specified collection based on the provided query.
 
@@ -348,7 +348,7 @@ The number of records matching the query.
 
 > **create**(`name`, `options`?): `undefined` \| [`KVSqliteCollection`](KVSqliteCollection.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:201
+Defined in: packages/kvsqlite/dist/index.d.ts:203
 
 Creates a new collection in the database.
 
@@ -413,7 +413,7 @@ Optional default settings for the collections, used if individual collection opt
 
 > **createIndex**(`indexName`, `fields`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:341
+Defined in: packages/kvsqlite/dist/index.d.ts:343
 
 #### Parameters
 
@@ -439,7 +439,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:341
 
 > **createJsonIndex**(`indexName`, `fields`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:340
+Defined in: packages/kvsqlite/dist/index.d.ts:342
 
 #### Parameters
 
@@ -487,7 +487,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **del**(`_id`?, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:306
+Defined in: packages/kvsqlite/dist/index.d.ts:308
 
 Deletes records from a specified collection based on the provided ID, array of IDs, or filter conditions.
 
@@ -520,7 +520,7 @@ The result of the delete operation(s).
 
 > **drop**(`name`): `void`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:221
+Defined in: packages/kvsqlite/dist/index.d.ts:223
 
 Drops a specified collection from the database.
 
@@ -549,7 +549,7 @@ An error if the collection is a system collection.
 
 > **enableFts**(`collection`?, `options`?): `void`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:406
+Defined in: packages/kvsqlite/dist/index.d.ts:408
 
 #### Parameters
 
@@ -649,7 +649,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **get**(`_id`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:281
+Defined in: packages/kvsqlite/dist/index.d.ts:283
 
 Retrieves the value of an extended property for a document in a specified collection based on the specified property name.
 
@@ -680,7 +680,7 @@ The value of the specified property.
 
 > **getCollection**(`name`): [`KVSqliteCollection`](KVSqliteCollection.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:211
+Defined in: packages/kvsqlite/dist/index.d.ts:213
 
 Retrieves a collection by name.
 
@@ -707,7 +707,7 @@ The collection instance if it exists, otherwise `undefined`.
 
 > **getExtend**(`docId`, `aPropName`?, `options`?): `any`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:282
+Defined in: packages/kvsqlite/dist/index.d.ts:284
 
 #### Parameters
 
@@ -733,7 +733,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:282
 
 > **getExtends**(`docId`, `aPropName`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:295
+Defined in: packages/kvsqlite/dist/index.d.ts:297
 
 Retrieves extended properties for a document in a specified collection based on the specified property names or patterns.
 
@@ -773,7 +773,7 @@ The retrieved properties as an object or a single value if `singleValue` is true
 
 > **getSerdeOptions**(`options`?): [`IKVSerdeOptions`](../interfaces/IKVSerdeOptions.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:190
+Defined in: packages/kvsqlite/dist/index.d.ts:192
 
 #### Parameters
 
@@ -787,11 +787,33 @@ Defined in: packages/kvsqlite/dist/index.d.ts:190
 
 ***
 
+### getSysConfig()
+
+> **getSysConfig**(`key`, `collection`?): `any`
+
+Defined in: packages/kvsqlite/dist/index.d.ts:190
+
+#### Parameters
+
+##### key
+
+`string`
+
+##### collection?
+
+`string`
+
+#### Returns
+
+`any`
+
+***
+
 ### isCollectionExists()
 
 > **isCollectionExists**(`collection`): `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:393
+Defined in: packages/kvsqlite/dist/index.d.ts:395
 
 Checks if a collection (table) exists in the database.
 
@@ -817,7 +839,7 @@ A boolean indicating whether the collection exists.
 
 > **isExists**(`_id`, `options`?): `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:317
+Defined in: packages/kvsqlite/dist/index.d.ts:319
 
 Checks if a record with the specified ID exists in a specified collection.
 
@@ -850,7 +872,7 @@ A boolean indicating whether the record exists.
 
 > **isTypeExists**(`type`, `name`): `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:384
+Defined in: packages/kvsqlite/dist/index.d.ts:386
 
 Checks if a database object of a specified type and name exists.
 
@@ -882,7 +904,7 @@ A boolean indicating whether the database object exists.
 
 > **list**(`query`?, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:339
+Defined in: packages/kvsqlite/dist/index.d.ts:341
 
 Lists records from a specified collection based on the provided query and options.
 
@@ -937,7 +959,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **loadFtsLanguage**(`options`?): `void`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:394
+Defined in: packages/kvsqlite/dist/index.d.ts:396
 
 #### Parameters
 
@@ -1009,7 +1031,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **search**(`filter`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:363
+Defined in: packages/kvsqlite/dist/index.d.ts:365
 
 Searches for records in a specified collection based on the provided filter conditions.
 
@@ -1042,7 +1064,7 @@ An array of objects representing the search results.
 
 > **searchEx**(`query`, `options`?): [`IKVObjItem`](../interfaces/IKVObjItem.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:352
+Defined in: packages/kvsqlite/dist/index.d.ts:354
 
 Executes an advanced search query on a specified collection.
 
@@ -1075,7 +1097,7 @@ An array of objects representing the search results.
 
 > **searchFts**(`query`, `options`?): `object`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:417
+Defined in: packages/kvsqlite/dist/index.d.ts:419
 
 Searches the full-text search (FTS) index for records matching the provided query.
 
@@ -1130,7 +1152,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **set**(`docId`, `obj`?, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:233
+Defined in: packages/kvsqlite/dist/index.d.ts:235
 
 Sets or updates a document in a specified collection.
 
@@ -1169,7 +1191,7 @@ The result of the set operation.
 
 > **setExtend**(`docId`, `key`, `value`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:246
+Defined in: packages/kvsqlite/dist/index.d.ts:248
 
 Sets an extended property for a document in a specified collection.
 
@@ -1214,7 +1236,7 @@ The result of the set operation.
 
 > **setExtends**(`docId`, `aDoc`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:258
+Defined in: packages/kvsqlite/dist/index.d.ts:260
 
 Sets multiple extended properties for a document in a specified collection.
 
@@ -1249,6 +1271,32 @@ An array of results from the set operations.
 
 ***
 
+### setSysConfig()
+
+> **setSysConfig**(`key`, `value`, `collection`?): `undefined` \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+
+Defined in: packages/kvsqlite/dist/index.d.ts:191
+
+#### Parameters
+
+##### key
+
+`string`
+
+##### value
+
+`any`
+
+##### collection?
+
+`string`
+
+#### Returns
+
+`undefined` \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+
+***
+
 ### table()
 
 > **table**(`name`, `options`): `this`
@@ -1279,7 +1327,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **tableInfo**(`collection`?, `options`?): `undefined` \| `Required`\<[`IKVFieldOptions`](../interfaces/IKVFieldOptions.md)\>
 
-Defined in: packages/kvsqlite/dist/index.d.ts:405
+Defined in: packages/kvsqlite/dist/index.d.ts:407
 
 Retrieves information about the table structure for a specified collection.
 

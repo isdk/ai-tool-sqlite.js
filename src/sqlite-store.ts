@@ -1,4 +1,5 @@
 import path from 'path'
+import { existsSync as _existsSync } from 'fs'
 import { createLRUCache, ToolFunc } from '@isdk/ai-tool'
 
 import { IKVObjItem, IKVSetOptions, KVSqlite as _KVSqlite } from '@isdk/kvsqlite';
@@ -13,6 +14,7 @@ cache.on('del', function (key: string, store: _KVSqlite) {
 })
 
 declare const KVSqlite: typeof _KVSqlite
+declare const existsSync: typeof _existsSync
 
 /**
  *
@@ -26,7 +28,7 @@ declare const KVSqlite: typeof _KVSqlite
  * @param params.options.expires the database LRU expires time(ms)
  * @returns
  */
-export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: string | IKVObjItem | IKVSetOptions, value?: IKVObjItem | IKVSetOptions, options?: IKVSetOptions} = {}) {
+export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: string | IKVObjItem | IKVSetOptions, value?: IKVObjItem | IKVSetOptions, options?: IKVSetOptions & {onlyOpen?: boolean}} = {}) {
 
   let loc: string = options?.location || this.location || ':memory:'
   let storeId = options?.location || this.location || ':memory:'
@@ -40,8 +42,11 @@ export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: strin
     // constrain the database file path, all database should be in the same dataPath directory if exists
     const dataPath = (this.constructor as any).dataPath
     let _loc = loc
-    if (loc[0] !== ':' && dataPath) {
-      _loc = path.join(dataPath, loc)
+    if (loc[0] !== ':') {
+      if (dataPath) {_loc = path.join(dataPath, loc)}
+      if (options?.onlyOpen && !existsSync(_loc)) {
+        return
+      }
     }
     store = new KVSqlite(_loc, {...options, id: storeId})
     cache.set(storeId, store, options)
@@ -79,7 +84,7 @@ export function createSqliteStore(name: string, dbPath?: string, options?: IKVSe
       options: { name: 'options', type: 'any', description: 'the database options' },
     },
     result: 'object',
-    scope: { cache, KVSqlite: _KVSqlite }
+    scope: { cache, KVSqlite: _KVSqlite, existsSync: _existsSync }
   })
   // if (!dbPath) { dbPath = ToolFunc.dataPath ? path.join(ToolFunc.dataPath, name) : ':memory:' }
   // result.store = new KVSqlite(dbPath, options)

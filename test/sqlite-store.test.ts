@@ -28,6 +28,11 @@ describe('sqliteStore function', async () => {
     expect(store2).not.toBe(store)
   });
 
+  it('should only open exists database', async () => {
+    const store1 = await conf.run({options: {location: 'noSuchdbIn', onlyOpen: true}})
+    expect(store1).toBeUndefined();
+  });
+
   it('should delete a key-value pair when value is null', async () => {
     store.set(doc);
     await conf.run({key, value: null});

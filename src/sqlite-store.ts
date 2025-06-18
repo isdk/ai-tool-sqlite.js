@@ -49,7 +49,8 @@ export function _sqliteStore(this: ToolFunc, {key, value, options}: {key?: strin
       }
     }
     store = new KVSqlite(_loc, {...options, id: storeId})
-    cache.set(storeId, store, options)
+    const opts = (loc === ':memory:') ? {fixed: true, ...options} : options
+    cache.set(storeId, store, opts)
   }
 
   // const store = this.store as KVSqlite;

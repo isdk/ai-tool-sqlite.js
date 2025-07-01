@@ -1,6 +1,9 @@
-import { StoreCacheName, _sqliteStore, createSqliteStore } from '../src/sqlite-store';
-import { ToolFunc } from '@isdk/ai-tool';
+import os from 'os';
+import path from 'path';
+import fs from 'fs';
+import { sleep, ToolFunc } from '@isdk/ai-tool';
 import { KVSqlite } from '@isdk/kvsqlite';
+import { StoreCacheName, _sqliteStore, createSqliteStore } from '../src/sqlite-store';
 
 const conf = createSqliteStore('conf')
 
@@ -52,7 +55,37 @@ describe('sqliteStore function', async () => {
 });
 
 describe('createSqliteStore function', () => {
+  const DefaultDBName = 'TestStore';
+  const dbPath = path.join(os.tmpdir(), `${DefaultDBName}-${Date.now()}.db`);
+
+  afterAll(async () => {
+    fs.unlinkSync(dbPath);
+  });
+
   it('should create a new sqlite store', async () => {
+    const options = { location: dbPath };
+    let mStore = createSqliteStore(DefaultDBName, dbPath, options);
+    expect(mStore).toBeInstanceOf(ToolFunc);
+    expect(mStore.location).toEqual(dbPath);
+    let result = await mStore.run({options: { expires: 100, collections: [{name: 'my', fields: {tag: {type: 'TEXT'}}}] }}) as KVSqlite
+    expect(result.open).toBeTruthy()
+    await sleep(200)
+    const cache = ToolFunc.runSync(StoreCacheName)
+    // trigger the clean expires item
+    cache.get(dbPath)
+    expect(result.open).toBeFalsy()
+
+    result = await mStore.run();
+    expect(result.open).toBeTruthy()
+    const tbl = result.getCollection('my')
+    expect(tbl).toBeDefined()
+    let res: any = tbl.set('mykey', {tag: 'mytag'})
+    expect(res).toBeDefined()
+    expect(res.changes).toBe(1)
+  });
+
+  it('should create a new sqlite memory store', async () => {
+    // the memomry store will not be cleared.
     const name = 'TestStore';
     const dbPath = ':memory:';
     const options = { location: dbPath };
@@ -65,12 +98,6 @@ describe('createSqliteStore function', () => {
     const cache = ToolFunc.runSync(StoreCacheName)
     // trigger the clean expires item
     cache.get(dbPath + name) // dbPath + name just for :memory:
-    expect(result.open).toBeFalsy()
+    expect(result.open).toBeTruthy()
   });
 });
-
-async function sleep(ms: number) {
-  return new Promise((resolve) => {
-    return setTimeout(resolve, ms);
-  })
-}

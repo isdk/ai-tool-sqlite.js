@@ -8,4 +8,4 @@
 
 > `const` **SYS\_KV\_COLLECTION**: `"_sys_kv"` = `"_sys_kv"`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:138
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1362

@@ -6,7 +6,7 @@
 
 # Interface: IKVTriggerOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:116
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1516
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:116
 
 > **action**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:121
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1521
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:121
 
 > `optional` **condition**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:120
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1520
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:120
 
 > **event**: `"UPDATE"` \| `"INSERT"` \| `"DELETE"`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:118
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1518
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:118
 
 > **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:117
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1517
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: packages/kvsqlite/dist/index.d.ts:117
 
 > **triggerTiming**: `"BEFORE"` \| `"AFTER"`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:119
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1519

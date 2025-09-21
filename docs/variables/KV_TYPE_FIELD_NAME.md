@@ -8,4 +8,4 @@
 
 > `const` **KV\_TYPE\_FIELD\_NAME**: `"type"` = `"type"`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:142
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1366

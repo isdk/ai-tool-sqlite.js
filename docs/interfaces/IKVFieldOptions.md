@@ -6,7 +6,7 @@
 
 # Interface: IKVFieldOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:106
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1506
 
 ## Indexable
 

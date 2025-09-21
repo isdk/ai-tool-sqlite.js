@@ -6,9 +6,9 @@
 
 # Function: createSqliteStore()
 
-> **createSqliteStore**(`name`, `dbPath`?, `options`?): `ToolFunc`
+> **createSqliteStore**(`name`, `dbPath?`, `options?`): `ToolFunc`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:72](https://github.com/isdk/ai-tool-sqlite.js/blob/5cc19364f69c0a003852117f8ff1c586f54eb29f/src/sqlite-store.ts#L72)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-store.ts:78](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-store.ts#L78)
 
 ## Parameters
 

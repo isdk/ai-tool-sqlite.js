@@ -6,7 +6,7 @@
 
 # Interface: IKVFieldOption
 
-Defined in: packages/kvsqlite/dist/index.d.ts:90
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1485
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:90
 
 > `optional` **constraint**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:97
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1492
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:97
 
 > `optional` **default**: `any`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:95
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1490
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:95
 
 > `optional` **foreignKey**: `object`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:98
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1493
 
 #### isJson?
 
@@ -54,11 +54,31 @@ Defined in: packages/kvsqlite/dist/index.d.ts:98
 
 ***
 
+### index?
+
+> `optional` **index**: `object`
+
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1500
+
+#### name
+
+> **name**: `string`
+
+#### partial?
+
+> `optional` **partial**: `boolean`
+
+#### unique?
+
+> `optional` **unique**: `boolean`
+
+***
+
 ### name?
 
 > `optional` **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:91
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1486
 
 ***
 
@@ -66,7 +86,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:91
 
 > `optional` **notNull**: `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:93
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1488
 
 ***
 
@@ -74,7 +94,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:93
 
 > `optional` **primary**: `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:94
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1489
 
 ***
 
@@ -82,7 +102,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:94
 
 > `optional` **type**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:92
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1487
 
 ***
 
@@ -90,4 +110,4 @@ Defined in: packages/kvsqlite/dist/index.d.ts:92
 
 > `optional` **unique**: `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:96
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1491

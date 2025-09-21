@@ -6,15 +6,15 @@
 
 # Class: KVSqliteAttachments
 
-Defined in: packages/kvsqlite/dist/index.d.ts:715
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1320
 
 ## Constructors
 
-### new KVSqliteAttachments()
+### Constructor
 
-> **new KVSqliteAttachments**(`name`, `db`): [`KVSqliteAttachments`](KVSqliteAttachments.md)
+> **new KVSqliteAttachments**(`name`, `db`): `KVSqliteAttachments`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:731
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1336
 
 #### Parameters
 
@@ -28,7 +28,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:731
 
 #### Returns
 
-[`KVSqliteAttachments`](KVSqliteAttachments.md)
+`KVSqliteAttachments`
 
 ## Properties
 
@@ -36,7 +36,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:731
 
 > `protected` **db**: [`KVSqlite`](KVSqlite.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:717
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1322
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:717
 
 > **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:716
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1321
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:716
 
 > **preAdd**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:718
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1323
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:718
 
 > **preAll**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:728
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1333
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:728
 
 > **preAllLimit**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:729
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1334
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:729
 
 > **preCalcSize**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:730
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1335
 
 ***
 
@@ -84,7 +84,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:730
 
 > **preCount**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:724
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1329
 
 ***
 
@@ -92,7 +92,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:724
 
 > **preCountW**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:725
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1330
 
 ***
 
@@ -100,7 +100,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:725
 
 > **preDel**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:722
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1327
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:722
 
 > **preDelAll**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:723
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1328
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:723
 
 > **preExists**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:720
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1325
 
 ***
 
@@ -124,7 +124,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:720
 
 > **preGet**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:721
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1326
 
 ***
 
@@ -132,7 +132,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:721
 
 > **preSearchKey**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:726
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1331
 
 ***
 
@@ -140,7 +140,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:726
 
 > **preSearchKeyAll**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:727
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1332
 
 ***
 
@@ -148,15 +148,15 @@ Defined in: packages/kvsqlite/dist/index.d.ts:727
 
 > **preUpdate**: `Statement`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:719
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1324
 
 ## Methods
 
 ### add()
 
-> **add**(`docId`, `filename`, `content`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **add**(`docId`, `filename`, `content`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:743
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1348
 
 #### Parameters
 
@@ -190,9 +190,9 @@ Defined in: packages/kvsqlite/dist/index.d.ts:743
 
 ### del()
 
-> **del**(`docId`, `filename`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **del**(`docId`, `filename?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:751
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1356
 
 #### Parameters
 
@@ -214,7 +214,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:751
 
 > **get**(`docId`, `filename`): `object`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:738
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1343
 
 Get file content
 
@@ -244,9 +244,9 @@ Get file content
 
 ### list()
 
-> **list**(`docId`, `filename`?): `unknown`[]
+> **list**(`docId`, `filename?`): `unknown`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:742
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1347
 
 #### Parameters
 
@@ -266,9 +266,9 @@ Defined in: packages/kvsqlite/dist/index.d.ts:742
 
 ### update()
 
-> **update**(`docId`, `filename`, `content`, `options`?): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
+> **update**(`docId`, `filename`, `content`, `options?`): [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:747
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1352
 
 #### Parameters
 

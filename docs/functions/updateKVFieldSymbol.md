@@ -8,7 +8,7 @@
 
 > **updateKVFieldSymbol**(`k`, `v`): `void`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:145
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:731
 
 ## Parameters
 

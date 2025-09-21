@@ -6,7 +6,7 @@
 
 # Interface: IKVSerdeOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:14
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1396
 
 ## Extended by
 
@@ -19,7 +19,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:14
 
 > `optional` **deserialize**: (`val`) => `any`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:16
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1398
 
 #### Parameters
 
@@ -37,7 +37,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:16
 
 > `optional` **serialize**: (`val`) => `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:15
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1397
 
 #### Parameters
 

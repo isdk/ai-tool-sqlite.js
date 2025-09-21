@@ -8,4 +8,4 @@
 
 > `const` **KV\_NAME\_SYMBOL**: `"名"` = `"\u540D"`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:3
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1371

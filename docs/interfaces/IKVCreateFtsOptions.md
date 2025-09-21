@@ -6,7 +6,7 @@
 
 # Interface: IKVCreateFtsOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:71
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1453
 
 Represents options for creating an FTS (Full-Text Search) table in SQLite with additional support for multiple languages and plugins.
 
@@ -16,7 +16,7 @@ Represents options for creating an FTS (Full-Text Search) table in SQLite with a
 
 > `optional` **exclude**: `string`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:79
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1461
 
 Lists fields to be excluded from full-text search.
 
@@ -26,7 +26,17 @@ Lists fields to be excluded from full-text search.
 
 > `optional` **fields**: `string`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:84
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1470
+
+***
+
+### include?
+
+> `optional` **include**: `string`[]
+
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1465
+
+Specifies fields that should be indexed in the FTS table.
 
 ***
 
@@ -34,7 +44,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:84
 
 > `optional` **language**: `string` \| [`IKVCreateFtsLanguageOptions`](IKVCreateFtsLanguageOptions.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:88
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1474
 
 Configures the language for full-text search.
 
@@ -44,9 +54,24 @@ Configures the language for full-text search.
 
 > `optional` **prefix**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:83
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1469
 
 Configures prefix matching behavior.
+
+***
+
+### skipIndexed?
+
+> `optional` **skipIndexed**: `boolean`
+
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1483
+
+Control Inclusion of Indexed Fields in FTS Indexing
+
+* When skipIndexed is set to true, fields that are already indexed will be automatically excluded from the FTS (Full-Text Search) indexing process by adding them to the unindexed list.
+* When set to false, this behavior is disabled, and all specified fields will be included in the FTS indexing process regardless of whether they are already indexed.
+
+defaults to `true`
 
 ***
 
@@ -54,6 +79,6 @@ Configures prefix matching behavior.
 
 > `optional` **unIndexed**: `string`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:75
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1457
 
 Specifies fields that should not be indexed in the FTS table.

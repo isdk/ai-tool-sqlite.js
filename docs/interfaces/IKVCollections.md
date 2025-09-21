@@ -6,7 +6,7 @@
 
 # Interface: IKVCollections
 
-Defined in: packages/kvsqlite/dist/index.d.ts:146
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:732
 
 ## Indexable
 

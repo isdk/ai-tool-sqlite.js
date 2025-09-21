@@ -8,4 +8,4 @@
 
 > `const` **StoreCacheName**: `"cache.store"` = `'cache.store'`
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:6](https://github.com/isdk/ai-tool-sqlite.js/blob/5cc19364f69c0a003852117f8ff1c586f54eb29f/src/sqlite-store.ts#L6)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-store.ts:7](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-store.ts#L7)

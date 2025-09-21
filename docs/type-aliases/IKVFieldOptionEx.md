@@ -6,6 +6,6 @@
 
 # Type Alias: IKVFieldOptionEx
 
-> **IKVFieldOptionEx**: `string` \| [`IKVFieldOption`](../interfaces/IKVFieldOption.md)
+> **IKVFieldOptionEx** = `string` \| [`IKVFieldOption`](../interfaces/IKVFieldOption.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:109
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1509

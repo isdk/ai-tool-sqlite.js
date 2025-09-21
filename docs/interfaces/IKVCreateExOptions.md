@@ -6,7 +6,7 @@
 
 # Interface: IKVCreateExOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:134
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1534
 
 ## Extends
 
@@ -22,7 +22,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:134
 
 > `optional` **deserialize**: (`val`) => `any`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:16
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1398
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:16
 
 > `optional` **fields**: [`IKVFieldOptionEx`](../type-aliases/IKVFieldOptionEx.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:135
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1535
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:135
 
 > `optional` **fts**: `true` \| [`IKVCreateFtsOptions`](IKVCreateFtsOptions.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:126
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1526
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:126
 
 > `optional` **indexes**: [`IKVIndexOptions`](IKVIndexOptions.md) \| [`IKVIndexOptions`](IKVIndexOptions.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:127
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1527
 
 #### Inherited from
 
@@ -76,7 +76,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:127
 
 > `optional` **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:124
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1524
 
 #### Inherited from
 
@@ -88,7 +88,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:124
 
 > `optional` **serialize**: (`val`) => `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:15
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1397
 
 #### Parameters
 
@@ -110,7 +110,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:15
 
 > `optional` **triggers**: [`IKVTriggerOptions`](IKVTriggerOptions.md)[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:128
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1528
 
 #### Inherited from
 
@@ -122,7 +122,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:128
 
 > `optional` **usingJsonb**: `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:125
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1525
 
 #### Inherited from
 

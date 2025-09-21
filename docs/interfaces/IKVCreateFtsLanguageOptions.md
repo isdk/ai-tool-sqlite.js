@@ -6,7 +6,7 @@
 
 # Interface: IKVCreateFtsLanguageOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:53
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1435
 
 Contains options tailored to a specific language's FTS setup, including plugin paths and configurations.
 
@@ -16,7 +16,7 @@ Contains options tailored to a specific language's FTS setup, including plugin p
 
 > **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:57
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1439
 
 The language identifier, such as 'zh' for Chinese or 'en' for English.
 
@@ -26,7 +26,7 @@ The language identifier, such as 'zh' for Chinese or 'en' for English.
 
 > `optional` **options**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:66
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1448
 
 Additional tokenize options for the language.
 
@@ -36,7 +36,7 @@ Additional tokenize options for the language.
 
 > `optional` **plugin**: [`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:58
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1440
 
 ***
 
@@ -44,6 +44,6 @@ Defined in: packages/kvsqlite/dist/index.d.ts:58
 
 > `optional` **tokenize**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:62
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1444
 
 Defines the tokenization method or plugin identifier to be used.

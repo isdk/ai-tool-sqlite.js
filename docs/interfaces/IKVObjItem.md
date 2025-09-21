@@ -6,7 +6,7 @@
 
 # Interface: IKVObjItem
 
-Defined in: packages/kvsqlite/dist/index.d.ts:10
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1392
 
 ## Indexable
 
@@ -18,4 +18,4 @@ Defined in: packages/kvsqlite/dist/index.d.ts:10
 
 > **\_id**: [`IKVDocumentId`](../type-aliases/IKVDocumentId.md)
 
-Defined in: packages/kvsqlite/dist/index.d.ts:11
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1393

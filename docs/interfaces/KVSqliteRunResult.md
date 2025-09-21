@@ -6,7 +6,7 @@
 
 # Interface: KVSqliteRunResult
 
-Defined in: packages/kvsqlite/dist/index.d.ts:8
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1390
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:8
 
 > **changes**: `number`
 
-Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:105
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/@types+better-sqlite3@7.6.13/node\_modules/@types/better-sqlite3/index.d.ts:112
 
 #### Inherited from
 
@@ -30,7 +30,7 @@ Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@type
 
 > **lastInsertRowid**: `number` \| `bigint`
 
-Defined in: node\_modules/.pnpm/@types+better-sqlite3@7.6.12/node\_modules/@types/better-sqlite3/index.d.ts:106
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/@types+better-sqlite3@7.6.13/node\_modules/@types/better-sqlite3/index.d.ts:113
 
 #### Inherited from
 

@@ -6,6 +6,6 @@
 
 # Variable: KVFileCurrentVer
 
-> `const` **KVFileCurrentVer**: `2` = `2`
+> `const` **KVFileCurrentVer**: `5` = `5`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:6
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1359

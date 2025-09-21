@@ -8,4 +8,4 @@
 
 > `const` **DefaultKVCollection**: `"kv"` = `"kv"`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:137
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1361

@@ -6,11 +6,13 @@
 
 # Interface: IKVCreateFtsPluginOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:39
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1421
 
 ## Indexable
 
 \[`name`: `string`\]: `any`
+
+An object holding additional configurations for the plugin related to this language.
 
 ## Properties
 
@@ -18,7 +20,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:39
 
 > `optional` **load**: (`db`, `options`) => `void`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:44
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1426
 
 #### Parameters
 
@@ -28,7 +30,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:44
 
 ##### options
 
-[`IKVCreateFtsPluginOptions`](IKVCreateFtsPluginOptions.md)
+`IKVCreateFtsPluginOptions`
 
 #### Returns
 
@@ -40,6 +42,6 @@ Defined in: packages/kvsqlite/dist/index.d.ts:44
 
 > **path**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:43
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1425
 
 The path to the plugin specific to this language.

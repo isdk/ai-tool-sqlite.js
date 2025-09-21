@@ -6,7 +6,7 @@
 
 # Interface: IKVIndexOptions
 
-Defined in: packages/kvsqlite/dist/index.d.ts:110
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1510
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:110
 
 > **fields**: `string`[]
 
-Defined in: packages/kvsqlite/dist/index.d.ts:112
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1512
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:112
 
 > **name**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:111
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1511
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: packages/kvsqlite/dist/index.d.ts:111
 
 > `optional` **partial**: `string`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:114
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1514
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: packages/kvsqlite/dist/index.d.ts:114
 
 > `optional` **unique**: `boolean`
 
-Defined in: packages/kvsqlite/dist/index.d.ts:113
+Defined in: @isdk/ai-tools/packages/kvsqlite/dist/index.d.ts:1513

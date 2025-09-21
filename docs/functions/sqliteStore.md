@@ -6,9 +6,9 @@
 
 # Function: \_sqliteStore()
 
-> **\_sqliteStore**(`this`, `__namedParameters`): [`KVSqlite`](../classes/KVSqlite.md) \| [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+> **\_sqliteStore**(`this`, `__namedParameters`): `undefined` \| [`KVSqlite`](../classes/KVSqlite.md) \| [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
 
-Defined in: [packages/ai-tool-sqlite/src/sqlite-store.ts:29](https://github.com/isdk/ai-tool-sqlite.js/blob/5cc19364f69c0a003852117f8ff1c586f54eb29f/src/sqlite-store.ts#L29)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-store.ts:31](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-store.ts#L31)
 
 return the database directly if no key is provided
 return the value if key is provided and value is undefined
@@ -29,7 +29,7 @@ set the value if key is provided and value is provided
 
 #### options?
 
-[`IKVSetOptions`](../interfaces/IKVSetOptions.md)
+[`IKVSetOptions`](../interfaces/IKVSetOptions.md) & `object`
 
 #### value?
 
@@ -37,4 +37,4 @@ set the value if key is provided and value is provided
 
 ## Returns
 
-[`KVSqlite`](../classes/KVSqlite.md) \| [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]
+`undefined` \| [`KVSqlite`](../classes/KVSqlite.md) \| [`IKVObjItem`](../interfaces/IKVObjItem.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md) \| [`KVSqliteRunResult`](../interfaces/KVSqliteRunResult.md)[]

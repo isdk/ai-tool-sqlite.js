@@ -190,6 +190,19 @@ export class KVSqliteResFunc<T extends KVSqliteResFuncParams = KVSqliteResFuncPa
     }
   }
 
+  set(model: KVSqliteResFuncParams): Promise<SqliteRunResult>|SqliteRunResult {
+    const val = model.val
+    const id = model.id ?? val?._id
+    if (!id) {
+      throw new CommonError('id is required', this.name + '.set', ErrorCode.InvalidArgument)
+    }
+    if (typeof val !== 'object' ) {
+      throw new CommonError('object val is required', this.name + '.set', ErrorCode.InvalidArgument)
+    }
+
+    return this.db.set(id as any, model.val, model as any) as SqliteRunResult
+  }
+
   $searchEx(options?: KVSqliteResFuncParams){
     const { query } = options || {}
     if (!query) {

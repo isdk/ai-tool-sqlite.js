@@ -244,6 +244,29 @@ function testBaseOperations(collection?: string) {
     expect(res).toHaveLength(2)
   })
 
+  it('should set an object (upsert)', async () => {
+    const result = ResClientTools.get(FUNC_NAME)
+    expect(result).toBeInstanceOf(ResClientTools)
+
+    // 1. Create a new item with set
+    let res = await result.set({id: "set-test-1", val: {name: 'set-hello'}, collection})
+    expect(res).toHaveProperty('changes', 1)
+
+    let item = await result.get({id: "set-test-1", collection})
+    expect(item).toHaveProperty('name', 'set-hello')
+
+    // 2. Update the item with set
+    res = await result.set({id: "set-test-1", val: {name: 'set-world'}, collection})
+    expect(res).toHaveProperty('changes', 1)
+
+    item = await result.get({id: "set-test-1", collection})
+    expect(item).toHaveProperty('name', 'set-world')
+
+    // cleanup
+    res = await result.delete({id: "set-test-1", collection})
+    expect(res).toHaveProperty('changes', 1)
+  })
+
   it('should delete', async () => {
     const result = ResClientTools.get(FUNC_NAME)
     expect(result).toBeInstanceOf(ResClientTools)

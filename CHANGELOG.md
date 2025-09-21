@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.14](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.1.13...v0.1.14) (2025-09-21)
+
+
+### Features
+
+* add onlyOpen to options ([bfccd8c](https://github.com/isdk/ai-tool-sqlite.js/commit/bfccd8c6f967597f6fb3102e7abedb93818ce747))
+
+
+### Bug Fixes
+
+* should cache memory db as fixed items ([f600f00](https://github.com/isdk/ai-tool-sqlite.js/commit/f600f0025cd1d0be11a2e6c988c06cc4694121ad))
+
 ## [0.1.13](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.1.12...v0.1.13) (2025-04-04)
 
 ## [0.1.12](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.1.11...v0.1.12) (2025-03-22)

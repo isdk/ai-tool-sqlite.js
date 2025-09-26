@@ -6,7 +6,7 @@
 
 # Class: KVSqliteResFunc\<T\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L41)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:41](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L41)
 
 ## Extends
 
@@ -28,7 +28,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:41](https:
 
 > **new KVSqliteResFunc**\<`T`\>(`name`, `options`): `KVSqliteResFunc`\<`T`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L51)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:51](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L51)
 
 #### Parameters
 
@@ -141,7 +141,7 @@ The initial value of Object.prototype.constructor is the standard built-in Objec
 
 > **db**: [`KVSqlite`](KVSqlite.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L48)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:48](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L48)
 
 ***
 
@@ -149,7 +149,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:48](https:
 
 > **dbPath**: `undefined` \| `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L46)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:46](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L46)
 
 ***
 
@@ -230,7 +230,7 @@ Addtional options to be passed to the underlying `fetch` call in a transport.
 
 > **initDir**: `undefined` \| `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L47)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:47](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L47)
 
 ***
 
@@ -238,7 +238,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:47](https:
 
 > **initingData**: `undefined` \| `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L49)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:49](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L49)
 
 ***
 
@@ -459,7 +459,7 @@ The conventional root path for the API endpoint.
 
 > **$count**(`options?`): `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:226](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L226)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:226](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L226)
 
 #### Parameters
 
@@ -477,7 +477,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:226](https
 
 > **$createCollection**(`__namedParameters`): `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:232](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L232)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:232](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L232)
 
 #### Parameters
 
@@ -495,7 +495,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:232](https
 
 > **$deleteCollection**(`__namedParameters`): `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:243](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L243)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:243](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L243)
 
 #### Parameters
 
@@ -513,7 +513,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:243](https
 
 > **$search**(`options?`): `T`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:216](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L216)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:216](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L216)
 
 #### Parameters
 
@@ -531,7 +531,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:216](https
 
 > **$searchEx**(`options?`): `T`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:206](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L206)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:206](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L206)
 
 #### Parameters
 
@@ -724,7 +724,7 @@ the dest object
 
 > **cast**(`key`, `value`): `any`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L107)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:107](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L107)
 
 #### Parameters
 
@@ -836,7 +836,7 @@ the defined attributes of the object
 
 > **delete**(`options`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L176)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:176](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L176)
 
 #### Parameters
 
@@ -907,7 +907,7 @@ The result of the function.
 
 > **get**(`options`): `T`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L121)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:121](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L121)
 
 #### Parameters
 
@@ -925,7 +925,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:121](https
 
 > **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L83)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:83](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L83)
 
 #### Parameters
 
@@ -1075,7 +1075,7 @@ A property name.
 
 > **initData**(`initDir?`, `collection?`): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L66)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:66](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L66)
 
 #### Parameters
 
@@ -1097,7 +1097,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:66](https:
 
 > **initDataFromDir**(`dir`, `collection?`): `Promise`\<`void`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L75)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:75](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L75)
 
 #### Parameters
 
@@ -1119,7 +1119,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:75](https:
 
 > **initDB**(`db`): `void`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L42)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:42](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L42)
 
 #### Parameters
 
@@ -1255,7 +1255,7 @@ The runtime parameters passed to the function call.
 
 > **list**(`options?`): `T`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L114)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:114](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L114)
 
 #### Parameters
 
@@ -1326,7 +1326,7 @@ An array of positional arguments.
 
 > **post**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[] \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| [`SqliteRunResult`](../interfaces/SqliteRunResult.md)[]\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L152)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:152](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L152)
 
 #### Parameters
 
@@ -1366,7 +1366,7 @@ A property name.
 
 > **put**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L134)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:134](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L134)
 
 #### Parameters
 
@@ -1641,7 +1641,7 @@ The result of the function execution.
 
 > **set**(`model`): [`SqliteRunResult`](../interfaces/SqliteRunResult.md) \| `Promise`\<[`SqliteRunResult`](../interfaces/SqliteRunResult.md)\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L193)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:193](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L193)
 
 #### Parameters
 
@@ -1737,7 +1737,7 @@ The instance that was unregistered.
 
 > **updateDataFromDir**(`dir`, `collection?`): `Promise`\<`undefined` \| `number`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/e038f5d78b1e6466c7041f2de0c960c862914143/src/sqlite-res.ts#L94)
+Defined in: [@isdk/ai-tools/packages/ai-tool-sqlite/src/sqlite-res.ts:94](https://github.com/isdk/ai-tool-sqlite.js/blob/2f4fdcf4b214ba449ef126c584c827b0d3d9f601/src/sqlite-res.ts#L94)
 
 #### Parameters
 

@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.15](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.1.14...v0.1.15) (2025-09-26)
+
 ## [0.1.14](https://github.com/isdk/ai-tool-sqlite.js/compare/v0.1.13...v0.1.14) (2025-09-21)
 
 
